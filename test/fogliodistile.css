@@ -12,7 +12,7 @@ nav {
   z-index: 3;
   width: inherit;
   position: absolute;
-  top: 45%;
+  top: 40%;
   transform: translateY(-50%);
   display: none;
 }
@@ -29,4 +29,14 @@ nav {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
+}
+
+#register {
+  padding-left: 135px;
+}
+
+#register-button {
+  position: absolute;
+  top: 550px;
+  left: 1000px;
 }
