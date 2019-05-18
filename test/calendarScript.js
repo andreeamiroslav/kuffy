@@ -1,6 +1,12 @@
 var date = new Date();
 var actual = date.getDate();
 
+document.addEventListener('DOMContentLoaded', function() {
+   var elems = document.querySelectorAll('select');
+   var instances = M.FormSelect.init(elems, options);
+ });
+
+
 function getReservations(){
   var xmlhttp = new XMLHttpRequest();
 
@@ -54,6 +60,10 @@ function getDaysNumber(year, month){
 }
 
 function initDate(set){
+  document.addEventListener('DOMContentLoaded', function() {
+     var elems = document.querySelectorAll('select');
+     var instances = M.FormSelect.init(elems, options);
+   });
   var element = document.getElementById('month');
 
   //If left arrow has been clicked, then set date's month to the previous one
