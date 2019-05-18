@@ -1,0 +1,48 @@
+.page-footer {
+  background-color: #0A2239
+}
+
+nav {
+  height: 100px;
+  line-height: 100px;
+  background-color: #05006E
+}
+
+#login-fields {
+  z-index: 3;
+  width: inherit;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  display: none;
+}
+
+#login-buttons {
+  width: inherit;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+#login-button {
+  position: absolute;
+  top: 110%;
+  left: 26%;
+}
+
+#right-text {
+  width: inherit;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+#register {
+  padding-left: 135px;
+}
+
+#register-button {
+  position: absolute;
+  top: 550px;
+  left: 1000px;
+}

@@ -1,0 +1,79 @@
+.content{
+  margin-top: 1%;
+}
+.previous{
+  display: inline;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: default;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.next{
+  display: inline;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.day{
+  padding-bottom: 0;
+  padding-top: 0;
+  color: grey;
+  cursor: default;
+  font-weight: normal;
+  text-align: center;
+}
+
+.actual{
+  background-color: skyblue;
+}
+
+.monthEdit{
+  background-color: blue;
+  text-align: left;
+}
+
+#month{
+  display: inline;
+  font-size: 20px;
+  font-weight: bold;
+  color: #035c78;
+}
+
+
+.dayNames{
+  padding-bottom: 0;
+}
+
+.dayRow{
+  border-bottom: 1px solid;
+}
+
+.reservationsRow{
+  font-weight: normal;
+}
+
+td{
+  border: none;
+}
+
+#tHeader{
+  color: white;
+  background-color:#1d7d74;
+}
+
+table{
+  padding-top: 0px;
+  margin-top: 0px;
+  width: 15%;
+  height: 20%;
+  border-collapse: collapse;
+}
