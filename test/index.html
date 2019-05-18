@@ -19,24 +19,24 @@
         <br /><button class="waves-effect waves-light btn-large" onclick="loginOn();" style="width: 20%">LOGIN</button>
         <br /><br /><button class="waves-effect waves-light btn-large" style="width: 20%">REGISTRATI</button>
       </div>
-      <br /><div id="login-fields">
+      <br />
+      <div id="login-fields">
         <h3>Accedi stronzo</h3>
-        <div class="input-field col offset-s3 s12">
-          <form class="col s12" action="checkLogin.php" method="post">
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="email" type="text" name="email" class="validate" >
-                <label for="email">Email</label>
-              </div>
-            </div>
-        </div>
         <div class="input-field col offset-s3 s6">
-          <input  id="password" type="password" name="password" class="validate">
-          <label for="password">Password</label>
+              <form action="checkLogin.php" method="post" id="login">
+                <div class="input-field">
+                  <input type="text" name="email" id="email">
+                  <label for="email">Email</label>
+                </div>
+                <div class="input-field">
+                  <input type="password" name="password" id="pass">
+                  <label for="pass">Password</label>
+                </div>
+                <button type="submit" class="btn waves-effect waves-light">Login</button>
+              </form>
         </div>
-        <button class="waves-effect waves-light btn-large" id="login-button" style="width: 20%">ACCEDI</button>
-        </form>
       </div>
+
     </div>
     <div class="col s5,5" align="center">
       <div id="right-text">
