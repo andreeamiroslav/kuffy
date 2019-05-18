@@ -24,6 +24,12 @@ nav {
   transform: translateY(-50%);
 }
 
+#login-button {
+  position: absolute;
+  top: 110%;
+  left: 26%;
+}
+
 #right-text {
   width: inherit;
   position: absolute;
@@ -39,10 +45,4 @@ nav {
   position: absolute;
   top: 550px;
   left: 1000px;
-}
-
-#login-button {
-  position: absolute;
-  top: 110%;
-  left: 26%;
 }
