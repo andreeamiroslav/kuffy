@@ -2,7 +2,7 @@
 <head>
   <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
-  <!--<link type="text/css" rel="stylesheet" href="fogliodistile.css"/>-->
+  <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
 </head>
 <body>
   <nav>
@@ -12,14 +12,30 @@
   </nav>
   <div class="row">
     <div class="col s6" align="center">
-      <h3>Benvenuto nel tuo gestore di Bed&Breakfast</h3>
-      <br /><a class="waves-effect waves-light btn-large" style="width: 20%">LOGIN</a>
-      <br /><br /><a class="waves-effect waves-light btn-large" style="width: 20%">REGISTRATI</a>
+      <div id="login-buttons">
+        <h3>Benvenuto nel tuo gestore di Bed&Breakfast</h3>
+        <br /><button class="waves-effect waves-light btn-large" style="width: 20%">LOGIN</button>
+        <br /><br /><button class="waves-effect waves-light btn-large" style="width: 20%">REGISTRATI</button>
+      </div>
+      <br /><div id="login-fields">
+        <div class="input-field col offset-s3 s12">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input placeholder="Email" id="email" type="text" class="validate">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="input-field col offset-s3 s6">
+          <input placeholder="Password" id="password" type="password" class="validate">
+        </div>
+      </div>
     </div>
-    <div class="col s6" align="center">
-      Testo a destra.
+      <div class="col s6" align="center">
+        Testo a destra.
+      </div>
     </div>
-  </div>
   <footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;" align="center">
     <div class="container">
       <h6 class="white-text" style = "position:relative; left:auto;; top:-20px;">Creato da ______ - <a class="grey-text text-lighten-3" href="#!">Versione Mobile</a></h6>
@@ -31,3 +47,4 @@
   </footer>
 </body>
 </html>
+
