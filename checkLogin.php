@@ -8,7 +8,7 @@
 
     header('Location: home.html');
   } else {
-    header('Location: login.php?login=false');
+    header('Location: index.html');
   }
 
   function checkLogin($email, $password, $link){
