@@ -9,6 +9,24 @@ nav {
 }
 
 #login-fields {
-  display:none;
+  z-index: 3;
+  width: inherit;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  display: none;
 }
 
+#login-buttons {
+  width: inherit;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+#right-text {
+  width: inherit;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
