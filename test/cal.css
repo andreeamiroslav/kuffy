@@ -5,7 +5,7 @@
   display: inline;
   font-weight: bolder;
   font-size: 20px;
-  cursor: pointer;
+  cursor: default;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
@@ -27,6 +27,7 @@
   padding-bottom: 0;
   padding-top: 0;
   color: grey;
+  cursor: default;
   font-weight: normal;
   text-align: center;
 }

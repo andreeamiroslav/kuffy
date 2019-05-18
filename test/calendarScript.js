@@ -1,4 +1,5 @@
 var date = new Date();
+var actual = date.getDate();
 
 function getReservations(){
   var xmlhttp = new XMLHttpRequest();
@@ -131,4 +132,10 @@ function initDate(set){
     var nID = date.getDate();
     document.getElementById(nID).classList.add("actual");
   }
+}
+
+function selectDate(n){
+  document.getElementById(actual).classList.remove("actual");
+  actual = n;
+  document.getElementById(actual).classList.add("actual");
 }
