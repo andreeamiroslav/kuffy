@@ -25,7 +25,7 @@ nav {
 }
 
 #right-text {
-  width: 465px;
+  width: inherit;
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
