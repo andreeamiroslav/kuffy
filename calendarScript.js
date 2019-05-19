@@ -1,10 +1,7 @@
 var date = new Date();
 var actual = date.getDate();
 
-document.addEventListener('DOMContentLoaded', function() {
-   var elems = document.querySelectorAll('select');
-   var instances = M.FormSelect.init(elems, options);
- });
+
 
 
 function getReservations(){
@@ -20,27 +17,22 @@ function getReservations(){
         var html ="<tr>\n";
 
         var doc = document.getElementById('struttura' + i);
-        //doc.innerHTML = v[i]['struttura_nome'];
         html += '<td id="struttura' + i + '">'+ v[i]['struttura_nome']
         + '\n</td>\n';
 
         var doc = document.getElementById('stanza' + i);
-        //doc.innerHTML = v[i]['stanza_nome'];
         html += '<td id="stanza' + i + '">'+ v[i]['stanza_nome']
         + '\n</td>\n';
 
         var doc = document.getElementById('nome' + i);
-        //doc.innerHTML = v[i]['nome'];
         html += '<td id="nome' + i + '">'+ v[i]['nome']
         + '\n</td>\n';
 
         var doc = document.getElementById('dal' + i);
-        //doc.innerHTML = v[i]['from_day'];
         html += '<td id="dal' + i + '">'+ v[i]['from_day']
         + '\n</td>\n';
 
         var doc = document.getElementById('al' + i);
-        //doc.innerHTML = v[i]['to_day'];
         html += '<td id="al' + i + '">'+ v[i]['to_day']
         + '\n</td>\n';
 
