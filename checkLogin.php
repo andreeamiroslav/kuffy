@@ -1,18 +1,14 @@
 <?php
-  require_once('config.php');
-  $link = mysqli_connect(DBMS_HOST, DBMS_USER, DBMS_PASSWORD, DBMS_DB );
-
-  if(!$link) {
-    echo (“Database Connection error” . mysql_error());
-}
-  //$loginOk = checkLogin($_REQUEST['email'], $_REQUEST['password'], $link);
+  require_once('init.php');
+  $loginOk = checkLogin($_REQUEST['email'], $_REQUEST['password'], $link);
 
   if($loginOk){
     $_SESSION['isLogged'] = TRUE;
     $_SESSION['email'] = $_REQUEST['email'];
+
     header('Location: home.html');
   } else {
-    //header('Location: index.html');
+    header('Location: index.html');
   }
 
   function checkLogin($email, $password, $link){
