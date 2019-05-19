@@ -48,23 +48,26 @@ nav {
 }
 
 #square-plus {
-  width: 248px;
-  height: 248px;
-  margin-bottom: 0px;
+  position: absolute;
+  top: 14.9%;
+  width: 260px;
+  height: 260px;
+  margin-top: 20px;
 }
 
 #square-edit {
   z-index: 3;
-  width: 248px;
-  height: 248px;
+  width: 227px;
+  height: 227px;
   margin-bottom: 0px;
   display: none;
 }
 
 #square-empty {
-  width: 248px;
-  height: 248px;
+  width: 227px;
+  height: 227px;
   margin-bottom: 0px;
+  margin-top: 30px;
 }
 
 #plus {
@@ -80,4 +83,8 @@ nav {
 #structure-edit {
   width:40px;
   height:40px;
+}
+
+#add-structure-button:focus {
+  background-color: #eeeeee;
 }
