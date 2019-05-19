@@ -2,8 +2,9 @@
 echo "ciao";
 require_once("config.php");
 echo "lol";
+$link = mysqli_connect('127.0.0.1', 'utentetest', 'passwordtest', 'test');
 
-if (mysqli_connect(DBMS_HOST, DBMS_USER, DBMS_PASSWORD, DBMS_DB)->connect_errno) {
+if ($link->connect_errno) {
     printf("Connect failed: %s\n", $mysqli->connect_error);
     exit();
 }
