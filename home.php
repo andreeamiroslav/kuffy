@@ -1,14 +1,25 @@
 <?php
-  require_once('init.php');
+  //require_once('init.php');
 ?>
 <html lang="it_IT" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Calendario</title>
     <link rel="stylesheet" type="text/css" href="materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="cal.css">
+    <script type = "text/javascript"
+       src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src = "materialize/js/materialize.min.js">
+    </script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <script type="text/javascript" src="calendarScript.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="cal.css">
+
+    <script>
+       $(document).ready(function() {
+          $('select').material_select();
+       });
+    </script>
   </head>
   <body onload="initDate(); getReservations();">
     <nav>
@@ -20,13 +31,12 @@
       <div class="col s4 content">
         <div class="input-field col s12">
           <select>
-            <option value="" disabled selected>Choose your option</option>
             <option value="1">Option 1</option>
             <option value="2">Option 2</option>
             <option value="3">Option 3</option>
           </select>
           <label>Seleziona una struttura</label>
-  </div>
+        </div>
       </div>
       <div class="col s4 content">
         <div class="calendar row" align="center">
@@ -131,7 +141,7 @@
         </tbody>
         </table>
       </div>
-  </div>
+    </div>
   <footer class="page-footer" style="position:fixed;bottom:0;left:0;width:100%;" align="center">
     <div class="container">
       <h6 class="white-text" style = "position:relative; left:auto;; top:-20px;">Creato da ______ - <a class="grey-text text-lighten-3" href="#!">Versione Mobile</a></h6>
