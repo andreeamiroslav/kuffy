@@ -4,14 +4,13 @@ echo "lol";
 $link = mysqli_connect(DBMS_HOST, DBMS_USER, DBMS_PASSWORD, DBMS_DB );
 echo "xd";
 if (!$link) {
-  echo "mmmh";
   exit;
 }
 
-$query = "SELECT * FROM utenti WHERE utente_email='".$email."' AND utente_password='".$password."';";
+$query = "SELECT * FROM utenti";
 
 $rs = mysqli_query($link, $query);
-echo $rs;
+echo $rs['utente_id'];
 if(!$rs == mysqli_query($link, $query)){
   echo "errore";
   exit;
