@@ -5,7 +5,7 @@
 nav {
   height: 100px;
   line-height: 100px;
-  background-color: #05006E
+  background-color: #4093d6
 }
 
 #login-fields {
@@ -24,12 +24,6 @@ nav {
   transform: translateY(-50%);
 }
 
-#login-button {
-  position: absolute;
-  top: 110%;
-  left: 26%;
-}
-
 #right-text {
   width: inherit;
   position: absolute;
@@ -45,4 +39,45 @@ nav {
   position: absolute;
   top: 550px;
   left: 1000px;
+}
+
+#login-button {
+  position: absolute;
+  top: 110%;
+  left: 26%;
+}
+
+#square-plus {
+  width: 248px;
+  height: 248px;
+  margin-bottom: 0px;
+}
+
+#square-edit {
+  z-index: 3;
+  width: 248px;
+  height: 248px;
+  margin-bottom: 0px;
+  display: none;
+}
+
+#square-empty {
+  width: 248px;
+  height: 248px;
+  margin-bottom: 0px;
+}
+
+#plus {
+  width:200px;
+  height:200px;
+}
+
+#structure-icon {
+  width:100px;
+  height:100px;
+}
+
+#structure-edit {
+  width:40px;
+  height:40px;
 }
