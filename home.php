@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+  require_once('init.php');
+?>
 <html lang="it_IT" dir="ltr">
   <head>
     <meta charset="utf-8">
