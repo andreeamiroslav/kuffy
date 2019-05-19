@@ -6,7 +6,7 @@
     $_SESSION['isLogged'] = TRUE;
     $_SESSION['email'] = $_REQUEST['email'];
 
-    header('Location: home.html');
+    header('Location: home.php');
   } else {
     header('Location: index.html');
   }
