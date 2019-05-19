@@ -6,10 +6,9 @@
   if($loginOk){
     $_SESSION['isLogged'] = TRUE;
     $_SESSION['email'] = $_REQUEST['email'];
-
     header('Location: home.html');
   } else {
-    header('Location: index.html');
+    //header('Location: index.html');
   }
 
   function checkLogin($email, $password, $link){
