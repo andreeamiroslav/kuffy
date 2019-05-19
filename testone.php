@@ -19,6 +19,7 @@ if(!$rs == mysqli_query($link, $query)){
 $num_row = mysqli_num_rows($rs);
 
 if($num_row==1){
+  echo "fatta";
   $ret = TRUE;
   $row = mysqli_fetch_assoc($rs);
   $_SESSION['utente_id'] = $row['utente_id'];
