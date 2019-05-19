@@ -32,13 +32,13 @@
         <div class="calendar row" align="center">
           <div class="valign-wrapper">
             <div class="col s3 right-align">
-              <p class="previous" onclick="initDate('prev');"> < </p>
+              <p class="arrowButton" onclick="initDate('prev');"> < </p>
             </div>
             <div class="col s6">
               <p id="month">Gennaio</p>
             </div>
             <div class="col s3 left-align">
-              <p class="next" onclick="initDate('next');"> > </p>
+              <p class="arrowButton" onclick="initDate('next');"> > </p>
             </div>
           </div>
           <table id="calTable" class="striped" border="0">
