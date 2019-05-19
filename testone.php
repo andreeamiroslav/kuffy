@@ -10,7 +10,7 @@ if (!$link) {
 $query = "SELECT * FROM utenti WHERE utente_email='".$email."' AND utente_password='".$password."';";
 
 $rs = mysqli_query($link, $query);
-
+echo $rs;
 if(!$rs == mysqli_query($link, $query)){
   echo "errore";
   exit;
