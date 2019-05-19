@@ -1,7 +1,10 @@
 <?php
   require_once('config.php');
   $link = mysqli_connect(DBMS_HOST, DBMS_USER, DBMS_PASSWORD, DBMS_DB );
-  $loginOk = checkLogin($_REQUEST['email'], $_REQUEST['password'], $link);
+  if(!$link) {
+    die(“Database Connection error” . mysql_error());
+}
+  //$loginOk = checkLogin($_REQUEST['email'], $_REQUEST['password'], $link);
 
   if($loginOk){
     $_SESSION['isLogged'] = TRUE;
