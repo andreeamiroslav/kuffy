@@ -1,9 +1,38 @@
 var date = new Date();
-var actual = date.getDate();
+var actual;
+
+function getCheckList(){
+  var doc = document.getElementById('checkList');
+  doc.innerHTML = "";
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      var v = JSON.parse(this.responseText);
+      var i = 0;
+      do{
+        i++;
+        var tempMonth = (date.getMonth()+1).toString();
+        var tempDay = date.getDate().toString();
+        if(tempMonth.length == 1)
+          tempMonth = "0" + tempMonth;
+        if(tempDay.length == 1)
+          tempDay = "0" + tempDay;
+
+        var tempDate = date.getFullYear() + "-" + tempMonth + "-" + tempDay;
+        if(v[i]['from_day'] == tempDate){
+          doc.innerHTML += '<p id="element' + i + '"><b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+        }
+      }while(i != Object.keys(v).length);
+    }
+
+  };
+        xmlhttp.open("GET", "query.php", true);
+        xmlhttp.send();
+        return true;
+}
 
 function getReservations(){
   var xmlhttp = new XMLHttpRequest();
-  var t = [];
   xmlhttp.onreadystatechange = function(){
     if(this.readyState == 4 && this.status == 200){
       var v = JSON.parse(this.responseText);
@@ -16,7 +45,6 @@ function getReservations(){
         var doc = document.getElementById('struttura' + i);
         html += '<td id="struttura' + i + '">'+ v[i]['struttura_nome']
         + '\n</td>\n';
-
         var doc = document.getElementById('stanza' + i);
         html += '<td id="stanza' + i + '">'+ v[i]['stanza_nome']
         + '\n</td>\n';
@@ -125,10 +153,11 @@ function initDate(set){
     temp2++;
   }
 
-  //To do: day selection, this auto-selects the current day
+  //This auto-selects the current day
   if(set!="prev" && set!="next"){
-    var nID = date.getDate();
+    var nID = document.getElementById(date.getDate()).innerHTML;
     document.getElementById(nID).classList.add("actual");
+    actual = nID;
   }
 }
 
@@ -136,4 +165,6 @@ function selectDate(n){
   document.getElementById(actual).classList.remove("actual");
   actual = n;
   document.getElementById(actual).classList.add("actual");
+  date.setDate(document.getElementById(actual).innerHTML);
+  getCheckList();
 }

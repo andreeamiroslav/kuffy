@@ -21,7 +21,7 @@
        });
     </script>
   </head>
-  <body onload="initDate(); getReservations();">
+  <body onload="initDate(); getCheckList(); getReservations();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <div class="row" class="container">
       <div class="col s4 content">
@@ -40,7 +40,8 @@
             }
             ?>
           </select>
-          <p>DAJE BELLOOOO\nOOOOO\nOOOOO</p>
+          <div id="checkList">
+          </div>
         </div>
       </div>
       <div class="col s4 content">
