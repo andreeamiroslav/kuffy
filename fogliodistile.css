@@ -230,3 +230,19 @@ nav {
 #add-structure-button:focus {
   background-color: #eeeeee;
 }
+
+#menu {
+  line-height: 50px;
+  background-color: #1466ad
+}
+
+#home-icon {
+  height: 50px;
+}
+
+#user-icon {
+  height: 30px;
+  position: relative;
+  bottom: -7;
+}
+
