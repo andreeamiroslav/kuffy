@@ -20,7 +20,11 @@ function getCheckList(){
 
         var tempDate = date.getFullYear() + "-" + tempMonth + "-" + tempDay;
         if(v[i]['from_day'] == tempDate){
-          doc.innerHTML += '<p id="element' + i + '"><b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+          doc.innerHTML += '<p id="element' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+        }
+
+        if(v[i]['to_day'] == tempDate){
+          doc.innerHTML += '<p id="element' + i + '"><b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
         }
       }while(i != Object.keys(v).length);
     }
