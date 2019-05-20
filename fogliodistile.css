@@ -231,6 +231,53 @@ nav {
   background-color: #eeeeee;
 }
 
+#edit-room {
+  padding-top: 7px;
+  width: 25px;
+  height: 25px;
+}
+
+#edit-room:focus {
+  background-color: #eeeeee;
+}
+
+#edit-room-icon {
+  width: 10px;
+  height: 10px;
+}
+
+#info-room {
+  margin-left: 29%;
+}
+
+#name-room {
+  font-size: 25px;
+}
+
+#info-room {
+  margin-left: 21%;
+}
+
+#room-booking-tbody {
+  display:block;
+  height: 200px;
+  overflow:auto;
+}
+
+#room-booking-thead, #room-booking-tbody-tr {
+  width: 490px;
+  display:table;
+  table-layout:fixed;
+}
+
+#room-booking {
+  width: 490px;
+}
+
+#room-bookings, #calendar, #name-info-room {
+  margin-top: 4%;
+}
+
 #menu {
   line-height: 50px;
   background-color: #1466ad
