@@ -24,7 +24,7 @@ function getCheckList(){
         }
 
         if(v[i]['to_day'] == tempDate){
-          doc.innerHTML += '<p id="element' + i + '"><b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+          doc.innerHTML += '<p id="element' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
         }
       }while(i != Object.keys(v).length);
     }
