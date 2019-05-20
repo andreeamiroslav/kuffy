@@ -3,6 +3,10 @@
   min-height: 100vh;
 }
 
+.completed{
+  text-decoration: line-through;
+}
+
 #content-wrap {
   padding-bottom: 8rem;    /* Footer height */
 }
@@ -12,6 +16,14 @@
   bottom: 0;
   width: 100%;
   height: 8rem;            /* Footer height */
+}
+
+#list{
+  border-style: solid;
+  border-radius: 10px;
+  border-width: thin;
+  border: 1;
+  border-color: #9e9e9e;
 }
 
 .page-footer {

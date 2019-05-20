@@ -4,7 +4,7 @@
 <html lang="it_IT" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Calendario</title>
+    <title>Home - Kuffy</title>
     <link rel="stylesheet" type="text/css" href="materialize.min.css">
     <script type = "text/javascript"
        src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -25,10 +25,22 @@
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <div class="row" class="container">
       <div class="col s4 content">
-        <div class="input-field col s12">
+        <div class="input-field col s12" id="list">
           <select id="selectStructure">
+            <?php require('init.php');
+            $query = "SELECT s.stanza_nome, p.id, p.from_day, p.to_day, p.nome, p.data, str.struttura_nome
+                      FROM prenotazioni p, stanze s, strutture str
+                      WHERE str.struttura_fkutenteid = '".$_SESSION['utente_id']."' AND p.id_stanza = s.stanza_id AND s.stanza_fkstrutturaid=str.struttura_id
+                      ORDER BY p.data DESC";
+            $result = $link->query($query);
+            $i = 0;
+            while($row = mysqli_fetch_array($result)){
+              $i++;
+              echo '<option value="'. $i .'">' . $row['struttura_nome'] . '</option>\n';
+            }
+            ?>
           </select>
-          <label>Seleziona una struttura</label>
+          <p>DAJE BELLOOOO\nOOOOO\nOOOOO</p>
         </div>
       </div>
       <div class="col s4 content">
