@@ -23,6 +23,7 @@
   </head>
   <body onload="initDate(); getCheckList(); getReservations();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
+    <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <div class="row" class="container">
       <div class="col s4 content">
         <div class="input-field col s12" id="list">
