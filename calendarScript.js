@@ -1,6 +1,17 @@
 var date = new Date();
 var actual = date.getDate();
+var structureList = [];
 
+function setStructures(){
+  var doc = document.getElementById('selectStructure');
+  var i;
+  console.log(structureList.length);
+  for(i = 0; i != structureList.length;i++){
+    console.log("ciao");
+    var temp = i+1;
+    doc.innerHTML += '<option value="'+ temp +'">' + structureList  [i] + '</option>\n';
+  }
+}
 
 
 
@@ -19,6 +30,8 @@ function getReservations(){
         var doc = document.getElementById('struttura' + i);
         html += '<td id="struttura' + i + '">'+ v[i]['struttura_nome']
         + '\n</td>\n';
+
+        structureList[0] = v[i]['struttura_nome'];
 
         var doc = document.getElementById('stanza' + i);
         html += '<td id="stanza' + i + '">'+ v[i]['stanza_nome']
@@ -41,9 +54,9 @@ function getReservations(){
     }
 
   };
-
   xmlhttp.open("GET", "query.php", true);
   xmlhttp.send();
+  setStructures();
   return true;
 }
 
