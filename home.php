@@ -7,7 +7,7 @@
     <title>Home - Kuffy</title>
     <link rel="stylesheet" type="text/css" href="materialize.min.css">
     <script type = "text/javascript"
-       src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+       src = "Scripts/jquery-2.1.1.min.js"></script>
     <script src = "materialize/js/materialize.min.js">
     </script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
