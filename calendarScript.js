@@ -20,11 +20,11 @@ function getCheckList(){
 
         var tempDate = date.getFullYear() + "-" + tempMonth + "-" + tempDay;
         if(v[i]['from_day'] == tempDate){
-          doc.innerHTML += '<p id="element' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+          doc.innerHTML += '<p class="selectable" onclick="lineElement(\'inelement'+i+'\')" id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
         }
 
         if(v[i]['to_day'] == tempDate){
-          doc.innerHTML += '<p id="element' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+          doc.innerHTML += '<p class="selectable" onclick="lineElement(\'outelement'+i+'\')" id="outelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
         }
       }while(i != Object.keys(v).length);
     }
@@ -35,6 +35,13 @@ function getCheckList(){
         return true;
 }
 
+function lineElement(id){
+  var doc = document.getElementById(id);
+  if(doc.classList.contains('lined'))
+    doc.classList.remove('lined')
+  else
+    doc.classList.add('lined');
+}
 function getReservations(){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){

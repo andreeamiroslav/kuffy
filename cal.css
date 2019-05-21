@@ -4,7 +4,7 @@
 .arrowButton{
   display: inline;
   font-weight: bolder;
-  font-size: 20px;
+  font-size: 23px;
   cursor: pointer;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -12,9 +12,17 @@
   user-select: none; /* Standard */
 }
 
+.lined{
+  text-decoration: line-through;
+}
+
+.selectable{
+  cursor: default;
+}
 .day{
   padding-bottom: 0;
   padding-top: 0;
+  font-size: 20px;
   color: grey;
   cursor: default;
   font-weight: normal;
@@ -32,7 +40,7 @@
 
 #month{
   display: inline;
-  font-size: 20px;
+  font-size: 23px;
   font-weight: bold;
   color: #035c78;
 }
@@ -40,6 +48,11 @@
 
 .dayNames{
   padding-bottom: 0;
+  padding-top:0.2%;
+  border-top: 1;
+  border-top-style: solid;
+  border-top-color: grey;
+  border-top-width: thin;
 }
 
 .dayRow{
