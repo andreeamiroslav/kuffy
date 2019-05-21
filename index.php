@@ -8,6 +8,7 @@
 </head>
 <body>
   <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
+  <div class="vl"></div>
   <div class="row">
     <div class="col s6" align="center">
       <div id="login-buttons">

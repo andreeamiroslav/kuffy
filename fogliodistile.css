@@ -303,3 +303,13 @@ nav {
   position: relative;
   bottom: -7;
 }
+
+.vl{
+  border-left: 1px solid rgba(169, 169, 169, .7);
+  height: 50%;
+  position: absolute;
+  margin-top: 11%;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
