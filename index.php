@@ -34,10 +34,18 @@
       </div>
 
     </div>
-    <div class="col s5,5" align="center">
+    <div class="col s5,5">
       <div id="right-text">
-        <h3>Gestisci il tuo b&b ovunque ti trovi!</h3>
-        <h4>Cosa puoi fare con Kuffy:</h4>
+        <div id="login-text" align="center">
+          <h3>Gestisci il tuo B&B ovunque ti trovi!</h3>
+        </div>
+        <div id="site-info">
+          <h4>Cosa puoi fare con Kuffy:</h4>
+          <ul>
+            <li>Tutte le tue strutture dove e quando vuoi.</li>
+            <li>Aggiungi, modifica ed elimina le tue prenotazioni in modo semplice e veloce.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
