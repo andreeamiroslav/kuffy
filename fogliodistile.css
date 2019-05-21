@@ -19,6 +19,7 @@
 }
 
 #list{
+  height: 70%;
   border-style: solid;
   border-radius: 10px;
   border-width: thin;
@@ -288,4 +289,3 @@ nav {
   position: relative;
   bottom: -7;
 }
-
