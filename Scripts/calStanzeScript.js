@@ -1,6 +1,7 @@
 var date = new Date();
 var actual;
 var first;
+var v = [];
 
 function getCheckList(){
   var doc = document.getElementById('checkList');
@@ -48,7 +49,7 @@ function getReservations(){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
     if(this.readyState == 4 && this.status == 200){
-      var v = JSON.parse(this.responseText);
+      v = JSON.parse(this.responseText);
       var i = 0;
       do{
         i++;
@@ -58,6 +59,8 @@ function getReservations(){
         var doc = document.getElementById('struttura' + i);
         html += '<td id="struttura' + i + '">'+ v[i]['struttura_nome']
         + '\n</td>\n';
+        w[i]['struttura_nome'] = v[i][struttura_nome];
+
         var doc = document.getElementById('stanza' + i);
         html += '<td id="stanza' + i + '">'+ v[i]['stanza_nome']
         + '\n</td>\n';
@@ -75,6 +78,8 @@ function getReservations(){
         + '\n</td>\n';
 
         temp.innerHTML += html;
+
+
       }while(i != Object.keys(v).length); //Returns the length of an associative array
     }
 
@@ -206,7 +211,7 @@ function fillColor(){
         var j = 0;
         do{
           j++;
-          console.log(v[j]['from_day'] + "     " +  v[j]['to_day'] + "       " + tempDate);
+          //console.log(v[j]['from_day'] + "     " +  v[j]['to_day'] + "       " + tempDate);
           if(v[j]['from_day'] == tempDate || v[j]['to_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "red";
           }else{
@@ -219,4 +224,10 @@ function fillColor(){
   xmlhttp.open("GET", "query.php", true);
   xmlhttp.send();
   return true;
+}
+
+function getStrutture(){
+  console.log(w[1]['struttura_nome']);
+  var content = '<h7>Nome struttura</h7><br /><br /><img src="Icone/97805.png" id="structure-icon"><br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a><a href="#?"><img src="Icone/1214428.png" id="structure-edit"></a>';
+
 }

@@ -21,10 +21,6 @@
           <td>
             <div class="card grey lighten-3" id="square-empty1"></div>
             <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit1" align="center">
-              <h7>Nome struttura</h7>
-              <br /><br /><img src="Icone/97805.png" id="structure-icon">
-              <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>
-              <a href="#?"><img src="Icone/1214428.png" id="structure-edit"></a>
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty2"></div>

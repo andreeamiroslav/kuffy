@@ -9,7 +9,7 @@
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
   </head>
 
-  <body onload="initDate(); getReservations(); fillColor();">
+  <body onload="initDate(); getReservations(); fillColor(); getStrutture();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <div class="row">
