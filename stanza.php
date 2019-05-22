@@ -6,10 +6,10 @@
     <link type="text/css" rel="stylesheet" href="calStanze.css"/>
     <script type="text/javascript" src="materialize.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="calendarScript.js"></script>
+    <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
   </head>
 
-  <body onload="initDate(); getReservations();">
+  <body onload="initDate(); getReservations(); fillColor();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <div class="row">
@@ -30,13 +30,13 @@
         <div class="calendar row" align="center">
           <div class="valign-wrapper">
             <div class="col s3 right-align">
-              <p class="arrowButton" onclick="initDate('prev');"> < </p>
+              <p class="arrowButton" id="leftButton" onclick="initDate('prev');"> < </p>
             </div>
             <div class="col s6">
               <p id="month">Gennaio</p>
             </div>
             <div class="col s3 left-align">
-              <p class="arrowButton" onclick="initDate('next');"> > </p>
+              <p class="arrowButton" id="rightButton" onclick="initDate('next');"> > </p>
             </div>
           </div>
           <table id="calTable" class="striped" border="1">

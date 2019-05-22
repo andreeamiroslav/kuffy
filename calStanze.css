@@ -8,6 +8,15 @@
   text-align: center;
   width: 35%;
 }
+
+#leftButton{
+  margin-right: 100%;
+}
+
+#rightButton{
+  margin-left: 100%;
+}
+
 .arrowButton{
   display: inline;
   font-weight: bolder;
@@ -29,7 +38,7 @@
 
 .day{
   padding: 1%;
-  font-size: 22px;
+  font-size: 20px;
   color: grey;
   cursor: default;
   font-weight: normal;
@@ -47,7 +56,7 @@
 
 #month{
   display: inline;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: bold;
   color: #035c78;
 }
@@ -72,16 +81,8 @@
   font-weight: normal;
 }
 
-td{
-  border: none;
-  white-space:nowrap
-}
 
 #tHeader{
   color: white;
   background-color:#1d7d74;
-}
-
-table{
-  border-collapse: collapse;
 }

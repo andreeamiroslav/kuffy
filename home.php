@@ -1,17 +1,16 @@
 <?php
-  //require_once('init.php');
+  require_once('init.php');
 ?>
 <html lang="it_IT" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Home - Kuffy</title>
     <link rel="stylesheet" type="text/css" href="materialize.min.css">
-    <script type = "text/javascript"
-       src = "Scripts/jquery-2.1.1.min.js"></script>
+    <script type = "text/javascript" src = "Scripts/jquery-2.1.1.min.js"></script>
     <script src = "materialize/js/materialize.min.js">
     </script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
-    <script type="text/javascript" src="calendarScript.js"></script>
+    <script type="text/javascript" src="Scripts/calendarScript.js"></script>
 
     <link rel="stylesheet" type="text/css" href="cal.css">
 
