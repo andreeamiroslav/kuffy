@@ -94,6 +94,7 @@ nav {
 }
 
 #square-edit1 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -101,6 +102,7 @@ nav {
 }
 
 #square-edit2 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -109,6 +111,7 @@ nav {
 }
 
 #square-edit3 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -117,6 +120,7 @@ nav {
 }
 
 #square-edit4 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -125,6 +129,7 @@ nav {
 }
 
 #square-edit5 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -133,6 +138,7 @@ nav {
 }
 
 #square-edit6 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -141,6 +147,7 @@ nav {
 }
 
 #square-edit7 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -149,6 +156,7 @@ nav {
 }
 
 #square-edit8 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -157,6 +165,7 @@ nav {
 }
 
 #square-edit9 {
+  font-size: 22px;
   z-index: 3;
   width: 227px;
   height: 227px;
@@ -231,8 +240,8 @@ nav {
 }
 
 #room-icon {
-  width:120px;
-  height:100px;
+  width:100px;
+  height:80px;
 }
 
 #structure-edit {
