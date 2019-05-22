@@ -332,3 +332,12 @@ nav {
   margin-left: -10%;
   margin-top: 27%;
 }
+
+#email-user-now, #email-user-new {
+  margin-top: 5%;
+}
+
+#modify-cancel {
+  margin-top: 4%;
+  margin-left: 66%;
+}
