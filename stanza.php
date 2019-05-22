@@ -39,7 +39,7 @@
               <p class="arrowButton" onclick="initDate('next');"> > </p>
             </div>
           </div>
-          <table id="calTable" class="striped" border="0">
+          <table id="calTable" class="striped" border="1">
             <tr class="dayRow">
               <th class="dayNames">Lun</th>
               <th class="dayNames">Mar</th>
