@@ -313,3 +313,22 @@ nav {
   margin-left: -3px;
   top: 0;
 }
+
+#booking {
+  margin-top: 2%;
+}
+
+#plus-client {
+  width: 25px;
+  height: 25px;
+}
+
+#add-client {
+  margin-left: 3%;
+}
+
+#add-booking {
+  position: absolute;
+  margin-left: -10%;
+  margin-top: 27%;
+}
