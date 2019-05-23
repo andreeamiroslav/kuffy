@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title>Stanze - Kuffy</title>
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
