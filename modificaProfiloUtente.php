@@ -1,7 +1,7 @@
 <html lang="it_IT" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home - Kuffy</title>
+    <title>Modifica profilo utente - Kuffy</title>
     <link rel="stylesheet" type="text/css" href="materialize.min.css">
     <script type = "text/javascript"
        src = "Scripts/jquery-2.1.1.min.js"></script>
