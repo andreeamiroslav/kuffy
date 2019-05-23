@@ -38,7 +38,7 @@
               </div>
             </div>
         <div class="modal-footer">
-          <a href="aggiungiStanza.php" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
+          <a href="stanza.php" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
         </div>
       </div>
     </div>
