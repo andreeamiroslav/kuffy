@@ -7,18 +7,42 @@
     <script type="text/javascript" src="materialize.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
+    <script language="javascript" type="text/javascript" src="Scripts/modal.js"></script>
   </head>
   <body onload="getStrutture();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
+
+    <div id="modal1" class="modal modal-footer">
+        <div class="modal-content">
+          <h4>Nuova struttura</h4>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="nome_struttura" type="text" class="validate">
+                <label for="nome_struttura">Nome struttura</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="indirizzo" type="text" class="validate">
+                <label for="indirizzo">Indirizzo</label>
+              </div>
+            </div>
+        <div class="modal-footer">
+          <a href="aggiungiStanza.php" class="modal-close waves-effect waves-light btn" id="modal-button-1">Aggiungi</a>
+        </div>
+      </div>
+    </div>
+
     <table>
       <tbody>
         <tr>
           <td>
-            <button id="add-structure-button" onclick="location.href = 'index.html'">
+            <a id="add-structure-button"  href="#modal1" class="modal-trigger" >
             <img src="Icone/plus_png_1046150.png" id="plus">
             Aggiungi struttura
-            </button>
+          </a>
           </td>
           <td>
             <div class="card grey lighten-3" id="square-empty1"></div>
