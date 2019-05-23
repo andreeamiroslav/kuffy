@@ -34,6 +34,28 @@
         </div>
       </div>
     </div>
+      
+    <div id="modal2" class="modal modal-footer">
+        <div class="modal-content">
+          <h4>Modifica struttura</h4>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="nome_struttura" type="text" class="validate">
+                <label for="nome_struttura">Nome struttura</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="indirizzo" type="text" class="validate">
+                <label for="indirizzo">Indirizzo</label>
+              </div>
+            </div>
+        <div class="modal-footer">
+          <a href="strutture.php" class="modal-close waves-effect waves-light btn" id="modal-button-2">Modifica</a>
+        </div>
+      </div>
+    </div>
 
     <table>
       <tbody>
