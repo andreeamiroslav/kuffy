@@ -1,7 +1,6 @@
 var date = new Date();
 var actual;
 var first;
-var v = [];
 
 function getCheckList(){
   var doc = document.getElementById('checkList');
@@ -49,7 +48,7 @@ function getReservations(){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
     if(this.readyState == 4 && this.status == 200){
-      v = JSON.parse(this.responseText);
+      var v = JSON.parse(this.responseText);
       var i = 0;
       do{
         i++;
@@ -227,7 +226,26 @@ function fillColor(){
 }
 
 function getStrutture(){
-  console.log(w[1]['struttura_nome']);
-  var content = '<h7>Nome struttura</h7><br /><br /><img src="Icone/97805.png" id="structure-icon"><br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a><a href="#?"><img src="Icone/1214428.png" id="structure-edit"></a>';
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      v = JSON.parse(this.responseText);
+      var i = 0;
+      do{
+        i++;
+
+        doc = document.getElementById('square-edit'+i);
+        var content = '<h7>' + v[i]['struttura_nome'] +'</h7><br /><br /><img src="Icone/97805.png" id="structure-icon"><br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a><a href="#?"><img src="Icone/1214428.png" id="structure-edit"></a>';
+
+        doc.innerHTML = content;
+
+
+      }while(i != Object.keys(v).length); //Returns the length of an associative array
+    }
+
+  };
+  xmlhttp.open("GET", "query.php", true);
+  xmlhttp.send();
+  return true;
 
 }

@@ -5,8 +5,9 @@
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <script type="text/javascript" src="materialize.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
   </head>
-  <body>
+  <body onload="getStrutture();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <table>
