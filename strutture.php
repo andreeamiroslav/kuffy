@@ -39,10 +39,12 @@
       <tbody>
         <tr>
           <td>
-            <a id="add-structure-button"  href="#modal1" class="modal-trigger" >
-            <img src="Icone/plus_png_1046150.png" id="plus">
-            Aggiungi struttura
-          </a>
+            <a href="#!" style="color: rgb(0,0,0)" id="link-add-structure">
+              <div class="card grey lighten-3" id="square-add" align="center">
+                <img src="Icone/plus_png_1046150.png" id="plus">
+                Aggiungi struttura
+              </div>
+            </a>
           </td>
           <td>
             <div class="card grey lighten-3" id="square-empty1"></div>
