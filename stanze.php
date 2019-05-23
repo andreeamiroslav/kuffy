@@ -8,7 +8,7 @@
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
   </head>
-  <body onload="getStanze('<?php echo $_GET['strutturaid'] ?>');">
+  <body onload="getStanze(<?php echo $_GET['strutturaid'] ?>);">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <table>

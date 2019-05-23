@@ -10,7 +10,7 @@
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
   </head>
 
-  <body onload="initDate(); getReservations(); fillColor(); getStrutture();">
+  <body onload="initDate(); getReservations(); fillColor(); getStanza('<?php echo $_GET['stanzaid'] ?>');">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <div class="row">
@@ -19,7 +19,6 @@
           <button id="edit-room" onclick="location.href = 'index.php'">
           <img id="edit-room-icon" src="Icone\61456.png">
           </button>
-          Nome struttura
         </div>
         <div id="info-room">
           <br />Numero posti letto:

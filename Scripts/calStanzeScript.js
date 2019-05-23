@@ -274,3 +274,23 @@ function getStanze(strutturaid){
   return true;
 
 }
+
+function getStanza(stanzaid){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      v = JSON.parse(this.responseText);
+      var i = 0;
+      do{
+        i++;
+        doc = document.getElementById('name-room');
+        doc.innerHTML += v[i]['stanza_nome'];
+      }while(i != Object.keys(v).length); //Returns the length of an associative array
+    }
+
+  };
+  xmlhttp.open("GET", "Queries/queryRoom.php?stanzaid="+stanzaid, true);
+  xmlhttp.send();
+  return true;
+
+}
