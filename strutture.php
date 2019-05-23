@@ -61,7 +61,7 @@
       <tbody>
         <tr>
           <td>
-            <a href="#!" style="color: rgb(0,0,0)" id="link-add-structure">
+            <a href="#modal1" style="color: rgb(0,0,0)" id="link-add-structure" class="modal-trigger">
               <div class="card grey lighten-3" id="square-add" align="center">
                 <img src="Icone/plus_png_1046150.png" id="plus">
                 Aggiungi struttura
