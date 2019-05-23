@@ -57,7 +57,7 @@
             </div>
             <div class="input-field col s5">
               <input id="surname" type="text" class="validate">
-              <label for="name">Cognome</label>
+              <label for="surname">Cognome</label>
             </div>
           </div>
         </div>
