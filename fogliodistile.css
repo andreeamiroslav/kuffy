@@ -93,6 +93,12 @@ nav {
   left: 26%;
 }
 
+#square-add {
+  width: 227px;
+  height: 227px;
+  margin-left: 10%;
+}
+
 #square-edit1 {
   font-size: 22px;
   z-index: 3;
