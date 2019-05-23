@@ -1,5 +1,6 @@
 <html lang="it_IT" dir="ltr">
   <head>
+    <title>Aggiungi prenotazione - Kuffy</title>
     <meta charset="utf-8">
     <title>Home - Kuffy</title>
     <link rel="stylesheet" type="text/css" href="materialize.min.css">
