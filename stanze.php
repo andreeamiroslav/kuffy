@@ -15,10 +15,12 @@
       <tbody>
         <tr>
           <td>
-            <button id="add-structure-button" onclick="location.href = 'index.html'">
-            <img src="Icone/plus_png_1046150.png" id="plus">
-            Aggiungi stanza
-            </button>
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare0">
+              <div class="card grey lighten-3" id="square-add" align="center">
+                <img src="Icone/plus_png_1046150.png" id="plus">
+                Aggiungi stanza
+              </div>
+            </a>
           </td>
           <td>
             <div class="card grey lighten-3" id="square-empty1"></div>
