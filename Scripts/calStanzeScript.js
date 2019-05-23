@@ -244,7 +244,7 @@ function getStrutture(){
     }
 
   };
-  xmlhttp.open("GET", "queryStructures.php", true);
+  xmlhttp.open("GET", "Queries/queryStructures.php", true);
   xmlhttp.send();
   return true;
 
