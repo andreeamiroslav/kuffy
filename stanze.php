@@ -7,15 +7,47 @@
     <script type="text/javascript" src="materialize.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
+    <script language="javascript" type="text/javascript" src="Scripts/modal.js"></script>
   </head>
   <body onload="getStanze(<?php echo $_GET['strutturaid'] ?>);">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
+
+    <div id="modal1" class="modal modal-footer">
+        <div class="modal-content">
+          <h4>Modifica stanza</h4>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="nome-stanza" type="text" class="validate">
+                <label for="nome_struttura">Nome stanza</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="posti-letto" type="text" class="validate">
+                <label for="posti-letto">Posti letto</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="prezzo-notte" type="text" class="validate">
+                <label for="prezzo-notte">Prezzo a notte</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="note" type="text" class="validate">
+                <label for="note">Note</label>
+              </div>
+            </div>
+        <div class="modal-footer">
+          <a href="aggiungiStanza.php" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
+        </div>
+      </div>
+    </div>
+
     <table>
       <tbody>
         <tr>
           <td>
-            <a href="#!" style="color: rgb(0,0,0)" id="link-add-room">
+            <a href="aggiungiStanza.php" style="color: rgb(0,0,0)" id="link-add-room">
               <div class="card grey lighten-3" id="square-add" align="center">
                 <img src="Icone/plus_png_1046150.png" id="plus">
                 Aggiungi stanza
