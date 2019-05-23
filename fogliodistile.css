@@ -99,6 +99,7 @@ nav {
   width: 227px;
   height: 227px;
   margin-left: 10%;
+  display: none;
 }
 
 #square-edit2 {
@@ -177,7 +178,6 @@ nav {
   width: 227px;
   height: 227px;
   margin-left: 10%;
-  display: none;
 }
 
 #square-empty2 {

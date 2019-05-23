@@ -22,11 +22,11 @@
           </td>
           <td>
             <div class="card grey lighten-3" id="square-empty1"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit1" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare0"><div class="card grey lighten-3" id="square-edit1" align="center">
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty2"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit2" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare1"><div class="card grey lighten-3" id="square-edit2" align="center">
               <h7>Nome struttura</h7>
               <br /><br /><img src="Icone/97805.png" id="structure-icon">
               <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>
@@ -34,7 +34,7 @@
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty3"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit3" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare2"><div class="card grey lighten-3" id="square-edit3" align="center">
               <h7>Nome struttura</h7>
               <br /><br /><img src="Icone/97805.png" id="structure-icon">
               <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>
@@ -42,7 +42,7 @@
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty4"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit4" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare3"><div class="card grey lighten-3" id="square-edit4" align="center">
               <h7>Nome struttura</h7>
               <br /><br /><img src="Icone/97805.png" id="structure-icon">
               <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>
@@ -52,7 +52,7 @@
         </tr>
         <tr>
           <td><div class="card grey lighten-3" id="square-empty5"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit5" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare4"><div class="card grey lighten-3" id="square-edit5" align="center">
               <h7>Nome struttura</h7>
               <br /><br /><img src="Icone/97805.png" id="structure-icon">
               <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>
@@ -60,7 +60,7 @@
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty6"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit6" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare5"><div class="card grey lighten-3" id="square-edit6" align="center">
               <h7>Nome struttura</h7>
               <br /><br /><img src="Icone/97805.png" id="structure-icon">
               <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>
@@ -68,7 +68,7 @@
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty7"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit7" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare6"><div class="card grey lighten-3" id="square-edit7" align="center">
               <h7>Nome struttura</h7>
               <br /><br /><img src="Icone/97805.png" id="structure-icon">
               <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>
@@ -76,7 +76,7 @@
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty8"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit8" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare7"><div class="card grey lighten-3" id="square-edit8" align="center">
               <h7>Nome struttura</h7>
               <br /><br /><img src="Icone/97805.png" id="structure-icon">
               <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>
@@ -84,7 +84,7 @@
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty9"></div>
-            <a href="#!" style="color: rgb(0,0,0)"><div class="card grey lighten-3" id="square-edit9" align="center">
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare8"><div class="card grey lighten-3" id="square-edit9" align="center">
               <h7>Nome struttura</h7>
               <br /><br /><img src="Icone/97805.png" id="structure-icon">
               <br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a>

@@ -233,13 +233,13 @@ function getStrutture(){
       var i = 0;
       do{
         i++;
-
         doc = document.getElementById('square-edit'+i);
         var content = '<h7>' + v[i]['struttura_nome'] +'</h7><br /><br /><img src="Icone/97805.png" id="structure-icon"><br /><br /><a href="#?"><img src="Icone/61456.png" id="structure-edit"></a><a href="#?"><img src="Icone/1214428.png" id="structure-edit"></a>';
-
+        doc.style.display = "block";
+        document.getElementById('square-empty'+i).style.display="none";
+        var t = i-1;
+        document.getElementById('linkSquare'+t).href="stanze.php?strutturaid="+v[i]['struttura_id'];
         doc.innerHTML = content;
-
-
       }while(i != Object.keys(v).length); //Returns the length of an associative array
     }
 
