@@ -1,9 +1,9 @@
 <?php
   require('init.php');
 
-  $query = "SELECT s.stanza_id, s.stanza_nome
-            FROM stanze s
-            WHERE s.stanza_fkstrutturaid = '".$_GET['strutturaid']."'";
+  $query = "SELECT DISTINCT s.stanza_id, s.stanza_nome
+            FROM stanze s, strutture str, utenti u
+            WHERE s.stanza_fkstrutturaid = '".$_GET['strutturaid']."' AND struttura_fkutenteid='".$_SESSION['utente_id']."' AND str.struttura_id='".$_GET['strutturaid']."'";
   $result = $link->query($query);
   $i = 0;
   while($row = mysqli_fetch_array($result)){
