@@ -26,6 +26,7 @@ function getCheckList(){
         if(v[i]['to_day'] == tempDate){
           doc.innerHTML += '<p class="selectable" onclick="lineElement(\'outelement'+i+'\')" id="outelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
         }
+
       }while(i != Object.keys(v).length);
     }
 

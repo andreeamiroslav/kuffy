@@ -46,6 +46,11 @@
   color: #035c78;
 }
 
+#checkList{
+  height: 80%;
+  overflow-y: scroll;
+}
+
 
 .dayNames{
   padding-bottom: 0;
