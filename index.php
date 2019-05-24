@@ -44,8 +44,16 @@
         <div id="site-info">
           <h4>Cosa puoi fare con Kuffy:</h4>
           <ul>
-            <li>Tutte le tue strutture dove e quando vuoi.</li>
-            <li>Aggiungi, modifica ed elimina le tue prenotazioni in modo semplice e veloce.</li>
+            <li>
+              <div id="info1">
+                Tutte le tue strutture dove e quando vuoi.
+              </div>
+            </li>
+            <li>
+              <div id="info2">
+                Aggiungi, modifica ed elimina le tue prenotazioni in modo semplice e veloce.
+              </div>
+            </li>
           </ul>
         </div>
       </div>
