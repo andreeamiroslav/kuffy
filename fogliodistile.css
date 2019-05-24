@@ -363,7 +363,6 @@ nav {
 }
 
 #modify-cancel-password {
-  margin-bottom: 4%;
   margin-left: 49%;
 }
 
@@ -374,4 +373,9 @@ nav {
 
 #new-room, #add-room {
   margin-left: 2%;
+}
+
+#change-password {
+  margin-top: 4%;
+  margin-bottom: -5%;
 }
