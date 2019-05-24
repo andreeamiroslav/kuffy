@@ -10,7 +10,7 @@
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
   </head>
 
-  <body onload="initDate('null', '<?php echo $_GET['stanzaid'] ?>'); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>');">
+  <body onload="initDate(); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>');">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <div class="row">
@@ -30,13 +30,13 @@
         <div class="calendar row" align="center">
           <div class="valign-wrapper">
             <div class="col s3 right-align">
-              <p class="arrowButton" id="leftButton" onclick="initDate('prev');"> < </p>
+              <p class="arrowButton" id="leftButton" onclick="initDate('prev', '<?php echo $_GET['stanzaid'] ?>');"> < </p>
             </div>
             <div class="col s6">
               <p id="month">Gennaio</p>
             </div>
             <div class="col s3 left-align">
-              <p class="arrowButton" id="rightButton" onclick="initDate('next');"> > </p>
+              <p class="arrowButton" id="rightButton" onclick="initDate('next', '<?php echo $_GET['stanzaid'] ?>');"> > </p>
             </div>
           </div>
           <table id="calTable" class="striped" border="1">
