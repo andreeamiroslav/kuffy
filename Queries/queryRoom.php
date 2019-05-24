@@ -11,6 +11,9 @@
     $i++;
     $p[$i]['stanza_nome'] = $row['stanza_nome'];
     $p[$i]['stanza_id'] = $row['stanza_id'];
+    $p[$i]['stanza_des'] = $row['stanza_des'];
+    $p[$i]['stanza_postiletto'] = $row['stanza_postiletto'];
+    $p[$i]['stanza_prezzonotte'] = $row['stanza_prezzonotte'];
   }
   $out = json_encode($p);
 echo($out);

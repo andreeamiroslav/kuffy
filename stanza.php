@@ -21,9 +21,9 @@
           </button>
         </div>
         <div id="info-room">
-          <br />Numero posti letto:
-          <br />Prezzo a notte:
-          <br />Note:
+          <br />Numero posti letto: <p style="display:inline" id="nPosti"></p>
+          <br />Prezzo a notte: <p style="display:inline" id="prezzoNotte"></p>
+          <br />Note: <p style="display:inline" id="desc"></p>
         </div>
       </div>
       <div class="col s6" id="calendar">

@@ -288,8 +288,10 @@ function getStanza(stanzaid){
       var i = 0;
       do{
         i++;
-        doc = document.getElementById('name-room');
-        doc.innerHTML += v[i]['stanza_nome'];
+        document.getElementById('name-room').innerHTML += v[i]['stanza_nome'];
+        document.getElementById('nPosti').innerHTML = v[i]['stanza_postiletto'];
+        document.getElementById('prezzoNotte').innerHTML = v[i]['stanza_prezzonotte'];
+        document.getElementById('desc').innerHTML = v[i]['stanza_des'];
       }while(i != Object.keys(v).length); //Returns the length of an associative array
     }
 
