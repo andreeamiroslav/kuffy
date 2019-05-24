@@ -125,14 +125,10 @@
         </div>
       </div>
       <div class="col s4 content">
+        Ultime prenotazioni
         <table id="resTable" class="striped" border="1">
-        <thead>
-          <tr id="tableTitle">
-            <th colspan="5">
-              Ultime prenotazioni
-            </th>
-          </tr>
-          <div id="tHeader">
+        <thead id="tHeader">
+          <div>
             <tr>
               <th>Struttura</th>
               <th>Stanza</th>
