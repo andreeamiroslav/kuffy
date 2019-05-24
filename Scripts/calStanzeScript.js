@@ -211,7 +211,6 @@ function fillColor(passedID){
         var j = 0;
         do{
           j++;
-          //console.log(v[j]['from_day'] + "     " +  v[j]['to_day'] + "       " + tempDate);
           if(v[j]['from_day'] == tempDate || v[j]['to_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "red";
           }else{
@@ -221,7 +220,7 @@ function fillColor(passedID){
       }
     }
   };
-
+  console.log("Queries/queryAvailability.php?stanzaid="+passedID);
   xmlhttp.open("GET", "Queries/queryAvailability.php?stanzaid="+passedID, true);
   xmlhttp.send();
   return true;
