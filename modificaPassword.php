@@ -2,16 +2,18 @@
   <head>
     <title>Modifica password - Kuffy</title>
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="materialize.min.css"  media="screen,projection"/>
+    <script type = "text/javascript" src = "Scripts/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css"/>
+    <script type = "text/javascript" src = "materialize/js/materialize.js"></script>
+    <script type = "text/javascript" src = "materialize/js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <link type="text/css" rel="stylesheet" href="calStanze.css"/>
-    <script type="text/javascript" src="materialize.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
   </head>
   <body onload="initDate(); getReservations(); fillColor();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
+    <script>getStructures();</script>
     <div id="change-password" align="center">
       <h4>Modifica la tua password</h4>
     </div>
