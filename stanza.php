@@ -16,10 +16,41 @@
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
+    
+    <div id="modal1" class="modal modal-footer">
+        <div class="modal-content">
+          <h4>Modifica stanza</h4>
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="nome-stanza" type="text" class="validate">
+                <label for="nome_struttura">Nome stanza</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="posti-letto" type="text" class="validate">
+                <label for="posti-letto">Posti letto</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6">
+                <input id="prezzo-notte" type="text" class="validate">
+                <label for="prezzo-notte">Prezzo a notte</label>
+              </div>
+              <div class="input-field col s6">
+                <input id="note" type="text" class="validate">
+                <label for="note">Note</label>
+              </div>
+            </div>
+        <div class="modal-footer">
+          <a href="stanza.php" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
+        </div>
+      </div>
+    </div>
+    
     <div class="row">
       <div class="col s3" id="name-info-room">
         <div id="name-room" align="center">
-          <button id="edit-room" onclick="location.href = 'index.php'">
+          <button id="edit-room" data-target="modal1" class="btn modal-trigger">
           <img id="edit-room-icon" src="Icone\61456.png">
           </button>
         </div>
