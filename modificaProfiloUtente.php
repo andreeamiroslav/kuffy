@@ -2,11 +2,10 @@
   <head>
     <meta charset="utf-8">
     <title>Modifica profilo utente - Kuffy</title>
-    <link rel="stylesheet" type="text/css" href="materialize.min.css">
-    <script type = "text/javascript"
-       src = "Scripts/jquery-2.1.1.min.js"></script>
-    <script src = "materialize/js/materialize.min.js">
-    </script>
+    <script type = "text/javascript" src = "Scripts/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css"/>
+    <script type = "text/javascript" src = "materialize/js/materialize.js"></script>
+    <script type = "text/javascript" src = "materialize/js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <script type="text/javascript" src="calendarScript.js"></script>
 
@@ -21,6 +20,7 @@
   <body>
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
+    <script>getStructures();</script>
     <div class="row">
       <div class="col s12">
         <div class="row" id="email-user-now">
