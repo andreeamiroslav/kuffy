@@ -92,7 +92,7 @@ function getDaysNumber(year, month){
   return new Date(year, month, 0).getDate();
 }
 
-function initDate(set, idStanza){
+function initDate(set){
   document.addEventListener('DOMContentLoaded', function() {
      var elems = document.querySelectorAll('select');
      var instances = M.FormSelect.init(elems, options);
@@ -206,7 +206,7 @@ function fillColor(passedID){
 
         var tempDate = tDate.getFullYear() + "-" + tempMonth + "-" + tDay;
         var temp = i - first;
-
+        console.log(tempDate);
         var j = 0;
         do{
           j++;
