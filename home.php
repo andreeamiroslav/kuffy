@@ -133,7 +133,7 @@
             </th>
           </tr>
           <div id="tHeader">
-            <tr id="tHeader">
+            <tr>
               <th>Struttura</th>
               <th>Stanza</th>
               <th>Cliente</th>
