@@ -50,14 +50,14 @@
 .dayNames{
   padding-bottom: 0;
   padding-top:0.2%;
+}
+
+.dayRow{
+
   border-top: 1;
   border-top-style: solid;
   border-top-color: grey;
   border-top-width: thin;
-}
-
-.dayRow{
-  border-bottom: 1px solid;
 }
 
 .reservationsRow{
