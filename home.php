@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <title>Home - Kuffy</title>
-    <link rel="stylesheet" type="text/css" href="materialize.min.css">
     <script type = "text/javascript" src = "Scripts/jquery-2.1.1.min.js"></script>
-    <script src = "materialize/js/materialize.min.js">
-    </script>
+    <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css"/>
+    <script type = "text/javascript" src = "materialize/js/materialize.js"></script>
+    <script type = "text/javascript" src = "materialize/js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <script type="text/javascript" src="Scripts/calendarScript.js"></script>
 
@@ -23,6 +23,7 @@
   <body onload="initDate(); getCheckList(); getReservations();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
+    <script>getStructures();</script>
     <div class="row" class="container">
       <div class="col s4 content">
         <div class="input-field col s12" id="list">
