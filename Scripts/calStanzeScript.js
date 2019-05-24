@@ -109,7 +109,6 @@ function initDate(set, idStanza){
     if(actual)
       document.getElementById(actual).classList.remove("actual");
   }
-  fillColor(idStanza);
   var m = "";
   switch(date.getMonth()){
     case 1:
