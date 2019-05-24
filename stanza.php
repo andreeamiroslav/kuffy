@@ -22,7 +22,7 @@
         </div>
         <div id="info-room">
           <br />Numero posti letto: <p style="display:inline" id="nPosti"></p>
-          <br />Prezzo a notte: <p style="display:inline" id="prezzoNotte"></p>
+          <br />Prezzo a notte: €<p style="display:inline" id="prezzoNotte"></p>
           <br />Note: <p style="display:inline" id="desc"></p>
         </div>
       </div>
