@@ -195,6 +195,7 @@ function fillColor(passedID){
     if(this.readyState == 4 && this.status == 200){
       var v = JSON.parse(this.responseText);
       var i;
+      var inRow = 0;
       for(i = first; i !=first+31; i++){
         var tDate = date;
         var tDay;
@@ -209,22 +210,27 @@ function fillColor(passedID){
 
         var tempDate = tDate.getFullYear() + "-" + tempMonth + "-" + tDay;
         var temp = i - first;
-
         var j = 0;
         do{
           j++;
-          if(v[j]['from_day'] == tempDate || v[j]['to_day'] == tempDate){
+          if(v[j]['from_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "red";
+            inRow = 1;
+          }else if(v[j]['to_day'] == tempDate){
+            document.getElementById(i).style.backgroundColor = "red";
+            inRow = 0;
           }else{
             document.getElementById(i).style.backgroundColor = "green";
-        }
-        if(document.getElementById(i).innerHTML == "")
-              document.getElementById(i).style.backgroundColor = null;
+          }
+          if(inRow == 1){
+            document.getElementById(i).style.backgroundColor = "red";
+          }
+          if(document.getElementById(i).innerHTML == "")
+                document.getElementById(i).style.backgroundColor = null;
         }while(j != Object.keys(v).length);
       }
     }
   };
-  console.log("Queries/queryAvailability.php?stanzaid="+passedID);
   xmlhttp.open("GET", "Queries/queryAvailability.php?stanzaid="+passedID, true);
   xmlhttp.send();
   return true;
@@ -300,4 +306,29 @@ function getStanza(stanzaid){
   xmlhttp.send();
   return true;
 
+}
+
+function getRoomReservations(stanzaid){
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function(){
+    if(this.readyState == 4 && this.status == 200){
+      var v = JSON.parse(this.responseText);
+      var i = 0;
+      do{
+        i++;
+        var doc = document.getElementById('room-booking-tbody');
+        var html = "";
+        html += '<tr class="room-booking-tbody-tr" id="resRow' + i + '">';
+        html += '<td>' + v[i]['nome'] + '</td>';
+        html += '<td>' + v[i]['from_day'] + '</td>';
+        html += '<td>' + v[i]['to_day'] + '</td>';
+        html += '</tr>';
+        doc.innerHTML += html;
+      }while(i != Object.keys(v).length); //Returns the length of an associative array
+    }
+
+  };
+  xmlhttp.open("GET", "Queries/queryRoomReservations.php?stanzaid="+stanzaid, true);
+  xmlhttp.send();
+  return true;
 }

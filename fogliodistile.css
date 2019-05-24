@@ -295,7 +295,7 @@ nav {
   overflow:auto;
 }
 
-#room-booking-thead, #room-booking-tbody-tr {
+#room-booking-thead, .room-booking-tbody-tr {
   width: 490px;
   display:table;
   table-layout:fixed;
