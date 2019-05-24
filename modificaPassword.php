@@ -12,6 +12,9 @@
   <body onload="initDate(); getReservations(); fillColor();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
+    <div id="change-password" align="center">
+      <h4>Modifica la tua password</h4>
+    </div>
     <div class="row">
       <div class="col s12">
         <div class="row" id="email-user-now">
@@ -19,11 +22,11 @@
             <input id="password-now" type="password" class="validate">
             <label for="password-now">Password corrente</label>
           </div>
-          <div class="input-field col offset-s4 s4">
+          <br /><div class="input-field col offset-s4 s4">
             <input id="password-new" type="password" class="validate">
             <label for="password-new">Nuova password</label>
           </div>
-          <div class="input-field col offset-s4 s4">
+          <br /><div class="input-field col offset-s4 s4">
             <input id="password-confirm" type="password" class="validate">
             <label for="password-confirm">Conferma nuova password</label>
           </div>
