@@ -12,7 +12,7 @@
     <script type="text/javascript" src="Scripts/modal.js"></script>
   </head>
 
-  <body onload="initDate(); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>');">
+    <body onload="initDate(); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>'); getRoomReservations('<?php echo $_GET['stanzaid'] ?>');">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
@@ -55,9 +55,9 @@
           </button>
         </div>
         <div id="info-room">
-          <br />Numero posti letto: <p style="display:inline" id="nPosti"></p>
-          <br />Prezzo a notte: €<p style="display:inline" id="prezzoNotte"></p>
-          <br />Note: <p style="display:inline" id="desc"></p>
+          <br /><b>Numero posti letto:</b> <p style="display:inline" id="nPosti"></p>
+          <br /><b>Prezzo a notte:</b> €<p style="display:inline" id="prezzoNotte"></p>
+          <br /><b>Note:</b> <p style="display:inline" id="desc"></p>
         </div>
       </div>
       <div class="col s6" id="calendar">
@@ -151,11 +151,6 @@
               </tr>
             </thead>
             <tbody id="room-booking-tbody" onclick="location.href='registrazione.php'">
-              <tr id="room-booking-tbody-tr">
-                <td>A bello</td>
-                <td>Che se dice</td>
-                <td>Tutto a posto?</td>
-              </tr>
             </tbody>
           </table>
         </div>
