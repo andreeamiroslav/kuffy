@@ -187,6 +187,9 @@ function selectDate(n){
 }
 
 function fillColor(passedID){
+  for(i=1; i != 40; i++){
+    document.getElementById(i).style.backgroundColor = null;
+  }
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
     if(this.readyState == 4 && this.status == 200){
@@ -212,11 +215,11 @@ function fillColor(passedID){
           j++;
           if(v[j]['from_day'] == tempDate || v[j]['to_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "red";
-            }else{
-              document.getElementById(i).style.backgroundColor = "green";
-            }
-          if(document.getElementById(i).innerHTML == "")
-                document.getElementById(i).style.backgroundColor = null;
+          }else{
+            document.getElementById(i).style.backgroundColor = "green";
+        }
+        if(document.getElementById(i).innerHTML == "")
+              document.getElementById(i).style.backgroundColor = null;
         }while(j != Object.keys(v).length);
       }
     }
