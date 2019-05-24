@@ -92,7 +92,7 @@ function getDaysNumber(year, month){
   return new Date(year, month, 0).getDate();
 }
 
-function initDate(set){
+function initDate(set, idStanza){
   document.addEventListener('DOMContentLoaded', function() {
      var elems = document.querySelectorAll('select');
      var instances = M.FormSelect.init(elems, options);
@@ -102,13 +102,14 @@ function initDate(set){
   //If left arrow has been clicked, then set date's month to the previous one
   if(set == "prev")
     date.setMonth(date.getMonth()-1);
-    //If right arrow has been clicked, then set date's month to the next one
+  //If right arrow has been clicked, then set date's month to the next one
   if(set == "next")
     date.setMonth(date.getMonth()+1);
   if(set == "next" || set == "prev"){
     if(actual)
       document.getElementById(actual).classList.remove("actual");
   }
+  fillColor(idStanza);
   var m = "";
   switch(date.getMonth()){
     case 1:
@@ -221,7 +222,6 @@ function fillColor(passedID){
     }
   };
 
-  console.log("Queries/query.php?stanzaid="+passedID);
   xmlhttp.open("GET", "Queries/queryAvailability.php?stanzaid="+passedID, true);
   xmlhttp.send();
   return true;

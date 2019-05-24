@@ -10,7 +10,7 @@
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
   </head>
 
-  <body onload="initDate(); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>');">
+  <body onload="initDate('null', '<?php echo $_GET['stanzaid'] ?>'); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>');">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <div class="row">
