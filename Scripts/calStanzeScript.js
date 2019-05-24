@@ -187,6 +187,9 @@ function selectDate(n){
 }
 
 function fillColor(passedID){
+  for(i=1; i != 40; i++){
+    document.getElementById(i).style.backgroundColor = null;
+  }
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
     if(this.readyState == 4 && this.status == 200){
@@ -206,7 +209,7 @@ function fillColor(passedID){
 
         var tempDate = tDate.getFullYear() + "-" + tempMonth + "-" + tDay;
         var temp = i - first;
-        console.log(tempDate);
+
         var j = 0;
         do{
           j++;
