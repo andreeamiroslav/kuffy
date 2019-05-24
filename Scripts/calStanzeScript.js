@@ -186,7 +186,7 @@ function selectDate(n){
   getCheckList();
 }
 
-function fillColor(){
+function fillColor(passedID){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
     if(this.readyState == 4 && this.status == 200){
@@ -220,7 +220,9 @@ function fillColor(){
       }
     }
   };
-  xmlhttp.open("GET", "query.php", true);
+
+  console.log("Queries/query.php?stanzaid="+passedID);
+  xmlhttp.open("GET", "Queries/queryAvailability.php?stanzaid="+passedID, true);
   xmlhttp.send();
   return true;
 }

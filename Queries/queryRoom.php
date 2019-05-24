@@ -1,5 +1,5 @@
 <?php
-  require('init.php');
+  require_once('init.php');
 
   $query = "SELECT DISTINCT s.stanza_id, s.stanza_nome, s.stanza_des, s.stanza_postiletto, s.stanza_prezzonotte
             FROM stanze s, strutture str, utenti u
