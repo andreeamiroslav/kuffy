@@ -214,16 +214,16 @@ function fillColor(passedID){
         do{
           j++;
           if(v[j]['from_day'] == tempDate){
-            document.getElementById(i).style.backgroundColor = "red";
+            document.getElementById(i).style.backgroundColor = "#f08080";
             inRow = 1;
           }else if(v[j]['to_day'] == tempDate){
-            document.getElementById(i).style.backgroundColor = "red";
+            document.getElementById(i).style.backgroundColor = "#f08080";
             inRow = 0;
           }else{
-            document.getElementById(i).style.backgroundColor = "green";
+            document.getElementById(i).style.backgroundColor = "#56b556";
           }
           if(inRow == 1){
-            document.getElementById(i).style.backgroundColor = "red";
+            document.getElementById(i).style.backgroundColor = "#f08080";
           }
           if(document.getElementById(i).innerHTML == "")
                 document.getElementById(i).style.backgroundColor = null;
@@ -294,7 +294,7 @@ function getStanza(stanzaid){
       var i = 0;
       do{
         i++;
-        document.getElementById('name-room').innerHTML += v[i]['stanza_nome'];
+        document.getElementById('name-room').innerHTML += "<b>" + v[i]['stanza_nome'] + "</b>";
         document.getElementById('nPosti').innerHTML = v[i]['stanza_postiletto'];
         document.getElementById('prezzoNotte').innerHTML = v[i]['stanza_prezzonotte'];
         document.getElementById('desc').innerHTML = v[i]['stanza_des'];

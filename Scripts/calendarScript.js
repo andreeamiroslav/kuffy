@@ -167,7 +167,7 @@ function initDate(set){
 
   //This auto-selects the current day
   if(set!="prev" && set!="next"){
-    var nID = document.getElementById(date.getDate()).innerHTML;
+    var nID = parseInt(document.getElementById(date.getDate()).innerHTML, 10) + first +1;
     document.getElementById(nID).classList.add("actual");
     actual = nID;
   }

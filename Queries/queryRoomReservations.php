@@ -7,14 +7,21 @@
             ORDER BY p.data DESC";
   $result = $link->query($query);
   $i = 0;
-  while($row = mysqli_fetch_array($result)){
-    $i++;
-    $p[$i]['from_day'] = $row['from_day'];
-    $p[$i]['to_day'] = $row['to_day'];
-    $p[$i]['nome'] = $row['nome'];
-    $p[$i]['data'] = $row['data'];
-    $p[$i]['from_day'] = $row['from_day'];
-    $p[$i]['to_day'] = $row['to_day'];
+  $num_row = mysqli_num_rows($result);
+
+  if($num_row<1){
+    $p[1]['from_day'] = "";
+    $p[1]['to_day'] = "";
+    $p[1]['nome'] = "";
+    $p[1]['data'] = "";
+  }else{
+    while($row = mysqli_fetch_array($result)){
+      $i++;
+      $p[$i]['nome'] = $row['nome'];
+      $p[$i]['data'] = $row['data'];
+      $p[$i]['from_day'] = $row['from_day'];
+      $p[$i]['to_day'] = $row['to_day'];
+    }
   }
   $out = json_encode($p);
   echo($out);
