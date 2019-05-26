@@ -27,22 +27,22 @@
         <form class="col s12">
           <div class="row" id="name-beds">
             <div class="input-field col s4" id="room-name">
-              <input id="name-room" type="text" class="validate">
-              <label for="name-room">Nome stanza</label>
+              <input id="name-room0" type="text" class="validate">
+              <label for="name-room0">Nome stanza</label>
             </div>
             <div class="input-field col s4" id="room-beds">
-              <input id="beds-room" type="text" class="validate">
-              <label for="beds-room">Postiletto</label>
+              <input id="beds-room0" type="text" class="validate">
+              <label for="beds-room0">Postiletto</label>
             </div>
           </div>
           <div class="row" id="price-note">
             <div class="input-field col s4" id="room-price">
-              <input id="price-room" type="text" class="validate">
-              <label for="price-room">Prezzo a notte</label>
+              <input id="price-room0" type="text" class="validate">
+              <label for="price-room0">Prezzo a notte</label>
             </div>
             <div class="input-field col s4" id="room-note">
-              <input id="note-room" type="text" class="validate">
-              <label for="note-room">Note</label>
+              <input id="note-room0" type="text" class="validate">
+              <label for="note-room0">Note</label>
             </div>
           </div>
         </form>
