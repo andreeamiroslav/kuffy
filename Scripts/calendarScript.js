@@ -1,5 +1,7 @@
 var date = new Date();
 var actual;
+var first;
+var last;
 
 function getCheckList(){
   var doc = document.getElementById('checkList');
@@ -26,7 +28,6 @@ function getCheckList(){
         if(v[i]['to_day'] == tempDate){
           doc.innerHTML += '<p class="selectable" onclick="lineElement(\'outelement'+i+'\')" id="outelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
         }
-
       }while(i != Object.keys(v).length);
     }
 
@@ -43,6 +44,7 @@ function lineElement(id){
   else
     doc.classList.add('lined');
 }
+
 function getReservations(){
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
@@ -100,6 +102,8 @@ function initDate(set){
     //If right arrow has been clicked, then set date's month to the next one
   if(set == "next")
     date.setMonth(date.getMonth()+1);
+  if(set == "prev" || set == "next")
+    document.getElementById(actual).classList.remove("actual");
   var m = "";
   switch(date.getMonth()){
     case 1:
@@ -153,7 +157,7 @@ function initDate(set){
   temp.setDate(1);
   temp.setFullYear(date.getFullYear());
   temp.setMonth(date.getMonth());
-  var first = temp.getDay();
+  first = temp.getDay();
   //If it's sunday (0) set it to 7 (correct number)
   if(first==0)
     first = 7;
@@ -163,6 +167,7 @@ function initDate(set){
   for(i=first; i != getDaysNumber(date.getYear(),date.getMonth()+1)+first; i++){
     document.getElementById(i).innerHTML=temp2;
     temp2++;
+    last = i;
   }
 
   //This auto-selects the current day
@@ -174,9 +179,11 @@ function initDate(set){
 }
 
 function selectDate(n){
-  document.getElementById(actual).classList.remove("actual");
-  actual = n;
-  document.getElementById(actual).classList.add("actual");
-  date.setDate(document.getElementById(actual).innerHTML);
-  getCheckList();
+    if(n >= first && n <= last){
+      document.getElementById(actual).classList.remove("actual");
+      actual = n;
+      document.getElementById(actual).classList.add("actual");
+      date.setDate(document.getElementById(actual).innerHTML);
+      getCheckList();
+  }
 }
