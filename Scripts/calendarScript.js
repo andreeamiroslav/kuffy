@@ -179,7 +179,7 @@ function initDate(set){
 }
 
 function selectDate(n){
-    if(n >= first && n <= last){
+    if(n >= first && n <= last && n != actual){
       document.getElementById(actual).classList.remove("actual");
       actual = n;
       document.getElementById(actual).classList.add("actual");
