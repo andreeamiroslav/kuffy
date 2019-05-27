@@ -332,3 +332,54 @@ function getRoomReservations(stanzaid){
   xmlhttp.send();
   return true;
 }
+
+
+function getRooms(){
+  //First remove all the options
+  var select = document.getElementById("selectRoom");
+  var length = select.options.length;
+  $("select").material_select();
+  for (j = 0; j < length; j++) {
+    select.options[0] = null;
+  }
+  //Update the select to view changes
+  $("select").material_select();
+   var xmlhttp = new XMLHttpRequest();
+   xmlhttp.onreadystatechange = function(){
+     if(this.readyState == 4 && this.status == 200){
+       var v = JSON.parse(this.responseText);
+       var i = 0;
+       do{
+         i++;
+         var element = document.getElementById('selectStructure');
+         if(parseInt(v[i]['struttura_id'], 10) == parseInt(element.options[element.selectedIndex].value, 10)){
+         //console.log(v[i]['struttura_id'] + "                " + element.options[element.selectedIndex].value);
+          //Get reference to select element
+          var sel = document.getElementById('selectRoom');
+
+          //Create new option element
+          var opt = document.createElement('option');
+
+          opt.id = v[i]['stanza_id'];
+
+          //Create text node to add to option element (opt)
+          opt.appendChild(document.createTextNode(v[i]['stanza_nome']) );
+
+          //Set value property of opt
+          opt.value = v[i]['stanza_id'];
+
+          //Add opt to end of select box (sel)
+          sel.appendChild(opt);
+
+          //Update the select to view changes
+          $("select").material_select();
+        }
+       }while(i != Object.keys(v).length); //Returns the length of an associative array
+     }
+
+   };
+  xmlhttp.open("GET", "Queries/queryRoomsAndStructures.php", true);
+  xmlhttp.send();
+  return true;
+
+}

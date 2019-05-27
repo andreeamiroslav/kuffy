@@ -18,15 +18,16 @@
        });
     </script>
   </head>
-  <body onload="initDate(); getStructures();">
+  <body onload="initDate(); getStructures(); getRooms();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
+
     <div class="row" id="booking">
       <form class="col s7">
         <div class="row" id="structure-from">
           <div class="input-field col offset-s1 s5" id="structure">
-            <select id="selectStructure">
+            <select id="selectStructure" onchange="getRooms();">
               <?php require('init.php');
               $query = "SELECT str.struttura_nome, str.struttura_id
                         FROM strutture str
@@ -48,10 +49,9 @@
         </div>
         <div class="row" id="room-to">
           <div class="input-field col offset-s1 s5" id="room">
-            <select id="selectRoom">
-              <option value="" disabled selected>Seleziona la stanza</option>
+            <select id="selectRoom" onchange="">
             </select>
-            <label>Strutture</label>
+            <label>Stanze</label>
           </div>
           <div class="input-field col s3">
             <input placeholder="gg/mm/aaaa" id="to" type="text" class="validate">
