@@ -37,7 +37,7 @@
             $i = 0;
             while($row = mysqli_fetch_array($result)){
               $i++;
-              echo '<option value="'. $i .'">' . $row['struttura_nome'] . '</option>\n';
+              echo '<option value="'. $i .'">' . $row['struttura_nome'] . '</option>';
             }
             ?>
           </select>

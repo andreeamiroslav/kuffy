@@ -1,0 +1,88 @@
+.content{
+  margin-top: 1%;
+}
+
+#calendar{
+  padding-left: 3%;
+  padding-right: 3%;
+  text-align: center;
+  width: 80%;
+}
+
+#leftButton{
+  margin-right: 100%;
+}
+
+#rightButton{
+  margin-left: 100%;
+}
+
+.arrowButton{
+  display: inline;
+  font-weight: bolder;
+  font-size: 26px;
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.lined{
+  text-decoration: line-through;
+}
+
+.selectable{
+  cursor: default;
+}
+
+.day{
+  padding: 1%;
+  font-size: 20px;
+  color: #0c0c0c;
+  cursor: default;
+  font-weight: normal;
+  text-align: center;
+}
+
+.actual{
+  background-color: skyblue;
+}
+
+.monthEdit{
+  background-color: blue;
+  text-align: left;
+}
+
+#month{
+  display: inline;
+  font-size: 22px;
+  font-weight: bold;
+  color: #035c78;
+}
+
+
+.dayNames{
+  padding-bottom: 0;
+  padding-top:0.2%;
+  font-size: 20 px;
+  border-top: 1;
+  border-top-style: solid;
+  border-top-color: grey;
+  border-top-width: thin;
+  text-align: center;
+}
+
+.dayRow{
+  border-bottom: 1px solid;
+}
+
+.reservationsRow{
+  font-weight: normal;
+}
+
+
+#tHeader{
+  color: white;
+  background-color:#1d7d74;
+}
