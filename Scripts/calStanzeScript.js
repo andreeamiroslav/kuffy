@@ -231,6 +231,12 @@ function fillColor(passedID){
       }
     }
   };
+
+  var element = document.getElementById("selectRoom");
+  if(passedID == null && element.options[element.selectedIndex].value != null){
+    passedID = element.options[element.selectedIndex].value;
+  }else if(passedID == null)
+    passedID = element.options[0].value;
   xmlhttp.open("GET", "Queries/queryAvailability.php?stanzaid="+passedID, true);
   xmlhttp.send();
   return true;
@@ -333,7 +339,6 @@ function getRoomReservations(stanzaid){
   return true;
 }
 
-
 function getRooms(){
   //First remove all the options
   var select = document.getElementById("selectRoom");
@@ -342,6 +347,7 @@ function getRooms(){
   for (j = 0; j < length; j++) {
     select.options[0] = null;
   }
+
   //Update the select to view changes
   $("select").material_select();
    var xmlhttp = new XMLHttpRequest();
@@ -367,6 +373,8 @@ function getRooms(){
 
           //Set value property of opt
           opt.value = v[i]['stanza_id'];
+          if(i == 1)
+            opt.selected = 'selected';
 
           //Add opt to end of select box (sel)
           sel.appendChild(opt);
@@ -375,6 +383,8 @@ function getRooms(){
           $("select").material_select();
         }
        }while(i != Object.keys(v).length); //Returns the length of an associative array
+
+       fillColor();
      }
 
    };

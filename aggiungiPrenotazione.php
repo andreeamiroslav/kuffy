@@ -49,7 +49,7 @@
         </div>
         <div class="row" id="room-to">
           <div class="input-field col offset-s1 s5" id="room">
-            <select id="selectRoom" onchange="">
+            <select id="selectRoom" onchange="fillColor();">
             </select>
             <label>Stanze</label>
           </div>
