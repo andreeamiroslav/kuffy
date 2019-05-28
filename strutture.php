@@ -8,12 +8,15 @@
     <script type = "text/javascript" src = "materialize/js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
+    <script language="javascript" type="text/javascript" src="addStructures.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/modal.js"></script>
+
   </head>
   <body onload="getStrutture();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
+
 
     <div id="modal1" class="modal modal-footer">
         <div class="modal-content">
@@ -21,22 +24,23 @@
           <form class="col s12">
             <div class="row">
               <div class="input-field col s6">
-                <input id="nome_struttura" type="text" class="validate">
+                <input id="nome_struttura" name="struttura-name" type="text" class="validate">
                 <label for="nome_struttura">Nome struttura</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
-                <input id="indirizzo" type="text" class="validate">
+                <input id="indirizzo" name="struttura-ind" type="text" class="validate">
                 <label for="indirizzo">Indirizzo</label>
               </div>
             </div>
         <div class="modal-footer">
-          <a href="aggiungiStanza.php" class="modal-close waves-effect waves-light btn" id="modal-button-1">Aggiungi</a>
+          <a onclick="submitValues('<?php session_start(); echo $_SESSION['utente_id']; ?>');" class="modal-close waves-effect waves-light btn" id="modal-button-1">Aggiungi</a>
         </div>
+      </form>
       </div>
     </div>
-      
+    
     <div id="modal2" class="modal modal-footer">
         <div class="modal-content">
           <h4>Modifica struttura</h4>
