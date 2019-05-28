@@ -40,7 +40,7 @@
       </form>
       </div>
     </div>
-    
+
     <div id="modal2" class="modal modal-footer">
         <div class="modal-content">
           <h4>Modifica struttura</h4>
@@ -98,12 +98,15 @@
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty6"></div>
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare5"><div class="card grey lighten-3" id="square-edit6" align="center">
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty7"></div>
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare6"><div class="card grey lighten-3" id="square-edit7" align="center">
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty8"></div>
+            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare7"><div class="card grey lighten-3" id="square-edit8" align="center">
             </td>
           <td><div class="card grey lighten-3" id="square-empty9"></div>
             <a href="#!" style="color: rgb(0,0,0)" id="linkSquare8"><div class="card grey lighten-3" id="square-edit9" align="center">
