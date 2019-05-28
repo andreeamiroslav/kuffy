@@ -299,6 +299,7 @@ nav {
   width: 490px;
   display:table;
   table-layout:fixed;
+  cursor: default;
 }
 
 #room-booking {

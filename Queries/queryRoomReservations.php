@@ -21,6 +21,7 @@
       $p[$i]['data'] = $row['data'];
       $p[$i]['from_day'] = $row['from_day'];
       $p[$i]['to_day'] = $row['to_day'];
+      $p[$i]['id'] = $row['id'];
     }
   }
   $out = json_encode($p);

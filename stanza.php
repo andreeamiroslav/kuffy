@@ -150,7 +150,7 @@
                 <th>Al</th>
               </tr>
             </thead>
-            <tbody id="room-booking-tbody" onclick="location.href='registrazione.php'">
+            <tbody id="room-booking-tbody">
             </tbody>
           </table>
         </div>

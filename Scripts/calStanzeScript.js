@@ -58,7 +58,6 @@ function getReservations(){
         var doc = document.getElementById('struttura' + i);
         html += '<td id="struttura' + i + '">'+ v[i]['struttura_nome']
         + '\n</td>\n';
-        w[i]['struttura_nome'] = v[i][struttura_nome];
 
         var doc = document.getElementById('stanza' + i);
         html += '<td id="stanza' + i + '">'+ v[i]['stanza_nome']
@@ -319,7 +318,7 @@ function getRoomReservations(stanzaid){
         i++;
         var doc = document.getElementById('room-booking-tbody');
         var html = "";
-        html += '<tr class="room-booking-tbody-tr" id="resRow' + i + '">';
+        html += '<tr class="room-booking-tbody-tr" id="resRow' + v[i]['id']+ '" onclick="showReservation(\'resRow' + v[i]['id'] + '\')">';
         html += '<td>' + v[i]['nome'] + '</td>';
         html += '<td>' + v[i]['from_day'] + '</td>';
         html += '<td>' + v[i]['to_day'] + '</td>';
@@ -397,6 +396,13 @@ function showReservation(resID){
         do{
           i++;
           if(document.getElementById(resID).classList.contains(v[i]['id'])){
+            document.getElementById('nome').innerHTML = v[i]['nome'];
+            document.getElementById('dal').innerHTML = v[i]['from_day'];
+            document.getElementById('al').innerHTML = v[i]['to_day'];
+            //document.getElementById('nPersone') = v[i][''];
+            document.getElementById('prezzo').innerHTML = parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
+
+          }else if(resID == ("resRow" + v[i]['id'])){
             document.getElementById('nome').innerHTML = v[i]['nome'];
             document.getElementById('dal').innerHTML = v[i]['from_day'];
             document.getElementById('al').innerHTML = v[i]['to_day'];
