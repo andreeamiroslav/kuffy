@@ -84,13 +84,13 @@
               <div class="calendar row" align="center">
                 <div class="valign-wrapper">
                   <div class="col s3 right-align">
-                    <p class="arrowButton" id="leftButton" onclick="initDate('prev'); fillColor('<?php echo $_GET['stanzaid'] ?>');"> < </p>
+                    <p class="arrowButton" id="leftButton" onclick="initDate('prev'); fillColor();"> < </p>
                   </div>
                   <div class="col s6">
                     <p id="month">Gennaio</p>
                   </div>
                   <div class="col s3 left-align">
-                    <p class="arrowButton" id="rightButton" onclick="initDate('next'); fillColor('<?php echo $_GET['stanzaid'] ?>');"> > </p>
+                    <p class="arrowButton" id="rightButton" onclick="initDate('next'); fillColor();"> > </p>
                   </div>
                 </div><table id="calTable" class="striped" border="1">
                   <tr class="dayRow">

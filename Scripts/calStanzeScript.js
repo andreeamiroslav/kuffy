@@ -98,7 +98,7 @@ function initDate(set){
      var instances = M.FormSelect.init(elems, options);
    });
   var element = document.getElementById('month');
-
+  console.log(set);
   //If left arrow has been clicked, then set date's month to the previous one
   if(set == "prev")
     date.setMonth(date.getMonth()-1);
