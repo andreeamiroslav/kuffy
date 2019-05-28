@@ -98,7 +98,7 @@ function initDate(set){
      var instances = M.FormSelect.init(elems, options);
    });
   var element = document.getElementById('month');
-  console.log(set);
+
   //If left arrow has been clicked, then set date's month to the previous one
   if(set == "prev")
     date.setMonth(date.getMonth()-1);
@@ -163,6 +163,7 @@ function initDate(set){
   temp.setFullYear(date.getFullYear());
   temp.setMonth(date.getMonth());
   first = temp.getDay();
+
   //If it's sunday (0) set it to 7 (correct number)
   if(first==0)
     first = 7;
@@ -366,7 +367,7 @@ function getRooms(){
           //Create new option element
           var opt = document.createElement('option');
 
-          opt.id = v[i]['stanza_id'];
+          opt.id = "room" + v[i]['stanza_id'];
 
           //Create text node to add to option element (opt)
           opt.appendChild(document.createTextNode(v[i]['stanza_nome']) );
