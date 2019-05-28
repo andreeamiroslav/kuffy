@@ -17,8 +17,8 @@
     $p[1]['data'] = "";
     $p[1]['check_in'] = "";
     $p[1]['check_out'] = "";
-    $p[1]['stanza_id'] = "";;
-    $p[1]['struttura_id'] = "";;
+    $p[1]['stanza_id'] = "";
+    $p[1]['struttura_id'] = "";
   }else{
     while($row = mysqli_fetch_array($result)){
       $i++;
@@ -32,6 +32,7 @@
       $p[$i]['check_out'] = $row['check_out'];
       $p[$i]['stanza_id'] = $row['stanza_id'];
       $p[$i]['struttura_id'] = $row['struttura_id'];
+      $p[$i]['id'] = $row['id'];
     }
   }
   $out = json_encode($p);

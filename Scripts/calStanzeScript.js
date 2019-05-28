@@ -178,15 +178,6 @@ function initDate(set){
 
 }
 
-function selectDate(n){
-  if(actual)
-    document.getElementById(actual).classList.remove("actual");
-  actual = n;
-  document.getElementById(actual).classList.add("actual");
-  date.setDate(document.getElementById(actual).innerHTML);
-  getCheckList();
-}
-
 function fillColor(passedID){
   for(i=1; i != 40; i++){
     document.getElementById(i).style.backgroundColor = null;
@@ -216,15 +207,18 @@ function fillColor(passedID){
           j++;
           if(v[j]['from_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "#f08080";
+            document.getElementById(i).classList.add(v[i]['id']);
             inRow = 1;
           }else if(v[j]['to_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "#f08080";
+            document.getElementById(i).classList.add(v[i]['id']);
             inRow = 0;
           }else{
             document.getElementById(i).style.backgroundColor = "#56b556";
           }
           if(inRow == 1){
             document.getElementById(i).style.backgroundColor = "#f08080";
+            document.getElementById(i).classList.add(v[i]['id']);
           }
           if(document.getElementById(i).innerHTML == "")
                 document.getElementById(i).style.backgroundColor = null;
@@ -360,7 +354,6 @@ function getRooms(){
          i++;
          var element = document.getElementById('selectStructure');
          if(parseInt(v[i]['struttura_id'], 10) == parseInt(element.options[element.selectedIndex].value, 10)){
-         //console.log(v[i]['struttura_id'] + "                " + element.options[element.selectedIndex].value);
           //Get reference to select element
           var sel = document.getElementById('selectRoom');
 
@@ -393,4 +386,28 @@ function getRooms(){
   xmlhttp.send();
   return true;
 
+}
+
+function showReservation(resID){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+        var v = JSON.parse(this.responseText);
+        var i = 0;
+        do{
+          i++;
+          if(document.getElementById(resID).classList.contains(v[i]['id'])){
+            document.getElementById('nome').innerHTML = v[i]['nome'];
+            document.getElementById('dal').innerHTML = v[i]['from_day'];
+            document.getElementById('al').innerHTML = v[i]['to_day'];
+            //document.getElementById('nPersone') = v[i][''];
+            document.getElementById('prezzo').innerHTML = parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
+          }
+        }while(i != Object.keys(v).length);
+      }
+
+    };
+          xmlhttp.open("GET", "Queries/query.php", true);
+          xmlhttp.send();
+          return true;
 }
