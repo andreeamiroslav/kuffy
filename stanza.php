@@ -50,9 +50,9 @@
     <div class="row">
       <div class="col s3" id="name-info-room">
         <div id="name-room" align="center">
-          <button id="edit-room" data-target="modal1" class="btn modal-trigger">
+          <a id="edit-room" data-target="modal1" class="btn modal-trigger">
           <img id="edit-room-icon" src="Icone\61456.png">
-          </button>
+        </a>
         </div>
         <div id="info-room">
           <br /><b>Numero posti letto:</b> <p style="display:inline" id="nPosti"></p>
