@@ -50,7 +50,7 @@
     <div class="row">
       <div class="col s3" id="name-info-room">
         <div id="name-room" align="center">
-          <a id="edit-room" data-target="modal1" class="btn modal-trigger">
+          <a id="edit-room" data-target="modal1" class="modal-trigger">
           <img id="edit-room-icon" src="Icone\61456.png">
         </a>
         </div>
