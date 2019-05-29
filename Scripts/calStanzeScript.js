@@ -210,7 +210,7 @@ function fillColor(passedID){
             document.getElementById(i).setAttribute('title', 'Clicca per visualizzare le informazioni sulla prenotazione');
             inRow = 1;
           }else if(v[j]['to_day'] == tempDate){
-            document.getElementById(i).style.backgroundColor = "#f08080";
+            document.getElementById(i).style.background = "linear-gradient(90deg, #f08080 50%, #56b556 50%)";
             document.getElementById(i).classList.add(v[i]['id']);
             document.getElementById(i).setAttribute('title', 'Clicca per visualizzare le informazioni sulla prenotazione');
             inRow = 0;
