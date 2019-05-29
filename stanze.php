@@ -12,7 +12,7 @@
   </head>
   <body onload="getStanze(<?php echo $_GET['strutturaid'] ?>);">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
-    <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
+    <script language="javascript" type="text/javascript" src="Scripts/menustruttura.js"></script>
     <script>getStructures();</script>
 
     <div id="modal1" class="modal modal-footer">
