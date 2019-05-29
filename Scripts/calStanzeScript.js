@@ -207,16 +207,20 @@ function fillColor(passedID){
           if(v[j]['from_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "#f08080";
             document.getElementById(i).classList.add(v[i]['id']);
+            document.getElementById(i).setAttribute('title', 'Clicca per visualizzare le informazioni sulla prenotazione');
             inRow = 1;
           }else if(v[j]['to_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "#f08080";
             document.getElementById(i).classList.add(v[i]['id']);
+            document.getElementById(i).setAttribute('title', 'Clicca per visualizzare le informazioni sulla prenotazione');
             inRow = 0;
           }else{
             document.getElementById(i).style.backgroundColor = "#56b556";
+            document.getElementById(i).setAttribute('title', 'Giorno libero');
           }
           if(inRow == 1){
             document.getElementById(i).style.backgroundColor = "#f08080";
+            document.getElementById(i).setAttribute('title', 'Clicca per visualizzare le informazioni sulla prenotazione');
             document.getElementById(i).classList.add(v[i]['id']);
           }
           if(document.getElementById(i).innerHTML == "")
@@ -318,7 +322,7 @@ function getRoomReservations(stanzaid){
         i++;
         var doc = document.getElementById('room-booking-tbody');
         var html = "";
-        html += '<tr class="room-booking-tbody-tr" id="resRow' + v[i]['id']+ '" onclick="showReservation(\'resRow' + v[i]['id'] + '\')">';
+        html += '<tr class="room-booking-tbody-tr" id="resRow' + v[i]['id']+ '" title="Clicca per visualizzare le informazioni sulla prenotazione" onclick="showReservation(\'resRow' + v[i]['id'] + '\')">';
         html += '<td>' + v[i]['nome'] + '</td>';
         html += '<td>' + v[i]['from_day'] + '</td>';
         html += '<td>' + v[i]['to_day'] + '</td>';
