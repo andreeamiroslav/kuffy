@@ -8,7 +8,7 @@
     <script type = "text/javascript" src = "materialize/js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
-    <script language="javascript" type="text/javascript" src="addStructures.js"></script>
+    <script language="javascript" type="text/javascript" src="Scripts/addStructures.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/modal.js"></script>
 
   </head>
