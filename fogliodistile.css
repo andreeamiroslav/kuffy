@@ -384,3 +384,19 @@ nav {
 .dropdown-content {
   top: 100% !important;
 }
+
+#modify-booking {
+   position:absolute;
+   left:85%;
+   top:75%;
+   width:20px;
+   height:20px;
+}
+
+#delete-booking {
+  position:absolute;
+  left:93%;
+  top:75%;
+  width:20px;
+  height:20px;
+}
