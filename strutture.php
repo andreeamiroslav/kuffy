@@ -35,7 +35,7 @@
               </div>
             </div>
         <div class="modal-footer">
-          <a onclick="submitValues('<?php session_start(); echo $_SESSION['utente_id']; ?>');" class="modal-close waves-effect waves-light btn" id="modal-button-1">Aggiungi</a>
+          <a onclick="submitValues('<?php session_start(); echo $_SESSION['utente_id']; ?>', 1);" class="modal-close waves-effect waves-light btn" id="modal-button-1">Aggiungi</a>
         </div>
       </form>
       </div>
@@ -47,18 +47,18 @@
           <form class="col s12">
             <div class="row">
               <div class="input-field col s6">
-                <input id="nome_struttura" type="text" class="validate">
-                <label for="nome_struttura">Nome struttura</label>
+                <input id="nome_struttura1" type="text" class="validate">
+                <label for="nome_struttura1">Nome struttura</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
-                <input id="indirizzo" type="text" class="validate">
-                <label for="indirizzo">Indirizzo</label>
+                <input id="indirizzo1" type="text" class="validate">
+                <label for="indirizzo1">Indirizzo</label>
               </div>
             </div>
         <div class="modal-footer">
-          <a href="strutture.php" class="modal-close waves-effect waves-light btn" id="modal-button-2">Modifica</a>
+          <a onclick="submitValues('<?php echo $_SESSION['utente_id']; ?>', 0 );" class="modal-close waves-effect waves-light btn" id="modal-button-2">Modifica</a>
         </div>
       </div>
     </div>
