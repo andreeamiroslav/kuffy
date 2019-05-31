@@ -39,6 +39,8 @@
               $i++;
               echo '<option value="'. $i .'">' . $row['struttura_nome'] . '</option>';
             }
+            if(i == 0)
+              echo '<option value="null">Nessuna struttura con impegni presente</option>';
             ?>
           </select>
           <div id="checkList">
@@ -140,6 +142,9 @@
           </div>
         </thead>
         <tbody id="bodyTable">
+          <tr>
+            <td colspan="3">Nessuna prenotazione presente</td>
+          </tr>
         <!--  Table will be filled by Javascript -->
         </tbody>
         </table>
