@@ -53,8 +53,10 @@ function getReservations(){
       var i = 0;
       do{
         i++;
-        var temp = document.getElementById('bodyTable');
         var html ="<tr>\n";
+        var temp = document.getElementById('bodyTable');
+        if(i == 1)
+          temp.innerHTML = "";
 
         var doc = document.getElementById('struttura' + i);
         html += '<td id="struttura' + i + '">'+ v[i]['struttura_nome']
