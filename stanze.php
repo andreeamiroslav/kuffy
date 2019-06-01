@@ -89,12 +89,10 @@
           </td>
           <td><div class="card grey lighten-3" id="square-empty8"></div>
             <a href="#!" style="color: rgb(0,0,0)" id="linkSquare7"><div class="card grey lighten-3" id="square-edit8" align="center">
-              <a href="#?"><img src="Icone/1214428.png" id="structure-edit"></a>
             </div></a>
           </td>
           <td><div class="card grey lighten-3" id="square-empty9"></div>
             <a href="#!" style="color: rgb(0,0,0)" id="linkSquare8"><div class="card grey lighten-3" id="square-edit9" align="center">
-              <a href="#?"><img src="Icone/1214428.png" id="structure-edit"></a>
             </div></a>
           </td>
         </tr>
