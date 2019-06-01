@@ -274,7 +274,7 @@ function getStanze(strutturaid){
       do{
         i++;
         doc = document.getElementById('square-edit'+i);
-        var content = '<h7>' + v[i]['stanza_nome'] +'</h7><br /><br /><img src="Icone/6716149901547464129-128.png" id="structure-icon"><br /><br /><a href="#modal1" class="modal-trigger"><img src="Icone/61456.png" id="structure-edit"></a><a href="#?"><img src="Icone/1214428.png" id="structure-edit"></a>';
+        var content = '<h7>' + v[i]['stanza_nome'] +'</h7><br /><br /><img src="Icone/6716149901547464129-128.png" id="structure-icon"><br /><br /><a href="#modal1" class="modal-trigger" onclick="setstanzaid('+v[i]['stanza_id']+', '+strutturaid+')"><img src="Icone/61456.png" id="structure-edit"></a><a href="upDelRooms.php?cmd=del&strutturaid='+strutturaid+'&stanza_id='+v[i]['stanza_id']+'"><img src="Icone/1214428.png" id="structure-edit"></a>';
         doc.style.display = "block";
         document.getElementById('square-empty'+i).style.display="none";
         var t = i-1;
