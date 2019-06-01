@@ -49,7 +49,7 @@
       <tbody>
         <tr>
           <td>
-            <a href="aggiungiStanza.php" style="color: rgb(0,0,0)" id="link-add-room">
+            <a href="aggiungiStanza.php?struttura_id=<?php echo $_REQUEST['strutturaid']; ?>" style="color: rgb(0,0,0)" id="link-add-room">
               <div class="card grey lighten-3" id="square-add" align="center">
                 <img src="Icone/plus_png_1046150.png" id="plus">
                 Aggiungi stanza
