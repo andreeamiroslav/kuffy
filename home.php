@@ -11,7 +11,6 @@
     <script type = "text/javascript" src = "materialize/js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <script type="text/javascript" src="Scripts/calendarScript.js"></script>
-
     <link rel="stylesheet" type="text/css" href="cal.css">
 
     <script>
@@ -39,11 +38,17 @@
               $i++;
               echo '<option value="'. $i .'">' . $row['struttura_nome'] . '</option>';
             }
-            if(i == 0)
+            if($i == 0)
               echo '<option value="null">Nessuna struttura con impegni presente</option>';
             ?>
           </select>
           <div id="checkList">
+            <div class="row">
+              <div class="col s10" id="checks">
+              </div>
+              <div class="col s2" id="trashList">
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -4,8 +4,10 @@ var first;
 var last;
 
 function getCheckList(){
-  var doc = document.getElementById('checkList');
+  var doc = document.getElementById('checks');
+  var trashDoc = document.getElementById('trashList');
   doc.innerHTML = "";
+  trashDoc.innerHTML = "";
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
     if(this.readyState == 4 && this.status == 200){
@@ -21,12 +23,18 @@ function getCheckList(){
           tempDay = "0" + tempDay;
 
         var tempDate = date.getFullYear() + "-" + tempMonth + "-" + tempDay;
-        if(v[i]['from_day'] == tempDate){
-          doc.innerHTML += '<p class="selectable" onclick="lineElement(\'inelement'+i+'\')" id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+        if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 1){
+          doc.innerHTML += '<p id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+          trashDoc.innerHTML += '<a href="deleteCheck.php?type=in&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a>';
+        }else if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 0){
+          doc.innerHTML += '<p class="lined" id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
         }
 
-        if(v[i]['to_day'] == tempDate){
-          doc.innerHTML += '<p class="selectable" onclick="lineElement(\'outelement'+i+'\')" id="outelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+        if(v[i]['to_day'] == tempDate && v[i]['en_check_out'] == 1){
+          doc.innerHTML += '<p id="outelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
+          trashDoc.innerHTML += '<a href="deleteCheck.php?type=out&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a>';
+        }else if(v[i]['to_day'] == tempDate && v[i]['en_check_out'] == 0){
+          doc.innerHTML += '<p class="lined" id="inelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
         }
       }while(i != Object.keys(v).length);
     }
@@ -92,18 +100,21 @@ function getDaysNumber(year, month){
 }
 
 function initDate(set){
-  document.addEventListener('DOMContentLoaded', function() {
-     var elems = document.querySelectorAll('select');
-     var instances = M.FormSelect.init(elems, options);
-   });
   var element = document.getElementById('month');
 
   //If left arrow has been clicked, then set date's month to the previous one
-  if(set == "prev")
-    date.setMonth(date.getMonth()-1);
+  if(set == "prev"){
+    var t = date.getMonth()-1;
+    date.setMonth(t);
+    date.setMonth(t);
+  }
     //If right arrow has been clicked, then set date's month to the next one
-  if(set == "next")
-    date.setMonth(date.getMonth()+1);
+  else if(set == "next"){
+    var t = date.getMonth()+1;
+    date.setMonth(t);
+    date.setMonth(t);
+  }
+
   if(set == "prev" || set == "next")
     document.getElementById(actual).classList.remove("actual");
   var m = "";
@@ -174,7 +185,7 @@ function initDate(set){
 
   //This auto-selects the current day
   if(set!="prev" && set!="next"){
-    var nID = parseInt(document.getElementById(date.getDate()).innerHTML, 10) + first +1;
+    var nID = first + date.getDate()-1;
     document.getElementById(nID).classList.add("actual");
     actual = nID;
   }
