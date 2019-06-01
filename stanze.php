@@ -9,6 +9,7 @@
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/modal.js"></script>
+    <script language="javascript" type="text/javascript" src="Scripts/updateRoom.js"></script>
   </head>
   <body onload="getStanze(<?php echo $_GET['strutturaid'] ?>);">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
@@ -22,7 +23,7 @@
             <div class="row">
               <div class="input-field col s6">
                 <input id="nome-stanza" type="text" class="validate">
-                <label for="nome_struttura">Nome stanza</label>
+                <label for="nome-stanza">Nome stanza</label>
               </div>
               <div class="input-field col s6">
                 <input id="posti-letto" type="text" class="validate">
@@ -40,7 +41,7 @@
               </div>
             </div>
         <div class="modal-footer">
-          <a href="stanza.php" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
+          <a onclick="submitValues();" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
         </div>
       </div>
     </div>
