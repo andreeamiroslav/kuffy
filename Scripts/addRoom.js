@@ -5,6 +5,7 @@ function submitValues(strutturaid){
   var data = "";
   var xmlhttp = new XMLHttpRequest();
   var i = 0;
+  var ok = false;
 
   for(i; i<formsNumber; i++){
     var nome = document.getElementById('name-room'+i).value;
@@ -21,6 +22,8 @@ function submitValues(strutturaid){
     xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xmlhttp.send(data);
   }
-
-  window.location.href = 'stanze.php?strutturaid='+strutturaid;
+  xmlhttp.onreadystatechange = function(){
+    if(this.readyState === XMLHttpRequest.DONE && this.status === 200)
+    window.location.href = 'stanze.php?strutturaid='+strutturaid;
+  }
 }
