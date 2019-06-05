@@ -183,6 +183,7 @@ function initDate(set){
 function fillColor(passedID){
   for(i=1; i != 40; i++){
     document.getElementById(i).style.backgroundColor = null;
+    document.getElementById(i).style.background = null;
   }
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
