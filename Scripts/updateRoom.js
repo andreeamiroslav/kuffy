@@ -4,12 +4,16 @@ function setstanzaid(temp, tmp){
   strutturaid = tmp;
 }
 
-function submitValues(){
+function setidstanza(temp){
+  stanza_id = temp;
+}
+
+function submitValues(i){
   var nome = document.getElementById('nome-stanza').value;
   var postiLetto = document.getElementById('posti-letto').value;
   var prezzoNotte = document.getElementById('prezzo-notte').value;
   var note = document.getElementById('note').value;
   var id = stanza_id;
 
-  window.location.href = 'upDelRooms.php?cmd=upd&stanza_nome='+nome+'&stanza_note='+note+'&stanza_postiletto='+postiLetto+'&stanza_prezzonotte='+prezzoNotte+'&stanza_id='+id+'&strutturaid='+strutturaid;
+  window.location.href = 'upDelRooms.php?cmd=upd&stanza_nome='+nome+'&stanza_note='+note+'&stanza_postiletto='+postiLetto+'&stanza_prezzonotte='+prezzoNotte+'&stanza_id='+id+'&strutturaid='+strutturaid+'&val='+i;
 }
