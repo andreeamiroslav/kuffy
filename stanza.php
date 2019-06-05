@@ -10,6 +10,7 @@
     <link type="text/css" rel="stylesheet" href="calStanze.css"/>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
     <script type="text/javascript" src="Scripts/modal.js"></script>
+    <script type="text/javascript" src="Scripts/updateRoom.js"></script>
   </head>
 
     <body onload="initDate(); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>'); getRoomReservations('<?php echo $_GET['stanzaid'] ?>');">
@@ -42,7 +43,7 @@
               </div>
             </div>
         <div class="modal-footer">
-          <a href="stanza.php" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
+          <a onclick="submitValues(0);" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
         </div>
       </div>
     </div>
@@ -50,7 +51,7 @@
     <div class="row">
       <div class="col s3" id="name-info-room">
         <div id="name-room" align="center">
-          <a id="edit-room" data-target="modal1" class="modal-trigger">
+          <a id="edit-room" data-target="modal1" class="modal-trigger" onclick="setidstanza('<?php echo $_GET['stanzaid']; ?>')">
           <img id="edit-room-icon" src="Icone\61456.png">
         </a>
         </div>
