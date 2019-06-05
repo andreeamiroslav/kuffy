@@ -41,7 +41,7 @@
               </div>
             </div>
         <div class="modal-footer">
-          <a onclick="submitValues();" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
+          <a onclick="submitValues(1);" class="modal-close waves-effect waves-light btn" id="modal-button-1">Modifica</a>
         </div>
       </div>
     </div>
