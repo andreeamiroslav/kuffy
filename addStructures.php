@@ -8,7 +8,8 @@
             '"1");';
             //echo '<br>Questa è la query: '.$query;
             if($rs = mysqli_query($link, $query)){
-              header('Location: strutture.php');
+              $last_id = mysqli_insert_id($link);
+              header('Location: aggiungiStanza.php?struttura_id='.$last_id);
             }
 
  ?>
