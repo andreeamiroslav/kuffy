@@ -106,12 +106,10 @@ function initDate(set){
   if(set == "prev"){
     var t = date.getMonth()-1;
     date.setMonth(t);
-    date.setMonth(t);
   }
     //If right arrow has been clicked, then set date's month to the next one
   else if(set == "next"){
     var t = date.getMonth()+1;
-    date.setMonth(t);
     date.setMonth(t);
   }
 
