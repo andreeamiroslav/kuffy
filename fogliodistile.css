@@ -411,3 +411,11 @@ nav {
   width:20px;
   height:20px;
 }
+
+#login-back-icon {
+  position: absolute;
+  top: 13%;
+  left: 22%;
+  width: 30px;
+  height: 30px;
+}
