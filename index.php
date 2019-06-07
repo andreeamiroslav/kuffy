@@ -21,7 +21,7 @@
       <div id="login-fields">
         <div class="row">
           <div class="col offset-s2 s1">
-            <a href="#!"><img src="Icone/av8a49a4f81c3318dc69d.png" id="login-back-icon"></a>
+            <a href="#!" onclick="loginOff();"><img src="Icone/av8a49a4f81c3318dc69d.png" id="login-back-icon"></a>
           </div>
         </div>
         <h3>Effettua il log-in</h3>
