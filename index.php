@@ -19,6 +19,11 @@
       </div>
       <br />
       <div id="login-fields">
+        <div class="row">
+          <div class="col offset-s2 s1">
+            <a href="#!"><img src="Icone/av8a49a4f81c3318dc69d.png" id="login-back-icon"></a>
+          </div>
+        </div>
         <h3>Effettua il log-in</h3>
         <div class="input-field col offset-s3 s6">
               <form action="checkLogin.php" method="post" id="login">
