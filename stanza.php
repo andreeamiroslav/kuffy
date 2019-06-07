@@ -161,8 +161,8 @@
             <br /><b>Dal:</b> <p style="display:inline" id="dal"></p> <b>Al:</b> <p style="display:inline" id="al"></p>
             <br /><b>Persone paganti:</b> <p style="display:inline" id="nPersone"></p>
             <br /><b>Prezzo totale:</b> <p style="display:inline" id="prezzo"></p>
-            <a href="#!"><img src="Icone/61456.png" id="modify-booking"></a>
-            <a href="#!"><img src="Icone/1214428.png" id="delete-booking"></a>
+            <a id="editLink" href=""><img src="Icone/61456.png" id="modify-booking"></a>
+            <a id="deleteLink" href=""><img src="Icone/1214428.png" id="delete-booking"></a>
           </span>
         </div>
       </div>
