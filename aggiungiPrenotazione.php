@@ -88,22 +88,58 @@
             </div>
           </div>
           <div class="row" id="name-surname">
-            <div class="input-field col offset-s1 s5">
+            <div class="input-field col offset-s1 s4">
               <input id="provenienza" type="text" class="validate">
               <label for="provenienza">Provenienza</label>
             </div>
-            <div class="input-field col s5">
+            <div class="input-field col s4">
               <input id="nascita" type="text" class="validate">
               <label for="nascita">Data di nascita</label>
             </div>
+            <div class="input-field col s3">
+              <input id="professione" type="text" class="validate">
+              <label for="professione">Professione</label>
+            </div>
           </div>
         </div>
-        <div id="other-client" class="row">
-          <h5>Altri clienti</h5>
+        <div id="other-client">
+          <h5>Altri ospiti</h5>
+          <div class="row" id="name-surname">
+            <div class="input-field col offset-s1 s4">
+              <input id="name" type="text" class="validate">
+              <label for="name">Nome</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="surname" type="text" class="validate">
+              <label for="surname">Cognome</label>
+            </div>
+            <div class="input-field col s3">
+              <select id="selectGender">
+                <option value="m">M</option>
+                <option value="f">F</option>
+                <option value="nd">Preferisco non rispondere</option>
+              </select>
+            </div>
+          </div>
+          <div class="row" id="name-surname">
+            <div class="input-field col offset-s1 s4">
+              <input id="provenienza" type="text" class="validate">
+              <label for="provenienza">Provenienza</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="nascita" type="text" class="validate">
+              <label for="nascita">Data di nascita</label>
+            </div>
+            <div class="input-field col s3">
+              <input id="professione" type="text" class="validate">
+              <label for="professione">Professione</label>
+            </div>
+          </div>
           <button id="add-client" class="btn-floating btn-large waves-effect waves-light red">
             <img src="Icone/plus-md.png" id="plus-client">
           </button>
           <button id="add-booking" class="waves-effect waves-light btn" onclick="location.href = 'index.php'">INSERISCI</button>
+
         </div>
       </form>
       <div class="col s5">
