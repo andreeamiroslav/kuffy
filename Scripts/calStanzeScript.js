@@ -210,12 +210,12 @@ function fillColor(passedID){
           j++;
           if(v[j]['from_day'] == tempDate){
             document.getElementById(i).style.backgroundColor = "#f08080";
-            document.getElementById(i).classList.add(v[i]['id']);
+            document.getElementById(i).classList.add(v[j]['id']);
             document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
             inRow = 1;
           }else if(v[j]['to_day'] == tempDate){
             document.getElementById(i).style.background = "linear-gradient(90deg, #f08080 50%, #56b556 50%)";
-            document.getElementById(i).classList.add(v[i]['id']);
+            document.getElementById(i).classList.add(v[j]['id']);
             document.getElementById(i).title="Giorno con check-out";
             inRow = 0;
           }else{
@@ -225,7 +225,7 @@ function fillColor(passedID){
           if(inRow == 1){
             document.getElementById(i).style.backgroundColor = "#f08080";
             document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
-            document.getElementById(i).classList.add(v[i]['id']);
+            document.getElementById(i).classList.add(v[j]['id']);
           }
           if(document.getElementById(i).innerHTML == "")
                 document.getElementById(i).style.backgroundColor = null;
@@ -410,8 +410,8 @@ function showReservation(resID){
             document.getElementById('al').innerHTML = v[i]['to_day'];
             //document.getElementById('nPersone') = v[i][''];
             document.getElementById('prezzo').innerHTML = parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
-            document.getElementById('editLink').href = "Queries/editReservation.php?id=" + v[i]['id'];
-            document.getElementById('deleteLink').href = "Queries/deleteReservation.php?id=" + v[i]['id'];
+            document.getElementById('editLink').href = "Queries/updateReservation.php?action=edit&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
+            document.getElementById('deleteLink').href = "Queries/updateReservation.php?action=del&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
           }
         }while(i != Object.keys(v).length);
       }
