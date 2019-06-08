@@ -26,7 +26,7 @@
 
     <div class="row" id="create-room">
       <div id="forms">
-        <form id="addF0" method="post" action="addRoom.php?id=<?php echo $_REQUEST['struttura_id']; ?>&num=0" class="col s12">
+        <form id="addF0" method="post" action="/Queries/addRoom.php?id=<?php echo $_REQUEST['struttura_id']; ?>&num=0" class="col s12">
           <div class="row" id="name-beds">
             <div class="input-field col s4" id="room-name">
               <input id="name-room0" type="text" class="validate" name="name0">

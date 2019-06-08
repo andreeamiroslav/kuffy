@@ -15,5 +15,5 @@ function submitValues(i){
   var note = document.getElementById('note').value;
   var id = stanza_id;
 
-  window.location.href = 'upDelRooms.php?cmd=upd&stanza_nome='+nome+'&stanza_note='+note+'&stanza_postiletto='+postiLetto+'&stanza_prezzonotte='+prezzoNotte+'&stanza_id='+id+'&strutturaid='+strutturaid+'&val='+i;
+  window.location.href = 'Queries/upDelRooms.php?cmd=upd&stanza_nome='+nome+'&stanza_note='+note+'&stanza_postiletto='+postiLetto+'&stanza_prezzonotte='+prezzoNotte+'&stanza_id='+id+'&strutturaid='+strutturaid+'&val='+i;
 }
