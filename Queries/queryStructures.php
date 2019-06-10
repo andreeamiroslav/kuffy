@@ -10,6 +10,7 @@
     $p[$i]['struttura_nome'] = $row['struttura_nome'];
     $p[$i]['struttura_id'] = $row['struttura_id'];
   }
+  $p[1]['nome_utente'] = $_SESSION['utente_username'];
   $out = json_encode($p);
   echo($out);
 
