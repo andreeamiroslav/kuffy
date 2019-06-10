@@ -29,6 +29,7 @@
       $ret = TRUE;
       $row = mysqli_fetch_assoc($rs);
       $_SESSION['utente_id'] = $row['utente_id'];
+      $_SESSION['utente_username'] = $row['utente_username'];
     }
     mysqli_close($link);
 
