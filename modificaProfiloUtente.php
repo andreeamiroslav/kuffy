@@ -23,30 +23,32 @@
     <script>getStructures();</script>
     <div class="row">
       <div class="col s12">
-        <div class="row" id="email-user-now">
-          <div class="input-field col offset-s1 s4">
-            <input id="email-now" type="text" class="validate">
-            <label for="email-now">Email corrente</label>
+        <form action="Queries/editUsernameEmail.php" method="post">
+          <div class="row" id="email-user-now">
+            <div class="input-field col offset-s1 s4">
+              <input name="email-old"id="email-now" type="text" class="validate">
+              <label for="email-now">Email corrente</label>
+            </div>
+            <div class="input-field col offset-s1 s4">
+              <input name="user-old" id="user-now" type="text" class="validate">
+              <label for="user-now">Username corrente</label>
+            </div>
           </div>
-          <div class="input-field col offset-s1 s4">
-            <input id="user-now" type="text" class="validate">
-            <label for="user-now">Username corrente</label>
+          <div class="row" id="email-user-new">
+            <div class="input-field col offset-s1 s4">
+              <input name="email-new" id="email-new" type="text" class="validate">
+              <label for="email-new">Nuova email</label>
+            </div>
+            <div class="input-field col offset-s1 s4">
+              <input name="user-new" id="user-new" type="text" class="validate">
+              <label for="user-new">Nuovo username</label>
+            </div>
           </div>
-        </div>
-        <div class="row" id="email-user-new">
-          <div class="input-field col offset-s1 s4">
-            <input id="email-new" type="text" class="validate">
-            <label for="email-new">Nuova email</label>
+          <div class="row" id="modify-cancel">
+            <button class="waves-effect waves-light btn-large" id="cancel-button">ANNULLA</button>
+            <button class="waves-effect waves-light btn-large" id="modify-button">MODIFICA</button>
           </div>
-          <div class="input-field col offset-s1 s4">
-            <input id="user-new" type="text" class="validate">
-            <label for="user-new">Nuovo username</label>
-          </div>
-        </div>
-        <div class="row" id="modify-cancel">
-          <button class="waves-effect waves-light btn-large" id="cancel-button">ANNULLA</button>
-          <button class="waves-effect waves-light btn-large" id="modify-button">MODIFICA</button>
-        </div>
+        </form>
       </div>
     </div>
     <script language="javascript" type="text/javascript" src="Scripts/footer.js"></script>
