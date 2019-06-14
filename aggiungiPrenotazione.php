@@ -28,85 +28,85 @@
     <script>getStructures();</script>
 
     <div class="row" id="booking">
-      <form class="col s7">
-        <div class="row" id="structure-from">
-          <div class="input-field col offset-s1 s5" id="structure">
-            <select id="selectStructure" onchange="getRooms();">
-              <?php require('init.php');
-              $query = "SELECT str.struttura_nome, str.struttura_id
-                        FROM strutture str
-                        WHERE str.struttura_fkutenteid = '".$_SESSION['utente_id']."'";
-              $result = $link->query($query);
-              $i = 0;
-              while($row = mysqli_fetch_array($result)){
-                $i++;
-                echo '<option value="'. $row['struttura_id'] .'">' . $row['struttura_nome'] . '</option>';
-              }
-              ?>
-            </select>
-            <label>Strutture</label>
-          </div>
-          <div class="input-field col s3">
-            <input placeholder="gg/mm/aaaa" id="from" type="text" class="validate">
-            <label for="name">Dal</label>
-          </div>
-        </div>
-        <div class="row" id="room-to">
-          <div class="input-field col offset-s1 s5" id="room">
-            <select id="selectRoom" onchange="fillColor();">
-            </select>
-            <label>Stanze</label>
-          </div>
-          <div class="input-field col s3">
-            <input placeholder="gg/mm/aaaa" id="to" type="text" class="validate">
-            <label for="name">Al</label>
-          </div>
-        </div>
-        <div class="row" id="checks">
-          <div class="input-field col offset-s1 s4">
-            <input id="checkin" type="text" class="validate">
-            <label for="checkin">Orario check-in</label>
-          </div>
-          <div class="input-field col s4">
-            <input id="checkout" type="text" class="validate">
-            <label for="checkout">Orario check-out</label>
-          </div>
-        </div>
-        <div id="client">
-          <h5>Nominativo cliente</h5>
-          <div class="row" id="name-surname">
-            <div class="input-field col offset-s1 s4">
-              <input id="name" type="text" class="validate">
-              <label for="name">Nome</label>
-            </div>
-            <div class="input-field col s4">
-              <input id="surname" type="text" class="validate">
-              <label for="surname">Cognome</label>
-            </div>
-            <div class="input-field col s3">
-              <select id="selectGender">
-                <option value="m">M</option>
-                <option value="f">F</option>
-                <option value="nd">Preferisco non rispondere</option>
+      <div class="col s7">
+        <form>
+          <div class="row" id="structure-from">
+            <div class="input-field col offset-s1 s5" id="structure">
+              <select id="selectStructure" onchange="getRooms();">
+                <?php require('init.php');
+                $query = "SELECT str.struttura_nome, str.struttura_id
+                          FROM strutture str
+                          WHERE str.struttura_fkutenteid = '".$_SESSION['utente_id']."'";
+                $result = $link->query($query);
+                $i = 0;
+                while($row = mysqli_fetch_array($result)){
+                  $i++;
+                  echo '<option value="'. $row['struttura_id'] .'">' . $row['struttura_nome'] . '</option>';
+                }
+                ?>
               </select>
-            </div>
-          </div>
-          <div class="row" id="name-surname">
-            <div class="input-field col offset-s1 s4">
-              <input id="provenienza" type="text" class="validate">
-              <label for="provenienza">Provenienza</label>
-            </div>
-            <div class="input-field col s4">
-              <input id="nascita" type="text" class="validate">
-              <label for="nascita">Data di nascita</label>
+              <label>Strutture</label>
             </div>
             <div class="input-field col s3">
-              <input id="professione" type="text" class="validate">
-              <label for="professione">Professione</label>
+              <input placeholder="gg/mm/aaaa" id="from" type="text" class="validate">
+              <label for="name">Dal</label>
             </div>
           </div>
-        </div>
-        </form>
+          <div class="row" id="room-to">
+            <div class="input-field col offset-s1 s5" id="room">
+              <select id="selectRoom" onchange="fillColor();">
+              </select>
+              <label>Stanze</label>
+            </div>
+            <div class="input-field col s3">
+              <input placeholder="gg/mm/aaaa" id="to" type="text" class="validate">
+              <label for="name">Al</label>
+            </div>
+          </div>
+          <div class="row" id="checks">
+            <div class="input-field col offset-s1 s4">
+              <input id="checkin" type="text" class="validate">
+              <label for="checkin">Orario check-in</label>
+            </div>
+            <div class="input-field col s4">
+              <input id="checkout" type="text" class="validate">
+              <label for="checkout">Orario check-out</label>
+            </div>
+          </div>
+          <div id="client">
+            <h5>Nominativo cliente</h5>
+            <div class="row" id="name-surname">
+              <div class="input-field col offset-s1 s4">
+                <input id="name" type="text" class="validate">
+                <label for="name">Nome</label>
+              </div>
+              <div class="input-field col s4">
+                <input id="surname" type="text" class="validate">
+                <label for="surname">Cognome</label>
+              </div>
+              <div class="input-field col s3">
+                <select id="selectGender">
+                  <option value="m">M</option>
+                  <option value="f">F</option>
+                </select>
+              </div>
+            </div>
+            <div class="row" id="name-surname">
+              <div class="input-field col offset-s1 s4">
+                <input id="provenienza" type="text" class="validate">
+                <label for="provenienza">Provenienza</label>
+              </div>
+              <div class="input-field col s4">
+                <input id="nascita" type="text" class="validate">
+                <label for="nascita">Data di nascita</label>
+              </div>
+              <div class="input-field col s3">
+                <input id="professione" type="text" class="validate">
+                <label for="professione">Professione</label>
+              </div>
+            </div>
+          </div>
+          </form>
           <div id="other-client">
             <h5>Altri ospiti</h5>
             <div id="forms"></div>
@@ -116,7 +116,7 @@
             <button id="add-booking" class="waves-effect waves-light btn" >INSERISCI</button>
           </div>
         </div>
-      
+
       <div class="col s5">
         <div class="row" id="structure-from">
           <div class="input-field col s5" id="calendar">
