@@ -1,7 +1,13 @@
 .menuIcon{
-  height: 110%;
-  width: 110%;
-  margin: 0;
-  position: relative;
-  top: 35%;
+  height: 80%;
+  width: 80%;
+}
+
+.vc{
+  vertical-align: middle;
+  height: 100%;
+}
+
+.con {
+  height: 100%;
 }
