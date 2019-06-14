@@ -1,16 +1,18 @@
 .menuIcon{
   height: 100%;
   width: 15%;
+  min-width: 60px;
 }
 
-.vc{
-  height: 100%;
-}
 
 .con {
-  height: 100%;
+  font-size: 40px;
 }
 
 #mobileNav{
   height: 10%;
+}
+
+#navName{
+  vertical-align: top;
 }
