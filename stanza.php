@@ -158,7 +158,7 @@
         <br /><div class="card grey lighten-3">
           <span class="black-text">
             <b>Dal: </b><p style="display:inline" id="dal"></p> <b>Al:</b> <p style="display:inline" id="al"></p>
-            <br /><b>Check-in:</b><p style="display:inline" id="in"></p> <b>Check-out:</b> <p style="display:inline" id="out"></p>
+            <br /><b>Check-in: </b><p style="display:inline" id="in"></p> <b>Check-out: </b> <p style="display:inline" id="out"></p>
             <br /><b>Prezzo totale:</b> <p style="display:inline" id="prezzo"></p>
             <br /><b>Persona prenotante:</b> <p style="display:inline" id="nome"></p>
             <br /><b>Numero altri ospiti:</b> <p style="display:inline" id="nPersone"></p>

@@ -408,6 +408,8 @@ function showReservation(resID){
             document.getElementById('nome').innerHTML = v[i]['nome'];
             document.getElementById('dal').innerHTML = v[i]['from_day'];
             document.getElementById('al').innerHTML = v[i]['to_day'];
+            document.getElementById('in').innerHTML = v[i]['check_in'];
+            document.getElementById('out').innerHTML = v[i]['check_out'];
             document.getElementById('nPersone').innerHTML = v[i]['nOspiti'];
             var ospitiHTML = '<ol>';
             var j = -1;
