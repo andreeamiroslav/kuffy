@@ -11,6 +11,7 @@
     <script type = "text/javascript" src = "/materialize/js/materialize.min.js"></script>
     <script type = "text/javascript" src = "/Scripts/Mobile/navbar.js"></script>
     <link type="text/css" rel="stylesheet" href="/fogliodistile.css"/>
+    <link type="text/css" rel="stylesheet" href="/Mobile/stylesheet.css"/>
     <script type="text/javascript" src="/Scripts/calendarScript.js"></script>
     <link rel="stylesheet" type="text/css" href="/cal.css">
 
