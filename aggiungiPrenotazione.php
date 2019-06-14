@@ -11,6 +11,7 @@
     <script type="text/javascript" src="calendarScript.js"></script>
     <link type="text/css" rel="stylesheet" href="calAggiungiPrenotazione.css"/>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
+    <script type="text/javascript" src="Scripts/addForm.js"></script>
 
     <script>
        function initSelect(){
