@@ -408,7 +408,22 @@ function showReservation(resID){
             document.getElementById('nome').innerHTML = v[i]['nome'];
             document.getElementById('dal').innerHTML = v[i]['from_day'];
             document.getElementById('al').innerHTML = v[i]['to_day'];
-            //document.getElementById('nPersone') = v[i][''];
+            document.getElementById('nPersone').innerHTML = v[i]['nOspiti'];
+            var ospitiHTML = '<ol>';
+            var j = -1;
+            do{
+              j++;
+              console.log(v[i]['nOspiti']);
+              ospitiHTML += "<li>";
+              ospitiHTML += "<b>Nome:</b> " + v[i][j]['o_nome'];
+              ospitiHTML += "<br /><b>Sesso:</b> " + v[i][j]['o_sesso'];
+              ospitiHTML += "<br /><b>Provenienza:</b> " + v[i][j]['o_provenienza'];
+              ospitiHTML += "<br /><b>Data di nascita:</b> " + v[i][j]['o_nascita'];
+              ospitiHTML += "<br /><b>Professione:</b> " + v[i][j]['o_professione'];
+              ospitiHTML += "</li>";
+            }while(j != v[i]['nOspiti']-1);
+            ospitiHTML += '</ol>';
+            document.getElementById('ospiti').innerHTML = ospitiHTML;
             document.getElementById('prezzo').innerHTML = parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
             document.getElementById('editLink').href = "Queries/updateReservation.php?action=edit&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
             document.getElementById('deleteLink').href = "Queries/updateReservation.php?action=del&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
