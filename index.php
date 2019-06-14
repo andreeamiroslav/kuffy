@@ -28,7 +28,7 @@
         <div class="input-field col offset-s3 s6">
               <form action="checkLogin.php" method="post" id="login">
                 <div class="input-field">
-                  <input type="text" name="email" id="email">
+                  <input type="email" name="email" id="email">
                   <label for="email">Email</label>
                 </div>
                 <div class="input-field">

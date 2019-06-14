@@ -26,7 +26,7 @@
         <form action="Queries/editUsernameEmail.php" method="post">
           <div class="row" id="email-user-now">
             <div class="input-field col offset-s1 s4">
-              <input name="email-old"id="email-now" type="text" class="validate">
+              <input name="email-old" id="email-now" type="email" class="validate">
               <label for="email-now">Email corrente</label>
             </div>
             <div class="input-field col offset-s1 s4">
@@ -36,7 +36,7 @@
           </div>
           <div class="row" id="email-user-new">
             <div class="input-field col offset-s1 s4">
-              <input name="email-new" id="email-new" type="text" class="validate">
+              <input name="email-new" id="email-new" type="email" class="validate">
               <label for="email-new">Nuova email</label>
             </div>
             <div class="input-field col offset-s1 s4">
