@@ -25,7 +25,7 @@
   <body onload="initDate(); getCheckList(); getReservations();">
     <script>getStructures();</script>
     <div class="row" class="container">
-      <div class="col s4 content">
+      <div class="col s12 content">
         <div class="input-field col s12" id="list">
           <select id="selectStructure">
             <?php require('init.php');
@@ -53,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="col s4 content">
+      <div class="col s12 content">
         <div class="calendar row" align="center">
           <div class="valign-wrapper">
             <div class="col s3 right-align">
@@ -133,7 +133,7 @@
           </table>
         </div>
       </div>
-      <div class="col s4 content">
+      <div class="col s12 content">
         Ultime prenotazioni
         <table id="resTable" class="striped" border="1">
         <thead id="tHeader">
