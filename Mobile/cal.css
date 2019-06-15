@@ -4,7 +4,7 @@
 .arrowButton{
   display: inline;
   font-weight: bolder;
-  font-size: 23px;
+  font-size: 70px;
   cursor: pointer;
   -webkit-user-select: none; /* Safari */
   -moz-user-select: none; /* Firefox */
@@ -39,7 +39,7 @@
 
 #month{
   display: inline;
-  font-size: 23px;
+  font-size: 70px;
   font-weight: bold;
   color: #035c78;
 }
@@ -56,7 +56,7 @@
 }
 
 .dayRow{
-
+  font-size: 40px;
   border-top: 1;
   border-top-style: solid;
   border-top-color: grey;
