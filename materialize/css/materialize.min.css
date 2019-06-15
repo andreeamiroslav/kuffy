@@ -6200,7 +6200,7 @@ input[type=range]::-ms-thumb {
 }
 .sidenav {
  position:fixed;
- width:300px;
+ width:70%;
  left:0;
  top:0;
  margin:0;
@@ -6240,10 +6240,10 @@ input[type=range]::-ms-thumb {
 .sidenav li>a {
  color:rgba(0,0,0,0.87);
  display:block;
- font-size:14px;
+ font-size:70px;
  font-weight:500;
- height:48px;
- line-height:48px;
+ height:70px;
+ line-height:70px;
  padding:0 32px
 }
 .sidenav li>a:hover {
