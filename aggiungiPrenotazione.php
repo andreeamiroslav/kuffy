@@ -2,27 +2,18 @@
   <head>
     <title>Aggiungi prenotazione - Kuffy</title>
     <meta charset="utf-8">
-    <title>Home - Kuffy</title>
     <script type = "text/javascript" src = "Scripts/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css"/>
     <script type = "text/javascript" src = "materialize/js/materialize.js"></script>
     <script type = "text/javascript" src = "materialize/js/materialize.min.js"></script>
     <link type="text/css" rel="stylesheet" href="fogliodistile.css"/>
-    <script type="text/javascript" src="calendarScript.js"></script>
     <link type="text/css" rel="stylesheet" href="calAggiungiPrenotazione.css"/>
     <script type="text/javascript" src="Scripts/calStanzeScript.js"></script>
     <script type="text/javascript" src="Scripts/addForm.js"></script>
-
-    <script>
-       function initSelect(){
-         $(document).ready(function() {
-            $('select').material_select();
-         });
-     }
-    </script>
-    </script>
+    <script type="text/javascript" src="Scripts/addReservation.js"></script>
   </head>
-  <body onload="initDate(); getStructures(); getRooms(); initSelect();">
+  
+  <body onload="initDate(); getStructures(); getRooms();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
@@ -48,7 +39,7 @@
               <label>Strutture</label>
             </div>
             <div class="input-field col s3">
-              <input placeholder="gg/mm/aaaa" id="from" type="text" class="validate">
+              <input placeholder="aaaa-mm-gg" name="from" id="from" type="text" class="validate">
               <label for="name">Dal</label>
             </div>
           </div>
@@ -59,7 +50,7 @@
               <label>Stanze</label>
             </div>
             <div class="input-field col s3">
-              <input placeholder="gg/mm/aaaa" id="to" type="text" class="validate">
+              <input placeholder="aaaa-mm-gg" name="to" id="to" type="text" class="validate">
               <label for="name">Al</label>
             </div>
           </div>
@@ -110,10 +101,10 @@
           <div id="other-client">
             <h5>Altri ospiti</h5>
             <div id="forms"></div>
-            <button id="add-client" class="btn-floating btn-large waves-effect waves-light red" onclick="addForm(); initSelect();">
+            <button id="add-client" class="btn-floating btn-large waves-effect waves-light red" onclick="destroySelect(); addForm(); initSelect();">
               <img src="Icone/plus-md.png" id="plus-client">
             </button>
-            <button id="add-booking" class="waves-effect waves-light btn" >INSERISCI</button>
+            <button id="add-booking" class="waves-effect waves-light btn" onclick="submitValues();">INSERISCI</button>
           </div>
         </div>
 
