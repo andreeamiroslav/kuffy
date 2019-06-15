@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>Home - Kuffy</title>
     <script type = "text/javascript" src = "/Scripts/jquery-2.1.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/materialize/css/materialize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/materialize/css/materializemobile.min.css"/>
     <script type = "text/javascript" src = "/materialize/js/materialize.js"></script>
     <script type = "text/javascript" src = "/materialize/js/materialize.min.js"></script>
     <script type = "text/javascript" src = "/Scripts/Mobile/navbar.js"></script>
