@@ -13,6 +13,17 @@ function addForm(){
   j++;
 }
 
+function initSelect(){
+  $(document).ready(function() {
+    $('select').material_select();
+  });
+}
+
+function destroySelect(){
+  $(document).ready(function() {
+    $('select').material_select('destroy');
+  });
+}
 
 
 /*
@@ -48,4 +59,3 @@ function addForm(){
     </div>
   </div>
   </form>*/
-
