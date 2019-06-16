@@ -31,7 +31,7 @@
         <div class="input-field col s12" id="list">
           <select id="selectStructure" onchange="getCheckList();">
             <?php require('init.php');
-            $query = "SELECT DISTINCT str.struttura_nome
+            $query = "SELECT DISTINCT str.struttura_nome, str.struttura_id
                       FROM prenotazioni p, stanze s, strutture str
                       WHERE str.struttura_fkutenteid = '".$_SESSION['utente_id']."' AND p.id_stanza = s.stanza_id AND s.stanza_fkstrutturaid=str.struttura_id";
             $result = $link->query($query);
