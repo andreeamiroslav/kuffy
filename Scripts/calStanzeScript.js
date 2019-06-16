@@ -206,26 +206,32 @@ function fillColor(passedID){
         var tempDate = tDate.getFullYear() + "-" + tempMonth + "-" + tDay;
         var temp = i - first;
         var j = 0;
+        var done = 0;
         do{
           j++;
-          if(v[j]['from_day'] == tempDate){
-            document.getElementById(i).style.backgroundColor = "#f08080";
-            document.getElementById(i).classList.add(v[j]['id']);
-            document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
-            inRow = 1;
-          }else if(v[j]['to_day'] == tempDate){
-            document.getElementById(i).style.background = "linear-gradient(90deg, #f08080 50%, #56b556 50%)";
-            document.getElementById(i).classList.add(v[j]['id']);
-            document.getElementById(i).title="Giorno con check-out";
-            inRow = 0;
-          }else{
-            document.getElementById(i).style.backgroundColor = "#56b556";
-            document.getElementById(i).title="Giorno libero";
-          }
-          if(inRow == 1){
-            document.getElementById(i).style.backgroundColor = "#f08080";
-            document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
-            document.getElementById(i).classList.add(v[j]['id']);
+          if(done == 0){
+            if(v[j]['to_day'] == tempDate){
+              document.getElementById(i).style.background = "linear-gradient(90deg, #f08080 50%, #56b556 50%)";
+              document.getElementById(i).classList.add(v[j]['id']);
+              document.getElementById(i).title="Giorno con check-out";
+              inRow = 0;
+            }else if(v[j]['from_day'] == tempDate){
+              document.getElementById(i).style.backgroundColor = "#f08080";
+              document.getElementById(i).classList.add(v[j]['id']);
+              document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
+              inRow = 1;
+              idInRow = v[j]['id'];
+              done = 1;
+            }else{
+              document.getElementById(i).style.backgroundColor = "#56b556";
+              document.getElementById(i).title="Giorno libero";
+            }
+
+            if(inRow == 1){
+              document.getElementById(i).style.backgroundColor = "#f08080";
+              document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
+              document.getElementById(i).classList.add(idInRow);
+            }
           }
           if(document.getElementById(i).innerHTML == "")
                 document.getElementById(i).style.backgroundColor = null;
@@ -412,18 +418,19 @@ function showReservation(resID){
             document.getElementById('out').innerHTML = v[i]['check_out'];
             document.getElementById('nPersone').innerHTML = v[i]['nOspiti'];
             var ospitiHTML = '<ol>';
+            if(v[i]['nOspiti']-1 > -1){
             var j = -1;
-            do{
-              j++;
-              console.log(v[i]['nOspiti']);
-              ospitiHTML += "<li>";
-              ospitiHTML += "<b>Nome:</b> " + v[i][j]['o_nome'];
-              ospitiHTML += "<br /><b>Sesso:</b> " + v[i][j]['o_sesso'];
-              ospitiHTML += "<br /><b>Provenienza:</b> " + v[i][j]['o_provenienza'];
-              ospitiHTML += "<br /><b>Data di nascita:</b> " + v[i][j]['o_nascita'];
-              ospitiHTML += "<br /><b>Professione:</b> " + v[i][j]['o_professione'];
-              ospitiHTML += "</li>";
-            }while(j != v[i]['nOspiti']-1);
+              do{
+                j++;
+                ospitiHTML += "<li>";
+                ospitiHTML += "<b>Nome:</b> " + v[i][j]['o_nome'];
+                ospitiHTML += "<br /><b>Sesso:</b> " + v[i][j]['o_sesso'];
+                ospitiHTML += "<br /><b>Provenienza:</b> " + v[i][j]['o_provenienza'];
+                ospitiHTML += "<br /><b>Data di nascita:</b> " + v[i][j]['o_nascita'];
+                ospitiHTML += "<br /><b>Professione:</b> " + v[i][j]['o_professione'];
+                ospitiHTML += "</li>";
+              }while(j != v[i]['nOspiti']-1);
+            }
             ospitiHTML += '</ol>';
             document.getElementById('ospiti').innerHTML = ospitiHTML;
             document.getElementById('prezzo').innerHTML = parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
