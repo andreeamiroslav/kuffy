@@ -23,7 +23,7 @@ function getCheckList(){
           tempDay = "0" + tempDay;
 
         var tempDate = date.getFullYear() + "-" + tempMonth + "-" + tempDay;
-        if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 1){
+        if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 1 && v[i]['struttura_id'] == document.getElementById('selectStructure').options[e.selectedIndex].value){
           doc.innerHTML += '<p id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
           trashDoc.innerHTML += '<a href="deleteCheck.php?type=in&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a>';
         }else if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 0){

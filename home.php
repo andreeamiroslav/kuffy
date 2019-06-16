@@ -29,7 +29,7 @@
     <div class="row" class="container">
       <div class="col s4 content">
         <div class="input-field col s12" id="list">
-          <select id="selectStructure">
+          <select id="selectStructure" onchange="getCheckList();">
             <?php require('init.php');
             $query = "SELECT DISTINCT str.struttura_nome
                       FROM prenotazioni p, stanze s, strutture str
@@ -38,7 +38,7 @@
             $i = 0;
             while($row = mysqli_fetch_array($result)){
               $i++;
-              echo '<option value="'. $i .'">' . $row['struttura_nome'] . '</option>';
+              echo '<option value="'. $row['struttura_id'] .'">' . $row['struttura_nome'] . '</option>';
             }
             if($i == 0)
               echo '<option value="null">Nessuna struttura con impegni presente</option>';
