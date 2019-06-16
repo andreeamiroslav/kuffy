@@ -27,14 +27,14 @@ function getCheckList(){
         if(v[i]['struttura_id'] == e.options[e.selectedIndex].value){
           if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 1){
             doc.innerHTML += '<p id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
-            trashDoc.innerHTML += '<a href="deleteCheck.php?type=in&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a>';
+            trashDoc.innerHTML += '<p><a href="deleteCheck.php?type=in&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a></p>';
           }else if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 0){
             doc.innerHTML += '<p class="lined" id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
           }
 
           if(v[i]['to_day'] == tempDate && v[i]['en_check_out'] == 1){
             doc.innerHTML += '<p id="outelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
-            trashDoc.innerHTML += '<a href="deleteCheck.php?type=out&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a>';
+            trashDoc.innerHTML += '<p><a href="deleteCheck.php?type=out&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a></p>';
           }else if(v[i]['to_day'] == tempDate && v[i]['en_check_out'] == 0){
             doc.innerHTML += '<p class="lined" id="inelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
           }
