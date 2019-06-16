@@ -1,6 +1,6 @@
 <?php
   require_once('init.php');
-  $query = "SELECT s.stanza_prezzonotte, s.stanza_id, s.stanza_nome, p.id, p.from_day, p.to_day, p.nome, p.data, p.days,
+  $query = "SELECT s.stanza_prezzonotte, s.stanza_id, s.stanza_nome, p.id, p.from_day, p.to_day, p.nome, p.p_cognome, p.data, p.days,
    str.struttura_nome, str.struttura_id, p.check_in, p.check_out, p.en_check_in, p.en_check_out, p.p_provenienza,
    p.p_sesso, p.p_nascita, p.p_professione
             FROM prenotazioni p, stanze s, strutture str
@@ -15,6 +15,7 @@
     $p[$i]['from_day'] = $row['from_day'];
     $p[$i]['to_day'] = $row['to_day'];
     $p[$i]['nome'] = $row['nome'];
+    $p[$i]['p_cognome'] = $row['p_cognome'];
     $p[$i]['data'] = $row['data'];
     $p[$i]['check_in'] = $row['check_in'];
     $p[$i]['check_out'] = $row['check_out'];
@@ -36,6 +37,7 @@
     while($r = mysqli_fetch_array($rs)){
       $j++;
       $p[$i][$j]['o_nome'] = $r['o_nome'];
+      $p[$i][$j]['o_cognome'] = $r['o_cognome'];
       $p[$i][$j]['o_provenienza'] = $r['o_provenienza'];
       $p[$i][$j]['o_professione'] = $r['o_professione'];
       $p[$i][$j]['o_sesso'] = $r['o_sesso'];

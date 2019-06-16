@@ -2,47 +2,6 @@ var date = new Date();
 var actual;
 var first;
 
-function getCheckList(){
-  var doc = document.getElementById('checkList');
-  doc.innerHTML = "";
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function(){
-    if(this.readyState == 4 && this.status == 200){
-      var v = JSON.parse(this.responseText);
-      var i = 0;
-      do{
-        i++;
-        var tempMonth = (date.getMonth()+1).toString();
-        var tempDay = date.getDate().toString();
-        if(tempMonth.length == 1)
-          tempMonth = "0" + tempMonth;
-        if(tempDay.length == 1)
-          tempDay = "0" + tempDay;
-
-        var tempDate = date.getFullYear() + "-" + tempMonth + "-" + tempDay;
-        if(v[i]['from_day'] == tempDate){
-          doc.innerHTML += '<p class="selectable" onclick="lineElement(\'inelement'+i+'\')" id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
-        }
-
-        if(v[i]['to_day'] == tempDate){
-          doc.innerHTML += '<p class="selectable" onclick="lineElement(\'outelement'+i+'\')" id="outelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + '"</p>';
-        }
-      }while(i != Object.keys(v).length);
-    }
-
-  };
-        xmlhttp.open("GET", "query.php", true);
-        xmlhttp.send();
-        return true;
-}
-
-function lineElement(id){
-  var doc = document.getElementById(id);
-  if(doc.classList.contains('lined'))
-    doc.classList.remove('lined')
-  else
-    doc.classList.add('lined');
-}
 
 function getReservations(){
   var xmlhttp = new XMLHttpRequest();
@@ -334,7 +293,7 @@ function getRoomReservations(stanzaid){
         var doc = document.getElementById('room-booking-tbody');
         var html = "";
         html += '<tr class="room-booking-tbody-tr '+ v[i]["id"]+'" id="resRow' + i + '" title="Clicca per visualizzare le informazioni sulla prenotazione" onclick="showReservation(\'res'+ v[i]["id"]+'\')">';
-        html += '<td>' + v[i]['nome'] + '</td>';
+        html += '<td>' + v[i]['nome'] + ' ' + v[i]['p_cognome'] + '</td>';
         html += '<td>' + v[i]['from_day'] + '</td>';
         html += '<td>' + v[i]['to_day'] + '</td>';
         html += '</tr>';
@@ -411,7 +370,7 @@ function showReservation(resID){
         do{
           i++;
           if(resID == 'res'+v[i]['id'] || document.getElementById(resID).classList.contains(v[i]['id'])){
-            document.getElementById('nome').innerHTML = v[i]['nome'];
+            document.getElementById('nome').innerHTML = v[i]['nome'] + ' ' + v[i]['p_cognome'];
             document.getElementById('dal').innerHTML = v[i]['from_day'];
             document.getElementById('al').innerHTML = v[i]['to_day'];
             document.getElementById('in').innerHTML = v[i]['check_in'];
@@ -423,7 +382,7 @@ function showReservation(resID){
               do{
                 j++;
                 ospitiHTML += "<li>";
-                ospitiHTML += "<b>Nome:</b> " + v[i][j]['o_nome'];
+                ospitiHTML += "<b>Nome:</b> " + v[i][j]['o_nome'] + " " + v[i][j]['o_cognome'];
                 ospitiHTML += "<br /><b>Sesso:</b> " + v[i][j]['o_sesso'];
                 ospitiHTML += "<br /><b>Provenienza:</b> " + v[i][j]['o_provenienza'];
                 ospitiHTML += "<br /><b>Data di nascita:</b> " + v[i][j]['o_nascita'];
