@@ -1622,7 +1622,6 @@ section {
  display:block
 }
 h1 {
- font-size:2em;
  margin:0.67em 0
 }
 figcaption,
@@ -1641,7 +1640,7 @@ hr {
 }
 pre {
  font-family:monospace, monospace;
- font-size:1em
+  :1em
 }
 a {
  background-color:transparent;
@@ -1666,7 +1665,7 @@ code,
 kbd,
 samp {
  font-family:monospace, monospace;
- font-size:1em
+  :1em
 }
 dfn {
  font-style:italic
@@ -1676,11 +1675,11 @@ mark {
  color:#000
 }
 small {
- font-size:80%
+  :80%
 }
 sub,
 sup {
- font-size:75%;
+  :75%;
  line-height:0;
  position:relative;
  vertical-align:baseline
@@ -1711,7 +1710,7 @@ optgroup,
 select,
 textarea {
  font-family:sans-serif;
- font-size:100%;
+  :100%;
  line-height:1.15;
  margin:0
 }
@@ -1917,16 +1916,16 @@ i.right {
  margin-left:15px
 }
 i.tiny {
- font-size:1rem
+  :1rem
 }
 i.small {
- font-size:2rem
+  :2rem
 }
 i.medium {
- font-size:4rem
+  :4rem
 }
 i.large {
- font-size:6rem
+  :6rem
 }
 img.responsive-img,
 video.responsive-video {
@@ -1943,7 +1942,7 @@ video.responsive-video {
 .pagination li a {
  color:#444;
  display:inline-block;
- font-size:1.2rem;
+  :1.2rem;
  padding:0 10px;
  line-height:30px
 }
@@ -1958,7 +1957,7 @@ video.responsive-video {
  color:#999
 }
 .pagination li i {
- font-size:2rem
+  :2rem
 }
 .pagination li.pages ul li {
  display:inline-block;
@@ -1979,7 +1978,7 @@ video.responsive-video {
  }
 }
 .breadcrumb {
- font-size:18px;
+  :18px;
  color:rgba(255,255,255,0.7)
 }
 .breadcrumb i,
@@ -1988,7 +1987,7 @@ video.responsive-video {
 .breadcrumb i.material-icons {
  display:inline-block;
  float:left;
- font-size:24px
+  :24px
 }
 .breadcrumb:before {
  content:'\E5CC';
@@ -1998,7 +1997,7 @@ video.responsive-video {
  font-family:'Material Icons';
  font-weight:normal;
  font-style:normal;
- font-size:25px;
+  :25px;
  margin:0 10px 0 8px;
  -webkit-font-smoothing:antialiased
 }
@@ -2269,14 +2268,14 @@ th {
  vertical-align:middle
 }
 .collection .collection-item.avatar i.circle {
- font-size:18px;
+  :18px;
  line-height:42px;
  color:#fff;
  background-color:#999;
  text-align:center
 }
 .collection .collection-item.avatar .title {
- font-size:16px
+  :16px
 }
 .collection .collection-item.avatar p {
  margin:0
@@ -2490,7 +2489,7 @@ span.badge {
  padding:0 6px;
  margin-left:14px;
  text-align:center;
- font-size:1rem;
+  :1rem;
  line-height:22px;
  height:22px;
  color:#757575;
@@ -2500,7 +2499,7 @@ span.badge {
 }
 span.badge.new {
  font-weight:300;
- font-size:0.8rem;
+  :0.8rem;
  color:#fff;
  background-color:#26a69a;
  border-radius:2px
@@ -3344,7 +3343,7 @@ nav [class^="mdi-"],
 nav [class*="mdi-"],
 nav i.material-icons {
  display:block;
- font-size:24px;
+  :24px;
  height:56px;
  line-height:56px
 }
@@ -3371,7 +3370,7 @@ nav .brand-logo {
  position:absolute;
  color:#fff;
  display:inline-block;
- font-size:2.1rem;
+  :2.1rem;
  padding:0
 }
 nav .brand-logo.center {
@@ -3412,7 +3411,7 @@ nav .brand-logo i.material-icons {
 }
 nav .nav-title {
  display:inline-block;
- font-size:32px;
+  :32px;
  padding:28px 0
 }
 nav ul {
@@ -3430,7 +3429,7 @@ nav ul li.active {
 nav ul a {
  -webkit-transition:background-color .3s;
  transition:background-color .3s;
- font-size:1rem;
+  :1rem;
  color:#fff;
  display:block;
  padding:0 15px;
@@ -3470,7 +3469,7 @@ nav .input-field {
 }
 nav .input-field input {
  height:100%;
- font-size:1.2rem;
+  :1.2rem;
  border:none;
  padding-left:2rem
 }
@@ -3530,17 +3529,17 @@ html {
 }
 @media only screen and (min-width: 0) {
  html {
-  font-size:14px
+   :14px
  }
 }
 @media only screen and (min-width: 992px) {
  html {
-  font-size:14.5px
+   :14.5px
  }
 }
 @media only screen and (min-width: 1200px) {
  html {
-  font-size:15px
+   :15px
  }
 }
 h1,
@@ -3561,32 +3560,32 @@ h6 a {
  font-weight:inherit
 }
 h1 {
- font-size:4.2rem;
+  :4.2rem;
  line-height:110%;
  margin:2.8rem 0 1.68rem 0
 }
 h2 {
- font-size:3.56rem;
+  :3.56rem;
  line-height:110%;
  margin:2.3733333333rem 0 1.424rem 0
 }
 h3 {
- font-size:2.92rem;
+  :2.92rem;
  line-height:110%;
  margin:1.9466666667rem 0 1.168rem 0
 }
 h4 {
- font-size:2.28rem;
+  :2.28rem;
  line-height:110%;
  margin:1.52rem 0 .912rem 0
 }
 h5 {
- font-size:1.64rem;
+  :1.64rem;
  line-height:110%;
  margin:1.0933333333rem 0 .656rem 0
 }
 h6 {
- font-size:1.15rem;
+  :1.15rem;
  line-height:110%;
  margin:.7666666667rem 0 .46rem 0
 }
@@ -3597,7 +3596,7 @@ strong {
  font-weight:500
 }
 small {
- font-size:75%
+  :75%
 }
 .light {
  font-weight:300
@@ -3607,112 +3606,112 @@ small {
 }
 @media only screen and (min-width: 360px) {
  .flow-text {
-  font-size:1.2rem
+   :1.2rem
  }
 }
 @media only screen and (min-width: 390px) {
  .flow-text {
-  font-size:1.224rem
+   :1.224rem
  }
 }
 @media only screen and (min-width: 420px) {
  .flow-text {
-  font-size:1.248rem
+   :1.248rem
  }
 }
 @media only screen and (min-width: 450px) {
  .flow-text {
-  font-size:1.272rem
+   :1.272rem
  }
 }
 @media only screen and (min-width: 480px) {
  .flow-text {
-  font-size:1.296rem
+   :1.296rem
  }
 }
 @media only screen and (min-width: 510px) {
  .flow-text {
-  font-size:1.32rem
+   :1.32rem
  }
 }
 @media only screen and (min-width: 540px) {
  .flow-text {
-  font-size:1.344rem
+   :1.344rem
  }
 }
 @media only screen and (min-width: 570px) {
  .flow-text {
-  font-size:1.368rem
+   :1.368rem
  }
 }
 @media only screen and (min-width: 600px) {
  .flow-text {
-  font-size:1.392rem
+   :1.392rem
  }
 }
 @media only screen and (min-width: 630px) {
  .flow-text {
-  font-size:1.416rem
+   :1.416rem
  }
 }
 @media only screen and (min-width: 660px) {
  .flow-text {
-  font-size:1.44rem
+   :1.44rem
  }
 }
 @media only screen and (min-width: 690px) {
  .flow-text {
-  font-size:1.464rem
+   :1.464rem
  }
 }
 @media only screen and (min-width: 720px) {
  .flow-text {
-  font-size:1.488rem
+   :1.488rem
  }
 }
 @media only screen and (min-width: 750px) {
  .flow-text {
-  font-size:1.512rem
+   :1.512rem
  }
 }
 @media only screen and (min-width: 780px) {
  .flow-text {
-  font-size:1.536rem
+   :1.536rem
  }
 }
 @media only screen and (min-width: 810px) {
  .flow-text {
-  font-size:1.56rem
+   :1.56rem
  }
 }
 @media only screen and (min-width: 840px) {
  .flow-text {
-  font-size:1.584rem
+   :1.584rem
  }
 }
 @media only screen and (min-width: 870px) {
  .flow-text {
-  font-size:1.608rem
+   :1.608rem
  }
 }
 @media only screen and (min-width: 900px) {
  .flow-text {
-  font-size:1.632rem
+   :1.632rem
  }
 }
 @media only screen and (min-width: 930px) {
  .flow-text {
-  font-size:1.656rem
+   :1.656rem
  }
 }
 @media only screen and (min-width: 960px) {
  .flow-text {
-  font-size:1.68rem
+   :1.68rem
  }
 }
 @media only screen and (max-width: 360px) {
  .flow-text {
-  font-size:1.2rem
+   :1.2rem
  }
 }
 .scale-transition {
@@ -3754,7 +3753,7 @@ small {
  border-radius:2px
 }
 .card .card-title {
- font-size:24px;
+  :24px;
  font-weight:300
 }
 .card .card-title.activator {
@@ -3962,7 +3961,7 @@ small {
  line-height:1.5em;
  background-color:#323232;
  padding:10px 25px;
- font-size:1.1rem;
+  :1.1rem;
  font-weight:300;
  color:#fff;
  display:-webkit-box;
@@ -4046,7 +4045,7 @@ small {
  width:100%;
  height:100%;
  padding:0 24px;
- font-size:14px;
+  :14px;
  text-overflow:ellipsis;
  overflow:hidden;
  -webkit-transition:color .28s ease, background-color .28s ease;
@@ -4093,7 +4092,7 @@ small {
 }
 .material-tooltip {
  padding:10px 8px;
- font-size:1rem;
+  :1rem;
  z-index:2000;
  background-color:transparent;
  border-radius:2px;
@@ -4196,7 +4195,7 @@ small {
 .btn-large,
 .btn-small,
 .btn-flat {
- font-size:14px;
+  :14px;
  outline:0
 }
 .btn i,
@@ -4206,7 +4205,7 @@ small {
 .btn-large i,
 .btn-small i,
 .btn-flat i {
- font-size:1.3rem;
+  :1.3rem;
  line-height:inherit
 }
 .btn:focus,
@@ -4290,7 +4289,7 @@ small {
  display:inline-block;
  text-align:center;
  color:#fff;
- font-size:1.6rem;
+  :1.6rem;
  line-height:40px
 }
 button.btn-floating {
@@ -4454,19 +4453,19 @@ button.btn-floating {
 .btn-large {
  height:54px;
  line-height:54px;
- font-size:15px;
+  :15px;
  padding:0 28px
 }
 .btn-large i {
- font-size:1.6rem
+  :1.6rem
 }
 .btn-small {
  height:32.4px;
  line-height:32.4px;
- font-size:13px
+  :13px
 }
 .btn-small i {
- font-size:1.2rem
+  :1.2rem
 }
 .btn-block {
  display:block
@@ -4510,7 +4509,7 @@ button.btn-floating {
 }
 .dropdown-content li>a,
 .dropdown-content li>span {
- font-size:16px;
+  :16px;
  color:#26a69a;
  display:block;
  line-height:22px;
@@ -4608,7 +4607,7 @@ body.keyboard-focused .dropdown-content li:focus {
 .waves-effect input[type="submit"] {
  border:0;
  font-style:normal;
- font-size:inherit;
+  :inherit;
  text-transform:inherit;
  background:none
 }
@@ -4758,7 +4757,7 @@ body.keyboard-focused .dropdown-content li:focus {
 }
 .collapsible-header i {
  width:2rem;
- font-size:1.6rem;
+  :1.6rem;
  display:inline-block;
  text-align:center;
  margin-right:1rem
@@ -4828,7 +4827,7 @@ body.keyboard-focused .dropdown-content li:focus {
 .chip {
  display:inline-block;
  height:32px;
- font-size:13px;
+  :13px;
  font-weight:500;
  color:rgba(0,0,0,0.6);
  line-height:32px;
@@ -4853,7 +4852,7 @@ body.keyboard-focused .dropdown-content li:focus {
 .chip .close {
  cursor:pointer;
  float:right;
- font-size:16px;
+  :16px;
  line-height:32px;
  padding-left:8px
 }
@@ -4881,7 +4880,7 @@ body.keyboard-focused .dropdown-content li:focus {
  border:0;
  color:rgba(0,0,0,0.6);
  display:inline-block;
- font-size:16px;
+  :16px;
  height:3rem;
  line-height:32px;
  outline:0;
@@ -4904,7 +4903,7 @@ body.keyboard-focused .dropdown-content li:focus {
  width:calc(100% - 3rem)
 }
 .chips:empty ~ label {
- font-size:0.8rem;
+  :0.8rem;
  -webkit-transform:translateY(-140%);
  transform:translateY(-140%)
 }
@@ -4956,7 +4955,7 @@ button:focus {
  background-color:#2ab7a9
 }
 label {
- font-size:.8rem;
+  :.8rem;
  color:#9e9e9e
 }
 ::-webkit-input-placeholder {
@@ -4994,7 +4993,7 @@ textarea.materialize-textarea {
  outline:none;
  height:3rem;
  width:100%;
- font-size:16px;
+  :16px;
  margin:0 0 8px 0;
  padding:0;
  -webkit-box-shadow:none;
@@ -5373,7 +5372,7 @@ textarea.materialize-textarea+label:after,
  position:absolute;
  top:0;
  left:0;
- font-size:1rem;
+  :1rem;
  cursor:text;
  -webkit-transition:color .2s ease-out, -webkit-transform .2s ease-out;
  transition:color .2s ease-out, -webkit-transform .2s ease-out;
@@ -5403,7 +5402,7 @@ textarea.materialize-textarea+label:after,
  position:relative;
  min-height:18px;
  display:block;
- font-size:12px;
+  :12px;
  color:rgba(0,0,0,0.54)
 }
 .input-field .helper-text::after {
@@ -5415,7 +5414,7 @@ textarea.materialize-textarea+label:after,
 .input-field .prefix {
  position:absolute;
  width:3rem;
- font-size:2rem;
+  :2rem;
  -webkit-transition:color .2s;
  transition:color .2s;
  top:.5rem
@@ -5486,7 +5485,7 @@ textarea.materialize-textarea+label:after,
  right:1rem;
  color:transparent;
  cursor:pointer;
- font-size:2rem;
+  :2rem;
  -webkit-transition:.3s color;
  transition:.3s color
 }
@@ -5539,7 +5538,7 @@ textarea.materialize-textarea {
  display:inline-block;
  height:25px;
  line-height:25px;
- font-size:1rem;
+  :1rem;
  -webkit-transition:.28s ease;
  transition:.28s ease;
  -webkit-user-select:none;
@@ -5635,7 +5634,7 @@ textarea.materialize-textarea {
  display:inline-block;
  height:25px;
  line-height:25px;
- font-size:1rem;
+  :1rem;
  -webkit-user-select:none;
  -moz-user-select:none;
  -ms-user-select:none;
@@ -5910,7 +5909,7 @@ select {
  height:6rem;
  line-height:6rem;
  width:100%;
- font-size:70px;
+  :70px;
  margin:0 0 8px 0;
  padding:0;
  display:block;
@@ -5935,7 +5934,7 @@ select {
 .select-wrapper+label {
  position:absolute;
  top:-26px;
- font-size:.8rem
+  :.8rem
 }
 select:disabled {
  color:rgba(0,0,0,0.42)
@@ -6027,7 +6026,7 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
  width:100%;
  margin:0;
  padding:0;
- font-size:20px;
+  :20px;
  cursor:pointer;
  opacity:0;
  filter:alpha(opacity=0)
@@ -6074,7 +6073,7 @@ input[type=range]+.thumb .value {
  width:30px;
  text-align:center;
  color:#26a69a;
- font-size:0;
+  :0;
  -webkit-transform:rotate(45deg);
  transform:rotate(45deg)
 }
@@ -6085,7 +6084,7 @@ input[type=range]+.thumb.active .value {
  color:#fff;
  margin-left:-1px;
  margin-top:8px;
- font-size:10px
+  :10px
 }
 input[type=range] {
  -webkit-appearance:none
@@ -6240,7 +6239,7 @@ input[type=range]::-ms-thumb {
 .sidenav li>a {
  color:rgba(0,0,0,0.87);
  display:block;
- font-size:50px;
+  :50px;
  font-weight:500;
  height:50px;
  line-height:50px;
@@ -6294,7 +6293,7 @@ input[type=range]::-ms-thumb {
  cursor:initial;
  pointer-events:none;
  color:rgba(0,0,0,0.54);
- font-size:14px;
+  :14px;
  font-weight:500;
  line-height:48px
 }
@@ -6333,7 +6332,7 @@ input[type=range]::-ms-thumb {
 }
 .sidenav .user-view .name,
 .sidenav .user-view .email {
- font-size:14px;
+  :14px;
  line-height:24px
 }
 .sidenav .user-view .name {
@@ -6921,12 +6920,12 @@ input[type=range]::-ms-thumb {
  left:0
 }
 .carousel.carousel-slider .carousel-item h2 {
- font-size:24px;
+  :24px;
  font-weight:500;
  line-height:32px
 }
 .carousel.carousel-slider .carousel-item p {
- font-size:15px
+  :15px
 }
 .carousel .carousel-item {
  visibility:hidden;
@@ -7013,7 +7012,7 @@ input[type=range]::-ms-thumb {
 }
 .tap-target {
  position:absolute;
- font-size:1rem;
+  :1rem;
  border-radius:50%;
  background-color:#ee6e73;
  -webkit-box-shadow:0 20px 20px 0 rgba(0,0,0,0.14),0 10px 50px 0 rgba(0,0,0,0.12),0 30px 10px -20px rgba(0,0,0,0.2);
@@ -7218,13 +7217,13 @@ input[type=range]::-ms-thumb {
 }
 .datepicker-date-display .year-text {
  display:block;
- font-size:1.5rem;
+  :1.5rem;
  line-height:25px;
  color:rgba(255,255,255,0.7)
 }
 .datepicker-date-display .date-text {
  display:block;
- font-size:2.8rem;
+  :2.8rem;
  line-height:47px;
  font-weight:500
 }
@@ -7236,7 +7235,7 @@ input[type=range]::-ms-thumb {
 }
 .datepicker-table {
  width:280px;
- font-size:1rem;
+  :1rem;
  margin:0 auto
 }
 .datepicker-table thead {
@@ -7361,7 +7360,7 @@ input[type=range]::-ms-thumb {
  font-weight:300
 }
 .timepicker-text-container {
- font-size:4rem;
+  :4rem;
  font-weight:bold;
  text-align:center;
  color:rgba(255,255,255,0.6);
@@ -7384,7 +7383,7 @@ input[type=range]::-ms-thumb {
  margin-left:3px
 }
 .timepicker-display-am-pm {
- font-size:1.3rem;
+  :1.3rem;
  position:absolute;
  right:1rem;
  bottom:1rem;
@@ -7431,7 +7430,7 @@ input[type=range]::-ms-thumb {
  height:40px;
  position:absolute;
  cursor:pointer;
- font-size:15px
+  :15px
 }
 .timepicker-tick.active,
 .timepicker-tick:hover {
