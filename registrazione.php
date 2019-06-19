@@ -7,8 +7,13 @@
   <script type="text/javascript" src="materialize.min.js"></script>
 </head>
 <body>
-  <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
-
+  <div id="page-container">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.php" class="brand-logo">Logo</a>
+      </div>
+    </nav>
+       <div id="content-wrap">
           <div class="row">
             <form action="Queries/addUser.php" method="post" class="col s12">
               <div class="row" id="register">
@@ -40,7 +45,7 @@
               </div>
               <div class="row" id="user-confirm">
                <?php
-                  if($_GET['msg'] == 'email'){
+                  if(isset($_GET['msg']) && $_GET['msg'] == 'email'){
                     echo '<p style="color: red; margin-left: 8.3rem;">Email già utilizzata</p>';
                     }
              ?>
@@ -54,10 +59,10 @@
                 </div>
               </div>
                <?php
-                  if($_GET['msg'] == 'username'){
+                  if(isset($_GET['msg']) && $_GET['msg'] == 'username'){
                     echo '<p style="color: red; margin-left: 8.3rem;">Username già utilizzato</p>';
                     }
-                  if($_GET['msg'] == 'password'){
+                  if(isset($_GET['msg']) && $_GET['msg'] == 'password'){
                     echo '<p style="color: red; margin-left: 30rem;">Le password devono corrispondere</p>';
                     }
              ?>
