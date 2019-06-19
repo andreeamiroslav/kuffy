@@ -16,6 +16,7 @@
     $p[$i]['stanza_prezzonotte'] = $row['stanza_prezzonotte'];
   }
   $out = json_encode($p);
-echo($out);
+  mysqli_close($link);
+  echo($out);
 
 ?>

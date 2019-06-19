@@ -15,6 +15,7 @@
     $p[$i]['struttura_id'] = $row['struttura_id'];
   }
   $out = json_encode($p);
+  mysqli_close($link);
 echo($out);
 
 ?>

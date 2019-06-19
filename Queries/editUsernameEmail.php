@@ -13,8 +13,10 @@
     if($num_row==1 && $row['utente_id'] == $_SESSION['utente_id']){
       $query = "UPDATE utenti SET utente_email='".$_POST['email-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
       $rs = mysqli_query($link, $query);
+      mysqli_close($link);
       header('Location: /home.php');
     }else{
+      mysqli_close($link);
           //email già utilizzata
   }
 }

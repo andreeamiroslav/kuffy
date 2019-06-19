@@ -12,6 +12,7 @@
   }
   $p[1]['nome_utente'] = $_SESSION['utente_username'];
   $out = json_encode($p);
+  mysqli_close($link);
   echo($out);
 
 ?>

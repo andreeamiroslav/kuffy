@@ -5,6 +5,7 @@
     $query = 'DELETE FROM strutture WHERE struttura_id='.$_REQUEST['strutturaid'];
 
     if($rs = mysqli_query($link, $query)){
+    mysqli_close($link);
       header('Location: /strutture.php');
     }
   } else if($_REQUEST['cmd']=='upd'){
@@ -12,7 +13,9 @@
       WHERE struttura_id='".$_REQUEST['strutturaid']."'";
 
       if($rs = mysqli_query($link, $query)){
+        mysqli_close($link);
         header('Location: /strutture.php');
       }
+      mysqli_close($link);
   }
  ?>

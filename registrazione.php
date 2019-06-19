@@ -39,6 +39,11 @@
                 </div>
               </div>
               <div class="row" id="user-confirm">
+               <?php
+                  if($_GET['msg'] == 'email'){
+                    echo '<p style="color: red; margin-left: 8.3rem;">Email già utilizzata</p>';
+                    }
+             ?>
                 <div class="input-field col offset-s1 s3">
                   <input name="username" id="user" type="text" class="validate">
                   <label for="user">Username</label>
@@ -48,6 +53,14 @@
                   <label for="conf-password">Conferma password</label>
                 </div>
               </div>
+               <?php
+                  if($_GET['msg'] == 'username'){
+                    echo '<p style="color: red; margin-left: 8.3rem;">Username già utilizzato</p>';
+                    }
+                  if($_GET['msg'] == 'password'){
+                    echo '<p style="color: red; margin-left: 30rem;">Le password devono corrispondere</p>';
+                    }
+             ?>
               <button type="submit" class="waves-effect waves-light btn-large" id="register-button" style="width: 20%">REGISTRATI</button>
             </form>
           </div>

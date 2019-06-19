@@ -16,6 +16,9 @@
       $query = "UPDATE utenti SET utente_password='".$_POST['password-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
       $rs = mysqli_query($link, $query);
       header('Location: /home.php');
+      mysqli_close($link);
     }
+    mysqli_close($link);
   }
+  mysqli_close($link);
 ?>

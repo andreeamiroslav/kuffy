@@ -5,6 +5,7 @@
     $query = 'DELETE FROM stanze WHERE stanza_id='.$_REQUEST['stanza_id'];
 
     if($rs = mysqli_query($link, $query)){
+    mysqli_close($link);
       header('Location: /stanze.php?strutturaid='.$_REQUEST['strutturaid']);
     }
   } else if($_REQUEST['cmd']=='upd'){
@@ -19,8 +20,10 @@
       }
 
       if($rs = mysqli_query($link, $query) && $_REQUEST['val']==1){
+      mysqli_close($link);
         header('Location: /stanze.php?strutturaid='.$_REQUEST['strutturaid']);
       } else {
+      mysqli_close($link);
         header('Location: /stanza.php?stanzaid='.$_REQUEST['stanza_id']);
       }
   }

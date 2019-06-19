@@ -10,11 +10,13 @@
     if($rs = mysqli_query($link, $query)){
         header('Location: /stanza.php?stanzaid='.$_GET['stanzaid']);
       }
+      mysqli_close($link);
   } else if($_REQUEST['action']=='edit'){
     $query = "UPDATE strutture SET struttura_nome='".$_REQUEST['struttura_nome']."', struttura_note='".$_REQUEST['struttura_note']."'
       WHERE struttura_id='".$_REQUEST['strutturaid']."'";
 
       if($rs = mysqli_query($link, $query)){
+        mysqli_close($link);
         header('Location: strutture.php');
       }
   }

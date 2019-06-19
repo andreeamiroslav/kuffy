@@ -11,6 +11,7 @@
           $_REQUEST['note'.$i].'");';
           //echo '<br>Questa è la query: '.$query;
           $rs = mysqli_query($link, $query);
+          mysqli_close($link);
     }
 
  ?>

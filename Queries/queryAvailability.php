@@ -36,5 +36,6 @@
     }
   }
   $out = json_encode($p);
+  mysqli_close($link);
   echo($out);
 ?>

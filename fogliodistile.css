@@ -8,14 +8,14 @@
 }
 
 #content-wrap {
-  padding-bottom: 8rem;    /* Footer height */
+  padding-bottom: 10rem;    /* Footer height */
 }
 
 #footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   width: 100%;
-  height: 8rem;
+  height: 8rem;            /* Footer height */
 }
 
 #list{

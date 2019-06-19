@@ -35,12 +35,22 @@
                   <input type="password" name="password" id="pass">
                   <label for="pass">Password</label>
                 </div>
+                <?php
+                  if(isset($_GET['msg'])){
+                    echo '<p style="color: red">Credenziali errate</p>';
+                    }
+             ?>
                 <button type="submit" class="btn waves-effect waves-light">Login</button>
               </form>
         </div>
       </div>
 
     </div>
+    <?php
+      if(isset($_GET['msg'])){
+    ?>
+    <script>loginOn();</script>
+  <?php } ?>
     <div class="col s5,5">
       <div id="right-text">
         <div id="login-text" align="center">

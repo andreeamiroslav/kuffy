@@ -11,5 +11,6 @@
               $last_id = mysqli_insert_id($link);
               header('Location: /aggiungiStanza.php?struttura_id='.$last_id);
             }
+            mysqli_close($link);
 
  ?>
