@@ -44,7 +44,7 @@ function getReservations(){
     }
 
   };
-  xmlhttp.open("GET", "query.php", true);
+  xmlhttp.open("GET", "Queries/query.php", true);
   xmlhttp.send();
   return true;
 }
