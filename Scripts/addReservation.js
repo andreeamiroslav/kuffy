@@ -13,7 +13,7 @@ function submitGuestsValues(){
       var nascita = document.getElementById('nascita'+i).value;
       var professione = document.getElementById('professione'+i).value;
 
-      data = 'name'+i+'='+nome+'&surname'+i+'='+cognome+'&gender'+i+'='+sesso+'&provenienza'+i+'='+provenienza+'&nascita'+i+'='+nascita+'&professione'+i+'='+professione;
+      data += 'name'+i+'='+nome+'&surname'+i+'='+cognome+'&gender'+i+'='+sesso+'&provenienza'+i+'='+provenienza+'&nascita'+i+'='+nascita+'&professione'+i+'='+professione;
 
       if(i+1!=formsNumber){
         data += '&';
