@@ -15,7 +15,7 @@ function submitValues(strutturaid){
     var note = document.getElementById('note-room'+i).value;
     if(nome == "" || postiletto == null || prezzoNotte == null)
       errore = true;
-    data = 'name'+i+'='+nome+'&beds'+i+'='+postiletto+'&price'+i+'='+prezzoNotte+'&note'+i+'='+note;
+    data += 'name'+i+'='+nome+'&beds'+i+'='+postiletto+'&price'+i+'='+prezzoNotte+'&note'+i+'='+note;
     if(i+1!=formsNumber){
       data += '&';
     }
