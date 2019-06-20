@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Stanze - Kuff</title>
+    <title>Stanze - Kuffy</title>
     <!--Import materialize.css-->
     <script type = "text/javascript" src = "Scripts/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="materialize/css/materialize.min.css"/>
@@ -47,6 +47,13 @@
     </div>
 
     <table>
+      <thead>
+       <?php
+          if(isset($_GET['msg'])){
+            echo '<p style="color: red;" align="center">Non tutte le stanze sono state aggiunte, si prega di compilare i campi segnati</p>';
+            }
+     ?>
+      </thead>
       <tbody>
         <tr>
           <td>

@@ -30,17 +30,17 @@
           <div class="row" id="name-beds">
             <div class="input-field col s4" id="room-name">
               <input id="name-room0" type="text" class="validate" name="name0">
-              <label for="name-room0">Nome stanza</label>
+              <label for="name-room0">Nome stanza <p style="display: inline; color: red;">(*)</p></label>
             </div>
             <div class="input-field col s4" id="room-beds">
               <input id="beds-room0" type="text" class="validate" name="beds0">
-              <label for="beds-room0">Postiletto</label>
+              <label for="beds-room0">Postiletto <p style="display: inline; color: red;">(*)</p></label>
             </div>
           </div>
           <div class="row" id="price-note">
             <div class="input-field col s4" id="room-price">
               <input id="price-room0" type="text" class="validate" name="price0">
-              <label for="price-room0">Prezzo a notte</label>
+              <label for="price-room0">Prezzo a notte <p style="display: inline; color: red;">(*)</p></label>
             </div>
             <div class="input-field col s4" id="room-note">
               <input id="note-room0" type="text" class="validate" name="note0">
@@ -49,6 +49,7 @@
           </div>
         </form>
       </div>
+      I campi contrassegnati da <p style="display: inline; color: red;">(*)</p> sono obbligatori<br /><br />
       <button id="new-room" class="btn-floating btn-large waves-effect waves-light red" onclick="add(<?php echo $_REQUEST['struttura_id']; ?>);">
         <img src="Icone/plus-md.png" id="plus-client">
       </button>
