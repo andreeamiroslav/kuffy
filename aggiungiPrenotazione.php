@@ -12,7 +12,7 @@
     <script type="text/javascript" src="Scripts/addForm.js"></script>
     <script type="text/javascript" src="Scripts/addReservation.js"></script>
   </head>
-  
+
   <body onload="initDate(); getStructures(); getRooms();">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
@@ -20,7 +20,7 @@
 
     <div class="row" id="booking">
       <div class="col s7">
-        <form>
+        <form id="firstForm" method="post" action="/Queries/addReservation.php?num=0">
           <div class="row" id="structure-from">
             <div class="input-field col offset-s1 s5" id="structure">
               <select id="selectStructure" onchange="getRooms();">
@@ -104,7 +104,7 @@
             <button id="add-client" class="btn-floating btn-large waves-effect waves-light red" onclick="destroySelect(); addForm(); initSelect();">
               <img src="Icone/plus-md.png" id="plus-client">
             </button>
-            <button id="add-booking" class="waves-effect waves-light btn" onclick="submitValues();">INSERISCI</button>
+            <button id="add-booking" class="waves-effect waves-light btn" onclick="submitResValues(); submitGuestsValues();">INSERISCI</button>
           </div>
         </div>
 
