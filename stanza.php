@@ -25,17 +25,17 @@
             <div class="row">
               <div class="input-field col s6">
                 <input id="nome-stanza" type="text" class="validate">
-                <label for="nome_struttura">Nome stanza</label>
+                <label for="nome_struttura">Nome stanza <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s6">
                 <input id="posti-letto" type="text" class="validate">
-                <label for="posti-letto">Posti letto</label>
+                <label for="posti-letto">Posti letto <p style="display: inline; color: red;">(*)</p></label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
                 <input id="prezzo-notte" type="text" class="validate">
-                <label for="prezzo-notte">Prezzo a notte</label>
+                <label for="prezzo-notte">Prezzo a notte <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s6">
                 <input id="note" type="text" class="validate">
@@ -49,6 +49,12 @@
     </div>
 
     <div class="row">
+      <?php
+         if(isset($_GET['msg'])){
+           if($_GET['msg'] == "error1")
+             echo '<p style="color: red;" align="center">La stanza non è stata modificata, si prega di compilare i campi segnati</p>';
+          }
+    ?>
       <div class="col s3" id="name-info-room">
         <div id="name-room" align="center">
           <a id="edit-room" data-target="modal1" class="modal-trigger" onclick="setidstanza('<?php echo $_GET['stanzaid']; ?>')">

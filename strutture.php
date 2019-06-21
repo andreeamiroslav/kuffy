@@ -25,15 +25,16 @@
             <div class="row">
               <div class="input-field col s6">
                 <input id="nome_struttura" name="struttura-name" type="text" class="validate">
-                <label for="nome_struttura">Nome struttura</label>
+                <label for="nome_struttura">Nome struttura <p style="display: inline; color: red;">(*)</p></label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
                 <input id="indirizzo" name="struttura-ind" type="text" class="validate">
-                <label for="indirizzo">Indirizzo</label>
+                <label for="indirizzo">Indirizzo <p style="display: inline; color: red;">(*)</p></label>
               </div>
             </div>
+            I campi contrassegnati da <p style="display: inline; color: red;">(*)</p> sono obbligatori<br />
         <div class="modal-footer">
           <a onclick="submitValues('<?php session_start(); echo $_SESSION['utente_id']; ?>', 1);" class="modal-close waves-effect waves-light btn" id="modal-button-1">Aggiungi</a>
         </div>
@@ -64,6 +65,13 @@
     </div>
 
     <table>
+      <thead>
+       <?php
+          if(isset($_GET['msg'])){
+            echo '<p style="color: red;" align="center">La struttura non è stata aggiunta, si prega di compilare i campi segnati</p>';
+            }
+     ?>
+      </thead>
       <tbody>
         <tr>
           <td>

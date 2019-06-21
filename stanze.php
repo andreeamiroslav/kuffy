@@ -23,17 +23,17 @@
             <div class="row">
               <div class="input-field col s6">
                 <input id="nome-stanza" type="text" class="validate">
-                <label for="nome-stanza">Nome stanza</label>
+                <label for="nome-stanza">Nome stanza <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s6">
                 <input id="posti-letto" type="text" class="validate">
-                <label for="posti-letto">Posti letto</label>
+                <label for="posti-letto">Posti letto <p style="display: inline; color: red;">(*)</p></label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s6">
                 <input id="prezzo-notte" type="text" class="validate">
-                <label for="prezzo-notte">Prezzo a notte</label>
+                <label for="prezzo-notte">Prezzo a notte <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s6">
                 <input id="note" type="text" class="validate">
@@ -50,8 +50,9 @@
       <thead>
        <?php
           if(isset($_GET['msg'])){
-            echo '<p style="color: red;" align="center">Non tutte le stanze sono state aggiunte, si prega di compilare i campi segnati</p>';
-            }
+            if($_GET['msg'] == "error")
+              echo '<p style="color: red;" align="center">Non tutte le stanze sono state aggiunte, si prega di compilare i campi segnati</p>';
+          }
      ?>
       </thead>
       <tbody>

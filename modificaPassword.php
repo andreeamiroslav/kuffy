@@ -19,6 +19,15 @@
     </div>
     <div class="row">
       <div class="col s12">
+        <br /><br />
+        <?php
+          if(isset($_GET['msg'])){
+            if($_GET['msg'] == "disuguali")
+                echo '<p style="color: red;" align="center">La password nuova e la sua conferma devono coincidere</p>';
+            if($_GET['msg'] == "errata")
+                echo '<p style="color: red;" align="center">La password attuale è errata</p>';
+           }
+      ?>
         <form action="Queries/editPassword.php" method="post">
           <div class="row" id="email-user-now">
             <div class="input-field col offset-s4 s4">

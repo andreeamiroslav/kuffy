@@ -1,3 +1,6 @@
+<?php
+  require_once('init.php');
+?>
 <html lang="it_IT" dir="ltr">
   <head>
     <title>Aggiungi stanza - Kuffy</title>
@@ -25,6 +28,14 @@
     <script>getStructures();</script>
 
     <div class="row" id="create-room">
+      <h4>Aggiungi una stanza alla struttura "
+        <?php
+          $query = "SELECT struttura_nome FROM strutture WHERE struttura_id = '". $_REQUEST['struttura_id']."'";
+          $result = $link->query($query);
+          $row = mysqli_fetch_array($result);
+          echo $row['struttura_nome'];
+          ?>
+    "</h4>
       <div id="forms">
         <form id="addF0" method="post" action="/Queries/addRoom.php?id=<?php echo $_REQUEST['struttura_id']; ?>&num=0" class="col s12">
           <div class="row" id="name-beds">

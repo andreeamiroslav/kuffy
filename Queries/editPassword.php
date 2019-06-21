@@ -15,10 +15,15 @@
     if($num_row==1){
       $query = "UPDATE utenti SET utente_password='".$_POST['password-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
       $rs = mysqli_query($link, $query);
-      header('Location: /home.php');
       mysqli_close($link);
+      header('Location: /home.php');
+    }else{
+      mysqli_close($link);
+      header('Location: /modificaPassword.php?msg=errata');
     }
+  }else{
     mysqli_close($link);
+    header('Location: /modificaPassword.php?msg=disuguali');
   }
   mysqli_close($link);
 ?>

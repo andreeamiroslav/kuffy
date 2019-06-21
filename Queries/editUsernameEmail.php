@@ -11,17 +11,35 @@
     $num_row = mysqli_num_rows($rs);
     $row = mysqli_fetch_array($rs);
     if($num_row==1 && $row['utente_id'] == $_SESSION['utente_id']){
-      $query = "UPDATE utenti SET utente_email='".$_POST['email-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
+      $query = "SELECT * FROM utenti WHERE utente_email='".$_POST['email-new']."';";
+      $rs = mysqli_query($link, $query);
+      if(!$rs == mysqli_query($link, $query)){
+        echo "errore";
+        exit;
+      }
+
+      $num_row = mysqli_num_rows($rs);
+      $row = mysqli_fetch_array($rs);
+      if($num_row>0){
+        mysqli_close($link);
+        header('Location: /modificaProfiloUtente.php?msg=mailesistente');
+      }else{
+        $query = "UPDATE utenti SET utente_email='".$_POST['email-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
+        $rs = mysqli_query($link, $query);
+        mysqli_close($link);
+        $_SESSION['utente_email'] = $_POST['email-new'];
+        header('Location: /home.php');
+      }
+    }else{
       $rs = mysqli_query($link, $query);
       mysqli_close($link);
-      header('Location: /home.php');
-    }else{
-      mysqli_close($link);
-          //email già utilizzata
+      header('Location: /modificaProfiloUtente.php?msg=mail');
   }
 }
 
-  if(isset($_POST['user-old']) && isset($_POST['user-new'])){
+
+
+  if($_POST['user-old'] != "" && $_POST['user-new'] != ""){
     $query = "SELECT * FROM utenti WHERE utente_username='".$_POST['user-old']."';";
     $rs = mysqli_query($link, $query);
     if(!$rs == mysqli_query($link, $query)){
@@ -32,11 +50,29 @@
     $num_row = mysqli_num_rows($rs);
     $row = mysqli_fetch_array($rs);
     if($num_row==1 && $row['utente_id'] == $_SESSION['utente_id']){
+      $query = "SELECT * FROM utenti WHERE utente_username='".$_POST['user-new']."';";
+      $rs = mysqli_query($link, $query);
+      if(!$rs == mysqli_query($link, $query)){
+        echo "errore";
+        exit;
+      }
+
+      $num_row = mysqli_num_rows($rs);
+      $row = mysqli_fetch_array($rs);
+      if($num_row>0){
+        mysqli_close($link);
+        header('Location: /modificaProfiloUtente.php?msg=usernameesistente');
+      }else{
       $query = "UPDATE utenti SET utente_username='".$_POST['user-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
       $rs = mysqli_query($link, $query);
+      mysqli_close($link);
+      $_SESSION['utente_username'] = $_POST['user-new'];
       header('Location: /home.php');
+    }
     }else{
-          //email già utilizzata
+      $rs = mysqli_query($link, $query);
+      mysqli_close($link);
+      header('Location: /modificaProfiloUtente.php?msg=username');
   }
 }
 

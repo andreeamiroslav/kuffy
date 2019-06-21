@@ -13,7 +13,7 @@ function submitValues(strutturaid){
     var postiletto = document.getElementById('beds-room'+i).value;
     var prezzoNotte = document.getElementById('price-room'+i).value;
     var note = document.getElementById('note-room'+i).value;
-    if(nome == "" || postiletto == null || prezzoNotte == null)
+    if(nome == "" || postiletto == "" || prezzoNotte == "")
       errore = true;
     data += 'name'+i+'='+nome+'&beds'+i+'='+postiletto+'&price'+i+'='+prezzoNotte+'&note'+i+'='+note;
     if(i+1!=formsNumber){

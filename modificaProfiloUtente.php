@@ -23,6 +23,18 @@
     <script>getStructures();</script>
     <div class="row">
       <div class="col s12">
+        <?php
+          if(isset($_GET['msg'])){
+            if($_GET['msg'] == "mail")
+                echo '<p style="color: red;" align="center">Indirizzo email errato</p>';
+            if($_GET['msg'] == "username")
+                echo '<p style="color: red;" align="center">Nome utente errato</p>';
+            if($_GET['msg'] == "mailesistente")
+                echo '<p style="color: red;" align="center">Indirizzo email già utilizzato</p>';
+            if($_GET['msg'] == "usernameesistente")
+                echo '<p style="color: red;" align="center">Nome utente già utilizzato</p>';
+           }
+      ?>
         <form action="Queries/editUsernameEmail.php" method="post">
           <div class="row" id="email-user-now">
             <div class="input-field col offset-s1 s4">
@@ -44,6 +56,7 @@
               <label for="user-new">Nuovo username</label>
             </div>
           </div>
+          <h6 align="center">E' possibile modificare esclusivamente uno tra email e username in una sola volta</h4>  
           <div class="row" id="modify-cancel">
             <button class="waves-effect waves-light btn-large" id="cancel-button">ANNULLA</button>
             <button class="waves-effect waves-light btn-large" id="modify-button">MODIFICA</button>
