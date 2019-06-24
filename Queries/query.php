@@ -1,7 +1,7 @@
 <?php
   require_once('init.php');
   $query = "SELECT s.stanza_prezzonotte, s.stanza_id, s.stanza_nome, p.id, p.from_day, p.to_day, p.nome, p.p_cognome, p.data, p.days,
-   str.struttura_nome, str.struttura_id, p.check_in, p.check_out, p.en_check_in, p.en_check_out, p.p_provenienza,
+   str.struttura_nome, str.struttura_id, DATE_FORMAT(p.check_in, '%H:%i') AS check_in, DATE_FORMAT(p.check_out, '%H:%i') AS check_out, p.en_check_in, p.en_check_out, p.p_provenienza,
    p.p_sesso, p.p_nascita, p.p_professione
             FROM prenotazioni p, stanze s, strutture str
             WHERE str.struttura_fkutenteid = '".$_SESSION['utente_id']."' AND p.id_stanza = s.stanza_id AND s.stanza_fkstrutturaid=str.struttura_id

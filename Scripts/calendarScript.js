@@ -89,7 +89,7 @@ function getReservations(){
         + '\n</td>\n';
 
         temp.innerHTML += html;
-      }while(i != Object.keys(v).length); //Returns the length of an associative array
+      }while(i != Object.keys(v).length && i != 5); //Returns the length of an associative array
     }
 
   };

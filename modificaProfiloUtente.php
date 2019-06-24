@@ -21,7 +21,7 @@
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
-    <div class="row">
+    <div class="row centered">
       <div class="col s12">
         <?php
           if(isset($_GET['msg'])){
@@ -56,7 +56,7 @@
               <label for="user-new">Nuovo username</label>
             </div>
           </div>
-          <h6 align="center">E' possibile modificare esclusivamente uno tra email e username in una sola volta</h4>  
+          <h6 align="center">E' possibile modificare esclusivamente uno tra email e username in una sola volta</h4>
           <div class="row" id="modify-cancel">
             <button class="waves-effect waves-light btn-large" id="cancel-button">ANNULLA</button>
             <button class="waves-effect waves-light btn-large" id="modify-button">MODIFICA</button>
