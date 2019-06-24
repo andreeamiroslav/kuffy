@@ -292,7 +292,7 @@ function getRoomReservations(stanzaid){
         i++;
         var doc = document.getElementById('room-booking-tbody');
         var html = "";
-        html += '<tr class="room-booking-tbody-tr '+ v[i]["id"]+'" id="resRow' + i + '" title="Clicca per visualizzare le informazioni sulla prenotazione" onclick="showReservation(\'res'+ v[i]["id"]+'\')">';
+        html += '<tr class="room-booking-tbody-tr '+ v[i]["id"]+'" id="resRow' + i + '" title="Clicca per visualizzare le informazioni sulla prenotazione" onclick="showReservationFromList(\'res'+ v[i]["id"]+'\')">';
         html += '<td>' + v[i]['nome'] + ' ' + v[i]['p_cognome'] + '</td>';
         html += '<td>' + v[i]['from_day'] + '</td>';
         html += '<td>' + v[i]['to_day'] + '</td>';
@@ -369,7 +369,7 @@ function showReservation(resID){
         var i = 0;
         do{
           i++;
-          if(resID == 'res'+v[i]['id'] || document.getElementById(resID).classList.contains(v[i]['id'])){
+          if(document.getElementById(resID).classList.contains(v[i]['id'])){
             document.getElementById('nome').innerHTML = v[i]['nome'] + ' ' + v[i]['p_cognome'];
             document.getElementById('dal').innerHTML = v[i]['from_day'];
             document.getElementById('al').innerHTML = v[i]['to_day'];
@@ -393,6 +393,50 @@ function showReservation(resID){
             ospitiHTML += '</ol>';
             document.getElementById('ospiti').innerHTML = ospitiHTML;
             document.getElementById('prezzo').innerHTML = parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
+            document.getElementById('editLink').href = "Queries/updateReservation.php?action=edit&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
+            document.getElementById('deleteLink').href = "Queries/updateReservation.php?action=del&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
+          }
+        }while(i != Object.keys(v).length);
+      }
+
+    };
+          xmlhttp.open("GET", "Queries/query.php", true);
+          xmlhttp.send();
+          return true;
+}
+
+function showReservationFromList(resID){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+        var v = JSON.parse(this.responseText);
+        var i = 0;
+        do{
+          i++;
+          if(resID == 'res'+v[i]['id']){
+            document.getElementById('nome').innerHTML = v[i]['nome'] + ' ' + v[i]['p_cognome'];
+            document.getElementById('dal').innerHTML = v[i]['from_day'];
+            document.getElementById('al').innerHTML = v[i]['to_day'];
+            document.getElementById('in').innerHTML = v[i]['check_in'];
+            document.getElementById('out').innerHTML = v[i]['check_out'];
+            document.getElementById('nPersone').innerHTML = v[i]['nOspiti'];
+            var ospitiHTML = '<ol>';
+            if(v[i]['nOspiti']-1 > -1){
+            var j = -1;
+              do{
+                j++;
+                ospitiHTML += "<li>";
+                ospitiHTML += "<b>Nome:</b> " + v[i][j]['o_nome'] + " " + v[i][j]['o_cognome'];
+                ospitiHTML += "<br /><b>Sesso:</b> " + v[i][j]['o_sesso'];
+                ospitiHTML += "<br /><b>Provenienza:</b> " + v[i][j]['o_provenienza'];
+                ospitiHTML += "<br /><b>Data di nascita:</b> " + v[i][j]['o_nascita'];
+                ospitiHTML += "<br /><b>Professione:</b> " + v[i][j]['o_professione'];
+                ospitiHTML += "</li>";
+              }while(j != v[i]['nOspiti']-1);
+            }
+            ospitiHTML += '</ol>';
+            document.getElementById('ospiti').innerHTML = ospitiHTML;
+            document.getElementById('prezzo').innerHTML = "€" + parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
             document.getElementById('editLink').href = "Queries/updateReservation.php?action=edit&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
             document.getElementById('deleteLink').href = "Queries/updateReservation.php?action=del&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
           }
