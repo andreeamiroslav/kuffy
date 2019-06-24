@@ -374,7 +374,10 @@ function getRooms(id){
           $("select").material_select();
         }
        }while(i != Object.keys(v).length); //Returns the length of an associative array
-       initReservation(id);
+       if(window.location.pathname.match(/modificaPrenotazione.php.*/))
+        initReservation(id);
+       console.log(document.getElementById('selectRoom').value);
+       fillColor(document.getElementById('selectRoom').value);
      }
 
    };
