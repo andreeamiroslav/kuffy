@@ -43,7 +43,7 @@
               <label for="password-confirm">Conferma nuova password</label>
             </div>
             <br /><div class="row col" id="modify-cancel-password">
-              <button class="waves-effect waves-light btn-large" id="cancel-button">ANNULLA</button>
+              <button class="waves-effect waves-light btn-large" type="button" id="cancel-button" onclick="location.href='/home.php';">ANNULLA</button>
               <button class="waves-effect waves-light btn-large" id="modify-button" type="submit">MODIFICA</button>
             </div>
           </div>

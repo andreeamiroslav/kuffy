@@ -56,9 +56,9 @@
               <label for="user-new">Nuovo username</label>
             </div>
           </div>
-          <h6 align="center">E' possibile modificare esclusivamente uno tra email e username in una sola volta</h4>  
+          <h6 align="center">E' possibile modificare esclusivamente uno tra email e username in una sola volta</h4>
           <div class="row" id="modify-cancel">
-            <button class="waves-effect waves-light btn-large" id="cancel-button">ANNULLA</button>
+            <button class="waves-effect waves-light btn-large" type="button" id="cancel-button" onclick="location.href='/home.php';">ANNULLA</button>
             <button class="waves-effect waves-light btn-large" id="modify-button">MODIFICA</button>
           </div>
         </form>

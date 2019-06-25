@@ -47,6 +47,15 @@ function submitResValues(){
   var nascita = document.getElementById('nascita').value;
   var professione = document.getElementById('professione').value;
 
+
+  if(from == "" || to == "" || days == "" || pax == "" || name == "" || surname == "" || gender == "" || idstanza == ""   || checkin == "" || checkout == "" || provenienza == "" || nascita == "" || professione == "")
+    window.location.href = 'aggiungiPrenotazione.php?msg=mancanti';
+
+  var fdate = new Date(from);
+  var tdate = new Date(to);
+  if(fdate >= tdate)
+    window.location.href = 'aggiungiPrenotazione.php?msg=data';
+
   data = 'from='+from+'&to='+to+'&days='+days+'&pax='+pax+'&name='+name+'&surname='+surname+'&gender='+gender+'&idstanza='+idstanza+'&checkin='+checkin+'&checkout='+checkout+'&provenienza='+provenienza+'&nascita='+nascita+'&professione='+professione;
 
   var url = document.getElementById('firstForm').action;

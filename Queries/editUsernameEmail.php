@@ -1,6 +1,6 @@
 <?php
   require_once('init.php');
-  if(isset($_POST['email-old']) && isset($_POST['email-new'])){
+  if($_POST['email-old'] != "" && $_POST['email-new'] != ""){
     $query = "SELECT * FROM utenti WHERE utente_email='".$_POST['email-old']."';";
     $rs = mysqli_query($link, $query);
     if(!$rs == mysqli_query($link, $query)){
@@ -77,6 +77,7 @@
 }
 
 
+header('Location: /home.php');
 
 
 
