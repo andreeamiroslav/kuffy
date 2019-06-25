@@ -21,7 +21,7 @@
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
-    <div class="row">
+    <div class="row centered">
       <div class="col s12">
         <?php
           if(isset($_GET['msg'])){

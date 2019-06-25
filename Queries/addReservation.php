@@ -16,4 +16,9 @@
           $_REQUEST['nascita'].'", "'.
           $_REQUEST['professione'].'");';
          $rs = mysqli_query($link, $query);
+         if(isset($_GET['resID']) && isset($_GET['stanzaidd'])){
+           header('Location: /Queries/updateReservation.php?action=del&id='.$_GET['resID'].'&stanzaid='.$_GET['stanzaidd']);
+         }else{
+           header('Location: /index.php');
+         }
  ?>

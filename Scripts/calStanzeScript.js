@@ -1,6 +1,7 @@
 var date = new Date();
 var actual;
 var first;
+var idInRow;
 
 
 function getReservations(){
@@ -143,6 +144,8 @@ function fillColor(passedID){
   for(i=1; i != 40; i++){
     document.getElementById(i).style.backgroundColor = null;
     document.getElementById(i).style.background = null;
+    document.getElementById(i).classList = "day";
+    document.getElementById(i).title="";
   }
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function(){
@@ -154,7 +157,6 @@ function fillColor(passedID){
         var tDate = date;
         var tDay;
         var tempMonth = (tDate.getMonth()+1).toString();
-        //var tempDay = tDate.getDate().toString();
         if(tempMonth.length == 1)
           tempMonth = "0" + tempMonth;
         if((i-first+1)<10)
@@ -173,25 +175,47 @@ function fillColor(passedID){
               document.getElementById(i).style.background = "linear-gradient(90deg, #f08080 50%, #56b556 50%)";
               document.getElementById(i).classList.add(v[j]['id']);
               document.getElementById(i).title="Giorno con check-out";
+              if(inRow == 0){
+                var t = i;
+                do{
+                  t--;
+                  document.getElementById(t).style.backgroundColor = "#f08080";
+                  if(window.location.pathname.match(/stanza.php.*/))
+                    document.getElementById(t).title="Clicca per visualizzare le informazioni sulla prenotazione";
+                  else
+                    document.getElementById(t).title= "Giorno occupato";
+                  document.getElementById(t).classList.add(idInRow);
+                }while(t != first);
+              }
               inRow = 0;
             }else if(v[j]['from_day'] == tempDate){
               document.getElementById(i).style.backgroundColor = "#f08080";
               document.getElementById(i).classList.add(v[j]['id']);
-              document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
+              if(window.location.pathname.match(/stanza.php.*/))
+                document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
+              else
+                document.getElementById(i).title= "Giorno occupato";
               inRow = 1;
               idInRow = v[j]['id'];
               done = 1;
             }else{
-              document.getElementById(i).style.backgroundColor = "#56b556";
-              document.getElementById(i).title="Giorno libero";
+              if(document.getElementById(i).classList == "day"){
+                document.getElementById(i).style.backgroundColor = "#56b556";
+                document.getElementById(i).title="Giorno libero";
+              }
             }
 
             if(inRow == 1){
               document.getElementById(i).style.backgroundColor = "#f08080";
-              document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
+              if(window.location.pathname.match(/stanza.php.*/))
+                document.getElementById(i).title="Clicca per visualizzare le informazioni sulla prenotazione";
+              else
+                document.getElementById(i).title= "Giorno occupato";
               document.getElementById(i).classList.add(idInRow);
             }
           }
+          if(i == 3)
+          console.log(document.getElementById(i).title + "    " + v[j]['nome']);
           if(document.getElementById(i).innerHTML == "")
                 document.getElementById(i).style.backgroundColor = null;
         }while(j != Object.keys(v).length);
@@ -292,7 +316,7 @@ function getRoomReservations(stanzaid){
         i++;
         var doc = document.getElementById('room-booking-tbody');
         var html = "";
-        html += '<tr class="room-booking-tbody-tr '+ v[i]["id"]+'" id="resRow' + i + '" title="Clicca per visualizzare le informazioni sulla prenotazione" onclick="showReservation(\'res'+ v[i]["id"]+'\')">';
+        html += '<tr class="room-booking-tbody-tr '+ v[i]["id"]+'" id="resRow' + i + '" title="Clicca per visualizzare le informazioni sulla prenotazione" onclick="showReservationFromList(\'res'+ v[i]["id"]+'\')">';
         html += '<td>' + v[i]['nome'] + ' ' + v[i]['p_cognome'] + '</td>';
         html += '<td>' + v[i]['from_day'] + '</td>';
         html += '<td>' + v[i]['to_day'] + '</td>';
@@ -307,7 +331,7 @@ function getRoomReservations(stanzaid){
   return true;
 }
 
-function getRooms(){
+function getRooms(id){
   //First remove all the options
   var select = document.getElementById("selectRoom");
   var length = select.options.length;
@@ -350,8 +374,10 @@ function getRooms(){
           $("select").material_select();
         }
        }while(i != Object.keys(v).length); //Returns the length of an associative array
-
-       fillColor();
+       if(window.location.pathname.match(/modificaPrenotazione.php.*/))
+        initReservation(id);
+       console.log(document.getElementById('selectRoom').value);
+       fillColor(document.getElementById('selectRoom').value);
      }
 
    };
@@ -369,7 +395,7 @@ function showReservation(resID){
         var i = 0;
         do{
           i++;
-          if(resID == 'res'+v[i]['id'] || document.getElementById(resID).classList.contains(v[i]['id'])){
+          if(document.getElementById(resID).classList.contains(v[i]['id'])){
             document.getElementById('nome').innerHTML = v[i]['nome'] + ' ' + v[i]['p_cognome'];
             document.getElementById('dal').innerHTML = v[i]['from_day'];
             document.getElementById('al').innerHTML = v[i]['to_day'];
@@ -392,8 +418,52 @@ function showReservation(resID){
             }
             ospitiHTML += '</ol>';
             document.getElementById('ospiti').innerHTML = ospitiHTML;
-            document.getElementById('prezzo').innerHTML = parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
-            document.getElementById('editLink').href = "Queries/updateReservation.php?action=edit&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
+            document.getElementById('prezzo').innerHTML = "€" + parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
+            document.getElementById('editLink').href = "modificaPrenotazione.php?id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
+            document.getElementById('deleteLink').href = "Queries/updateReservation.php?action=del&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
+          }
+        }while(i != Object.keys(v).length);
+      }
+
+    };
+          xmlhttp.open("GET", "Queries/query.php", true);
+          xmlhttp.send();
+          return true;
+}
+
+function showReservationFromList(resID){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function(){
+      if(this.readyState == 4 && this.status == 200){
+        var v = JSON.parse(this.responseText);
+        var i = 0;
+        do{
+          i++;
+          if(resID == 'res'+v[i]['id']){
+            document.getElementById('nome').innerHTML = v[i]['nome'] + ' ' + v[i]['p_cognome'];
+            document.getElementById('dal').innerHTML = v[i]['from_day'];
+            document.getElementById('al').innerHTML = v[i]['to_day'];
+            document.getElementById('in').innerHTML = v[i]['check_in'];
+            document.getElementById('out').innerHTML = v[i]['check_out'];
+            document.getElementById('nPersone').innerHTML = v[i]['nOspiti'];
+            var ospitiHTML = '<ol>';
+            if(v[i]['nOspiti']-1 > -1){
+            var j = -1;
+              do{
+                j++;
+                ospitiHTML += "<li>";
+                ospitiHTML += "<b>Nome:</b> " + v[i][j]['o_nome'] + " " + v[i][j]['o_cognome'];
+                ospitiHTML += "<br /><b>Sesso:</b> " + v[i][j]['o_sesso'];
+                ospitiHTML += "<br /><b>Provenienza:</b> " + v[i][j]['o_provenienza'];
+                ospitiHTML += "<br /><b>Data di nascita:</b> " + v[i][j]['o_nascita'];
+                ospitiHTML += "<br /><b>Professione:</b> " + v[i][j]['o_professione'];
+                ospitiHTML += "</li>";
+              }while(j != v[i]['nOspiti']-1);
+            }
+            ospitiHTML += '</ol>';
+            document.getElementById('ospiti').innerHTML = ospitiHTML;
+            document.getElementById('prezzo').innerHTML = "€" + parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
+            document.getElementById('editLink').href = "modificaPrenotazione.php?id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
             document.getElementById('deleteLink').href = "Queries/updateReservation.php?action=del&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
           }
         }while(i != Object.keys(v).length);

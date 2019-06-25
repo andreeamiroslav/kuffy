@@ -62,7 +62,7 @@ function getReservations(){
     if(this.readyState == 4 && this.status == 200){
       var v = JSON.parse(this.responseText);
       var i = 0;
-      do{
+      while(i != Object.keys(v).length && i != 5){
         i++;
         var html ="<tr>\n";
         var temp = document.getElementById('bodyTable');
@@ -89,7 +89,7 @@ function getReservations(){
         + '\n</td>\n';
 
         temp.innerHTML += html;
-      }while(i != Object.keys(v).length); //Returns the length of an associative array
+      }
     }
 
   };

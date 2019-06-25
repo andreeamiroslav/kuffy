@@ -10,14 +10,16 @@
     if($rs = mysqli_query($link, $query)){
         header('Location: /stanza.php?stanzaid='.$_GET['stanzaid']);
       }
-      mysqli_close($link);
-  } else if($_REQUEST['action']=='edit'){
-    $query = "UPDATE strutture SET struttura_nome='".$_REQUEST['struttura_nome']."', struttura_note='".$_REQUEST['struttura_note']."'
-      WHERE struttura_id='".$_REQUEST['strutturaid']."'";
 
+      $query = "DELETE FROM ospiti
+                WHERE o_prenotazioneid in
+                 (SELECT * FROM (SELECT o_prenotazioneid
+                  FROM ospiti o, prenotazioni p, stanze s, strutture str
+                  WHERE str.struttura_fkutenteid = '".$_SESSION['utente_id']."' AND s.stanza_fkstrutturaid=str.struttura_id
+                      AND p.id_stanza = s.stanza_id AND p.id = ".$_GET['id']." AND o_id = p.id) as t)";
       if($rs = mysqli_query($link, $query)){
-        mysqli_close($link);
-        header('Location: strutture.php');
-      }
+          header('Location: /stanza.php?stanzaid='.$_GET['stanzaid']);
+        }
+      mysqli_close($link);
   }
  ?>

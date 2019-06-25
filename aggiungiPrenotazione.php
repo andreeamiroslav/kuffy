@@ -56,11 +56,11 @@
           </div>
           <div class="row" id="checks">
             <div class="input-field col offset-s1 s4">
-              <input id="checkin" type="text" class="validate">
+              <input placeholder="HH:MM" id="checkin" type="text" class="validate">
               <label for="checkin">Orario check-in</label>
             </div>
             <div class="input-field col s4">
-              <input id="checkout" type="text" class="validate">
+              <input placeholder="HH:MM" id="checkout" type="text" class="validate">
               <label for="checkout">Orario check-out</label>
             </div>
           </div>
@@ -88,7 +88,7 @@
                 <label for="provenienza">Provenienza</label>
               </div>
               <div class="input-field col s4">
-                <input id="nascita" type="text" class="validate">
+                <input placeholder="aaaa-mm-gg" id="nascita" type="text" class="validate">
                 <label for="nascita">Data di nascita</label>
               </div>
               <div class="input-field col s3">

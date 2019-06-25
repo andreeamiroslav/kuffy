@@ -15,7 +15,7 @@
 
     <script>
     if (/Mobile|Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-      window.location.href = "/Mobile/home.php";
+    //  window.location.href = "/Mobile/home.php";
     }
        $(document).ready(function() {
           $('select').material_select();
@@ -150,7 +150,7 @@
         </thead>
         <tbody id="bodyTable">
           <tr>
-            <td colspan="3">Nessuna prenotazione presente</td>
+            <td colspan="5">Nessuna prenotazione presente</td>
           </tr>
         <!--  Table will be filled by Javascript -->
         </tbody>
