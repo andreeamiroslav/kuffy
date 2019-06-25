@@ -401,6 +401,9 @@ function showReservation(resID){
             document.getElementById('al').innerHTML = v[i]['to_day'];
             document.getElementById('in').innerHTML = v[i]['check_in'];
             document.getElementById('out').innerHTML = v[i]['check_out'];
+            document.getElementById('provenienza').innerHTML = v[i]['p_provenienza'];
+            document.getElementById('nascita').innerHTML = v[i]['p_nascita'];
+            document.getElementById('professione').innerHTML = v[i]['p_professione'];
             document.getElementById('nPersone').innerHTML = v[i]['nOspiti'];
             var ospitiHTML = '<ol>';
             if(v[i]['nOspiti']-1 > -1){
@@ -445,6 +448,9 @@ function showReservationFromList(resID){
             document.getElementById('al').innerHTML = v[i]['to_day'];
             document.getElementById('in').innerHTML = v[i]['check_in'];
             document.getElementById('out').innerHTML = v[i]['check_out'];
+            document.getElementById('provenienza').innerHTML = v[i]['p_provenienza'];
+            document.getElementById('nascita').innerHTML = v[i]['p_nascita'];
+            document.getElementById('professione').innerHTML = v[i]['p_professione'];
             document.getElementById('nPersone').innerHTML = v[i]['nOspiti'];
             var ospitiHTML = '<ol>';
             if(v[i]['nOspiti']-1 > -1){

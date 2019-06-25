@@ -167,6 +167,9 @@
             <br /><b>Check-in: </b><p style="display:inline" id="in"></p> <b>Check-out: </b> <p style="display:inline" id="out"></p>
             <br /><b>Prezzo totale:</b> <p style="display:inline" id="prezzo"></p>
             <br /><b>Persona prenotante:</b> <p style="display:inline" id="nome"></p>
+            <br /><b>Data di nascita:</b> <p style="display:inline" id="nascita"></p>
+            <br /><b>Provenienza:</b> <p style="display:inline" id="provenienza"></p>
+            <br /><b>Professione:</b> <p style="display:inline" id="professione"></p>
             <br /><b>Numero altri ospiti:</b> <p style="display:inline" id="nPersone"></p>
             <br /><br /><b>Ospiti:</b> <p id="ospiti"></p>
             <a id="editLink" href=""><img src="Icone/61456.png" id="modify-booking"></a>

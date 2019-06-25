@@ -3,6 +3,7 @@ function submitGuestsValues(){
   var data = "";
   var xmlhttp = new XMLHttpRequest();
   var i = 0;
+  var errors = 0;
   formsNumber -= 1;
 
   for(i; i<formsNumber; i++){
@@ -12,6 +13,8 @@ function submitGuestsValues(){
       var provenienza = document.getElementById('provenienza'+i).value;
       var nascita = document.getElementById('nascita'+i).value;
       var professione = document.getElementById('professione'+i).value;
+      if(nome == "" || cognome == "" || sesso == "" || provenienza == "" || nascita == "" || professione == "")
+        errors ++;
 
       data += 'name'+i+'='+nome+'&surname'+i+'='+cognome+'&gender'+i+'='+sesso+'&provenienza'+i+'='+provenienza+'&nascita'+i+'='+nascita+'&professione'+i+'='+professione;
 
@@ -21,6 +24,8 @@ function submitGuestsValues(){
       var url = document.getElementById('addF'+i).action;
       xmlhttp.open("POST", url);
       xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+      if(errors > 0)
+        data = "";
       xmlhttp.send(data);
   }
   xmlhttp.onreadystatechange = function(){
@@ -29,7 +34,7 @@ function submitGuestsValues(){
   }
 }
 
-function submitResValues(){
+function submitResValues(id){
   var data = "";
   var xmlhttp = new XMLHttpRequest();
 
@@ -51,13 +56,14 @@ function submitResValues(){
   if(from == "" || to == "" || days == "" || pax == "" || name == "" || surname == "" || gender == "" || idstanza == ""   || checkin == "" || checkout == "" || provenienza == "" || nascita == "" || professione == "")
     window.location.href = 'aggiungiPrenotazione.php?msg=mancanti';
 
+
   var fdate = new Date(from);
   var tdate = new Date(to);
   if(fdate >= tdate)
     window.location.href = 'aggiungiPrenotazione.php?msg=data';
-
-  data = 'from='+from+'&to='+to+'&days='+days+'&pax='+pax+'&name='+name+'&surname='+surname+'&gender='+gender+'&idstanza='+idstanza+'&checkin='+checkin+'&checkout='+checkout+'&provenienza='+provenienza+'&nascita='+nascita+'&professione='+professione;
-
+  data = 'from='+from+'&to='+to+'&days='+days+'&pax='+pax+'&name='+name+'&surname='+surname+'&gender='+gender+'&idstanza='+idstanza+'&checkin='+checkin+'&checkout='+checkout+'&provenienza='+provenienza+'&nascita='+nascita+'&professione='+professione+'&stanzaidd='+idstanza;
+  if(id != null)
+    data += '&resID='+id
   var url = document.getElementById('firstForm').action;
   xmlhttp.open("POST", url);
   xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");

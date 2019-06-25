@@ -78,8 +78,8 @@
               </div>
               <div class="input-field col s3">
                 <select id="selectGender">
-                  <option value="M">M</option>
-                  <option value="F">F</option>
+                  <option value="m">M</option>
+                  <option value="f">F</option>
                 </select>
               </div>
             </div>
@@ -105,7 +105,7 @@
             <button id="add-client" class="btn-floating btn-large waves-effect waves-light red" onclick="destroySelect(); addForm(); initSelect();">
               <img src="Icone/plus-md.png" id="plus-client">
             </button>
-            <button id="add-booking" class="waves-effect waves-light btn" onclick="submitResValues(); submitGuestsValues();">INSERISCI</button>
+            <button id="add-booking" class="waves-effect waves-light btn" onclick="submitResValues('<?php echo $_GET['id'] ?>'); submitGuestsValues();">INSERISCI</button>
           </div>
         </div>
 

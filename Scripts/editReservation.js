@@ -25,20 +25,13 @@ function initReservation(id){
             do{
               j++;
               var temp = document.getElementById('forms');
-              temp.innerHTML += '<form id="addF'+j+'" method="post" action="/Queries/addGuests.php?num='+j+'"><div class="row" id="name-surname"><div class="input-field col offset-s1 s4">  <input placeholder="Nome" id="name'+j+'" type="text" class="validate"> </div>  <div class="input-field col s4"><input placeholder="Cognome" id="surname'+j+'" type="text" class="validate"> </div><div class="input-field col s3"><select id="selectGender'+j+'"><option value="M">M</option><option value="F">F</option></select></div></div><div class="row" id="name-surname"><div class="input-field col offset-s1 s4"><input placeholder="Provenienza" id="provenienza'+j+'" type="text" class="validate"></div><div class="input-field col s4"><input placeholder="Data di nascita" id="nascita'+j+'" type="text" class="validate"></div><div class="input-field col s3"><input placeholder="Professione" id="professione'+j+'" type="text" class="validate"></div></div> </form>';
+              temp.innerHTML += '<form id="addF'+j+'" method="post" action="/Queries/addGuests.php?num='+j+'"><div class="row" id="name-surname"><div class="input-field col offset-s1 s4">  <input placeholder="Nome" id="name'+j+'" type="text" class="validate"> </div>  <div class="input-field col s4"><input placeholder="Cognome" id="surname'+j+'" type="text" class="validate"> </div><div class="input-field col s3"><select id="selectGender'+j+'"><option value="m">M</option><option value="f">F</option></select></div></div><div class="row" id="name-surname"><div class="input-field col offset-s1 s4"><input placeholder="Provenienza" id="provenienza'+j+'" type="text" class="validate"></div><div class="input-field col s4"><input placeholder="Data di nascita" id="nascita'+j+'" type="text" class="validate"></div><div class="input-field col s3"><input placeholder="Professione" id="professione'+j+'" type="text" class="validate"></div></div> </form>';
               document.getElementById('name'+j).value = v[i][j]['o_nome'];
               document.getElementById('surname'+j).value = v[i][j]['o_cognome'];
               document.getElementById('selectGender'+j).value = v[i][j]['o_sesso'];
               document.getElementById('provenienza'+j).value = v[i][j]['o_provenienza'];
               document.getElementById('nascita'+j).value = v[i][j]['o_nascita'];
               document.getElementById('professione'+j).value = v[i][j]['o_professione'];
-              ospitiHTML += "<li>";
-              ospitiHTML += "<b>Nome:</b> " + v[i][j]['o_nome'] + " " + v[i][j]['o_cognome'];
-              ospitiHTML += "<br /><b>Sesso:</b> " + v[i][j]['o_sesso'];
-              ospitiHTML += "<br /><b>Provenienza:</b> " + v[i][j]['o_provenienza'];
-              ospitiHTML += "<br /><b>Data di nascita:</b> " + v[i][j]['o_nascita'];
-              ospitiHTML += "<br /><b>Professione:</b> " + v[i][j]['o_professione'];
-              ospitiHTML += "</li>";
             }while(j != v[i]['nOspiti']-1);
           }}
           $("select").material_select();
