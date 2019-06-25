@@ -150,7 +150,7 @@
         </thead>
         <tbody id="bodyTable">
           <tr>
-            <td colspan="3">Nessuna prenotazione presente</td>
+            <td colspan="5">Nessuna prenotazione presente</td>
           </tr>
         <!--  Table will be filled by Javascript -->
         </tbody>
