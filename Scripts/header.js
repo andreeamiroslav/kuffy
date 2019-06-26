@@ -1,10 +1,12 @@
-document.write('<div id="page-container">  <nav><div class="nav-wrapper"><a href="#" class="brand-logo">Kuffy</a></div></nav><div id="content-wrap">')
+document.write('<div id="page-container">  <nav><div class="nav-wrapper"><a href="#" class="brand-logo"><img src="Icone/Logo Kuffy.png" id="logo"></a></div></nav><div id="content-wrap">')
 
 /*Scritto decentemente:
 <div id="page-container">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      <a href="#" class="brand-logo">
+        <img src="Icone/Logo Kuffy.png" id="logo">
+      </a>
     </div>
   </nav>
      <div id="content-wrap">
