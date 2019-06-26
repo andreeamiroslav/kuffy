@@ -3506,17 +3506,17 @@ nav .input-field label.active i {
 }
 @media only screen and (min-width: 601px) {
  nav.nav-extended .nav-wrapper {
-  min-height:100px
+  min-height:90px
  }
  nav,
  nav .nav-wrapper i,
  nav a.sidenav-trigger,
  nav a.sidenav-trigger i {
-  height:100px;
-  line-height:100px
+  height:90px;
+  line-height:90px
  }
  .navbar-fixed {
-  height:100px
+  height:90px
  }
 }
 a {
