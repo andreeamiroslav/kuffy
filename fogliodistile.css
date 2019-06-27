@@ -1,14 +1,14 @@
 #logo {
   position: relative;
   margin-top: 0.2%;
+  margin-top: 5px;
   margin-left: 2%;
-  max-width: 10%;
-  width: auto;
+  height: 105px;
 }
 
 nav{
-  height: auto;
   max-height: 127px;
+  height: 113px;
 }
 
 .waves-effect {
