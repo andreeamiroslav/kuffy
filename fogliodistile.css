@@ -2,12 +2,11 @@
   position: relative;
   margin-top: 5px;
   margin-left: 2%;
-  max-height: 115px;
-  height: 115px;
+  height: 105px;
 }
 
 nav{
-  height: 127px;
+  height: 112px;
 }
 
 .waves-effect {
