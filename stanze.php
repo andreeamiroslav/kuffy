@@ -63,53 +63,53 @@
                 <img src="Icone/plus_png_1046150.png" id="plus">
                 Aggiungi stanza
               </a>
-            </div>  
+            </div>
           </td>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty1"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare0"><div class="card grey lighten-3" id="square-edit1" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare0"><div class="card grey lighten-3" id="square-edit1" align="center">
             </div></a>
           </td>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty2"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare1"><div class="card grey lighten-3" id="square-edit2" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare1"><div class="card grey lighten-3" id="square-edit2" align="center">
             </div></a>
           </td>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty3"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare2"><div class="card grey lighten-3" id="square-edit3" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare2"><div class="card grey lighten-3" id="square-edit3" align="center">
               </div></a>
           </td>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty4"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare3"><div class="card grey lighten-3" id="square-edit4" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare3"><div class="card grey lighten-3" id="square-edit4" align="center">
             </div></a>
           </td>
         </tr>
         <tr>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty5"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare4"><div class="card grey lighten-3" id="square-edit5" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare4"><div class="card grey lighten-3" id="square-edit5" align="center">
             </div></a>
           </td>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty6"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare5"><div class="card grey lighten-3" id="square-edit6" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare5"><div class="card grey lighten-3" id="square-edit6" align="center">
             </div></a>
           </td>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty7"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare6"><div class="card grey lighten-3" id="square-edit7" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare6"><div class="card grey lighten-3" id="square-edit7" align="center">
             </div></a>
           </td>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty8"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare7"><div class="card grey lighten-3" id="square-edit8" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare7"><div class="card grey lighten-3" id="square-edit8" align="center">
             </div></a>
           </td>
           <td style="width: 237px;">
             <div class="card grey lighten-3" id="square-empty9"></div>
-            <a href="#!" style="color: rgb(0,0,0)" id="linkSquare8"><div class="card grey lighten-3" id="square-edit9" align="center">
+            <a style="color: rgb(0,0,0)" id="linkSquare8"><div class="card grey lighten-3" id="square-edit9" align="center">
             </div></a>
           </td>
         </tr>
