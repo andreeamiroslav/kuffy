@@ -2,6 +2,7 @@
   position: relative;
   margin-top: 0.2%;
   margin-left: 2%;
+<<<<<<< HEAD
   max-width: 10%;
   width: auto;
 }
@@ -9,6 +10,13 @@
 nav{
   height: auto;
   max-height: 127px;
+=======
+  height: 105px;
+}
+
+nav{
+  height: 112px;
+>>>>>>> 4f9116fde17cf76331c2d07576a0b7150d32fcb6
 }
 
 .waves-effect {
