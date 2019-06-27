@@ -7,6 +7,7 @@
   <script type="text/javascript" src="materialize.min.js"></script>
 </head>
 <body>
+  <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
   <div id="page-container">
     <nav>
       <div class="nav-wrapper">
