@@ -243,10 +243,9 @@ function getStrutture(){
         i++;
         var t = i-1;
         doc = document.getElementById('square-edit'+i);
-        var content = '<h7>' + v[i]['struttura_nome'] +'</h7><br /><br /><img src="Icone/97805.png" id="structure-icon"><br /><br /><a href="#modal2" class="modal-trigger" onclick="setidstruttura('+v[i]['struttura_id']+')"><img src="Icone/61456.png" id="structure-edit-btn" class="'+v[i]['struttura_id']+'"></a><a href="Queries/upDelStructures.php?cmd=del&strutturaid='+v[i]['struttura_id']+'"><img src="Icone/1214428.png" id="structure-edit" ></a>';
+        var content = '<a style="color: rgb(0,0,0)" href="stanze.php?strutturaid='+v[i]['struttura_id']+'"><h7>' + v[i]['struttura_nome'] +'</h7></a><br /><br /><a href="stanze.php?strutturaid='+v[i]['struttura_id']+'"><img src="Icone/97805.png" id="structure-icon"></a><br /><br /><a href="#modal2" class="modal-trigger" onclick="setidstruttura('+v[i]['struttura_id']+')"><img src="Icone/61456.png" id="structure-edit-btn" class="'+v[i]['struttura_id']+'"></a><a href="Queries/upDelStructures.php?cmd=del&strutturaid='+v[i]['struttura_id']+'"><img src="Icone/1214428.png" id="structure-edit" ></a>';
         doc.style.display = "block";
         document.getElementById('square-empty'+i).style.display="none";
-        document.getElementById('linkSquare'+t).href="stanze.php?strutturaid="+v[i]['struttura_id'];
         document.getElementById('linkSquare'+t).name = v[i]['struttura_id'];
         doc.innerHTML = content;
       }while(i != Object.keys(v).length); //Returns the length of an associative array
@@ -268,11 +267,10 @@ function getStanze(strutturaid){
       do{
         i++;
         doc = document.getElementById('square-edit'+i);
-        var content = '<h7>' + v[i]['stanza_nome'] +'</h7><br /><br /><img src="Icone/6716149901547464129-128.png" id="structure-icon"><br /><br /><a href="#modal1" class="modal-trigger" onclick="setstanzaid('+v[i]['stanza_id']+', '+strutturaid+')"><img src="Icone/61456.png" id="structure-edit"></a><a href="Queries/upDelRooms.php?cmd=del&strutturaid='+strutturaid+'&stanza_id='+v[i]['stanza_id']+'"><img src="Icone/1214428.png" id="structure-edit"></a>';
+        var content = '<a style="color: rgb(0,0,0)" href="stanza.php?stanzaid='+v[i]['stanza_id']+'"><h7>' + v[i]['stanza_nome'] +'</h7></a><br /><br /><a href="stanza.php?stanzaid='+v[i]['stanza_id']+'"><img src="Icone/6716149901547464129-128.png" id="structure-icon"></a><br /><br /><a href="#modal1" class="modal-trigger" onclick="setstanzaid('+v[i]['stanza_id']+', '+strutturaid+')"><img src="Icone/61456.png" id="structure-edit"></a><a href="Queries/upDelRooms.php?cmd=del&strutturaid='+strutturaid+'&stanza_id='+v[i]['stanza_id']+'"><img src="Icone/1214428.png" id="structure-edit"></a>';
         doc.style.display = "block";
         document.getElementById('square-empty'+i).style.display="none";
         var t = i-1;
-        document.getElementById('linkSquare'+t).href="stanza.php?stanzaid="+v[i]['stanza_id'];
         doc.innerHTML = content;
       }while(i != Object.keys(v).length); //Returns the length of an associative array
     }
