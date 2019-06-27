@@ -13,10 +13,14 @@
     <script type="text/javascript" src="Scripts/updateRoom.js"></script>
   </head>
 
-    <body onload="initDate(); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>'); getRoomReservations('<?php echo $_GET['stanzaid'] ?>');">
+    <body onload="initDate(); getReservations('<?php echo $_GET['stanzaid'] ?>'); fillColor('<?php echo $_GET['stanzaid'] ?>'); getStanza('<?php echo $_GET['stanzaid'] ?>'); getRoomReservations('<?php echo $_GET['stanzaid'] ?>'); <?php if(isset($_GET['resID'])){?>
+        showReservationFromList('<?php echo $_GET['resID'] ?>');
+      <?php
+    } ?>">
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
+
 
     <div id="modal1" class="modal modal-footer">
         <div class="modal-content">
