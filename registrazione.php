@@ -9,11 +9,6 @@
 <body>
   <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
   <div id="page-container">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="index.php" class="brand-logo">Logo</a>
-      </div>
-    </nav>
        <div id="content-wrap">
           <div class="row">
             <form action="Queries/addUser.php" method="post" class="col s12">
