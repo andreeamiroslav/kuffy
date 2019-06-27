@@ -8,8 +8,6 @@
 </head>
 <body>
   <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
-  <div id="page-container">
-       <div id="content-wrap">
           <div class="row">
             <form action="Queries/addUser.php" method="post" class="col s12">
               <div class="row" id="register">
@@ -65,9 +63,6 @@
               <button type="submit" class="waves-effect waves-light btn-large" id="register-button" style="width: 20%">REGISTRATI</button>
             </form>
           </div>
-          <br>
-          <br>
-          <br>
 
   <script language="javascript" type="text/javascript" src="Scripts/footer.js"></script>
 </body>
