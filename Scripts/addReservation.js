@@ -13,7 +13,7 @@ function submitGuestsValues(){
       var provenienza = document.getElementById('provenienza'+i).value;
       var nascita = document.getElementById('nascita'+i).value;
       var professione = document.getElementById('professione'+i).value;
-      if(nome == "" || cognome == "" || sesso == "" || provenienza == "" || nascita == "0000-00-00" || professione == "")
+      if(nome == "" || cognome == "" || sesso == "" || provenienza == "" || nascita == "0000-00-00" || nascita == "" || professione == "")
         errors ++;
 
       data += 'name'+i+'='+nome+'&surname'+i+'='+cognome+'&gender'+i+'='+sesso+'&provenienza'+i+'='+provenienza+'&nascita'+i+'='+nascita+'&professione'+i+'='+professione;
