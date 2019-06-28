@@ -64,7 +64,7 @@ function getReservations(){
       var i = 0;
       while(i != Object.keys(v).length && i != 5){
         i++;
-        var html ='<tr class="selectable" onclick="window.location= \'/stanza.php?stanzaid='+v[i]['stanza_id']+'&resID=res'+v[i]['id']+'\'">\n';
+        var html ='<tr class="selectable" tile="Clicca per visualizzare le prenotazione" onclick="window.location = \'/stanza.php?stanzaid='+v[i]['stanza_id']+'&resID=res'+v[i]['id']+'\'">\n';
         var temp = document.getElementById('bodyTable');
         if(i == 1)
           temp.innerHTML = "";
