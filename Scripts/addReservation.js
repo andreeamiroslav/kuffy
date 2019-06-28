@@ -55,7 +55,10 @@ function submitResValues(id){
 
 
   if(from == "" || to == "" || days == "" || pax == "" || name == "" || surname == "" || gender == "" || idstanza == ""   || checkin == "" || checkout == "" || provenienza == "" || nascita == "" || professione == ""){
-    data = 'from='+from+'&to='+to+'&days='+days+'&pax='+pax+'&name='+name+'&surname='+surname+'&gender='+gender+'&idstanza='+idstanza+'&checkin='+checkin+'&checkout='+checkout+'&provenienza='+provenienza+'&nascita='+nascita+'&professione='+professione+'&stanzaidd='+idstanza;
+    data = "/stanza.php?stanzaid=" + idstanza + "&msg=mancanti";
+    if(id != null)
+      data += '&resID=res'+id;
+    window.location.href = data;
   }else{
     var fdate = new Date(from);
     var tdate = new Date(to);

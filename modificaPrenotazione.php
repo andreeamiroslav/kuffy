@@ -18,14 +18,13 @@
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
-
     <div class="row" id="booking">
       <div class="col s7">
         <form id="firstForm" method="post" action="/Queries/addReservation.php?num=0&resID=<?php echo $_GET['id'] ?>&stanzaidd=<?php echo $_GET['stanzaid'] ?>">
           <div class="row" id="structure-from">
             <div class="input-field col offset-s1 s5" id="structure">
               <select id="selectStructure" onchange="getRooms();">
-                <?php require('init.php');
+                <?php require_once('init.php');
                 $query = "SELECT str.struttura_nome, str.struttura_id
                           FROM strutture str
                           WHERE str.struttura_fkutenteid = '".$_SESSION['utente_id']."'";
