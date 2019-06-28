@@ -101,6 +101,7 @@
           <div id="other-client">
             <h5>Altri ospiti</h5>
             <div id="forms"></div>
+            I campi contrassegnati da <p style="display: inline; color: red;">(*)</p> sono obbligatori<br /><br />
             <button id="add-client" class="btn-floating btn-large waves-effect waves-light red" onclick="destroySelect(); addForm(); initSelect();">
               <img src="Icone/plus-md.png" id="plus-client">
             </button>
