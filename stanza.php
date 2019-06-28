@@ -180,8 +180,16 @@
             <br /><b>Numero altri ospiti:</b> <p style="display:inline" id="nPersone"></p>
             <br /><br /><b>Ospiti:</b> <p id="ospiti"></p>
             <a id="editLink" href=""><img src="Icone/61456.png" id="modify-booking"></a>
-            <a id="deleteLink" href=""><img src="Icone/1214428.png" id="delete-booking"></a>
+            <a id="deleteLink" data-target="modal2" class="modal-trigger"><img src="Icone/1214428.png" id="delete-booking"></a>
           </span>
+        </div>
+        <div id="modal2" class="modal">
+          <div class="modal-content">
+            <h4>Eliminare la prenotazione?</h4>
+          </div>
+          <div class="modal-footer">
+            <a href="" id="delete" class="modal-close waves-effect waves-green btn-flat">Elimina</a>
+          </div>
         </div>
       </div>
     </div>
