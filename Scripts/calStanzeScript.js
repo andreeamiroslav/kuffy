@@ -189,6 +189,7 @@ function fillColor(passedID){
               }
               inRow = 0;
             }else if(v[j]['from_day'] == tempDate){
+              document.getElementById(i).style.background = null;
               document.getElementById(i).style.backgroundColor = "#f08080";
               document.getElementById(i).classList.add(v[j]['id']);
               if(window.location.pathname.match(/stanza.php.*/))
