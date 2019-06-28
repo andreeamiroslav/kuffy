@@ -25,7 +25,7 @@
           <div class="row" id="structure-from">
             <div class="input-field col offset-s1 s5" id="structure">
               <select id="selectStructure" onchange="getRooms();">
-                <?php require('init.php');
+                <?php require_one('init.php');
                 $query = "SELECT str.struttura_nome, str.struttura_id
                           FROM strutture str
                           WHERE str.struttura_fkutenteid = '".$_SESSION['utente_id']."'";
