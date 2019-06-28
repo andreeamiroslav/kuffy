@@ -188,7 +188,7 @@
             <h4>Eliminare la prenotazione?</h4>
           </div>
           <div class="modal-footer">
-            <a href="" id="delete" class="modal-close waves-effect waves-green btn-flat">Elimina</a>
+            <a href="" id="delete" class="modal-close waves-effect waves-green btn">Elimina</a>
           </div>
         </div>
       </div>
