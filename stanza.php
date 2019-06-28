@@ -56,7 +56,7 @@
       <?php
          if(isset($_GET['msg'])){
            if($_GET['msg'] == "error1")
-             echo '<p style="color: red;" align="center">La stanza non è stata modificata, si prega di compilare i campi segnati</p>';
+             echo '<p style="color: red;" align="center">La stanza non è stata modificata, si prega di compilare i campi contrassegnati con i valori corretti</p>';
           if($_GET['msg'] == 'mancanti'){
             echo '<p style="color: red;" align="center" >Riempire tutti i campi del prenotante</p>';
             }
