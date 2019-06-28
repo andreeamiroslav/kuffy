@@ -4,6 +4,11 @@ function setstanzaid(temp, tmp){
   strutturaid = tmp;
 }
 
+function editDel(){
+  document.getElementById('delete').href ='Queries/upDelRooms.php?cmd=del&strutturaid='+strutturaid+'&stanza_id='+stanza_id;
+}
+
+
 function setidstanza(temp){
   stanza_id = temp;
 }
