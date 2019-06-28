@@ -65,12 +65,12 @@ function submitResValues(id){
     window.location.href = 'aggiungiPrenotazione.php?msg=data';
   data = 'from='+from+'&to='+to+'&days='+days+'&pax='+pax+'&name='+name+'&surname='+surname+'&gender='+gender+'&idstanza='+idstanza+'&checkin='+checkin+'&checkout='+checkout+'&provenienza='+provenienza+'&nascita='+nascita+'&professione='+professione+'&stanzaidd='+idstanza;
   if(id != null)
-    data += '&resID='+id
+    data += '&resID='+id;
   var url = document.getElementById('firstForm').action;
-  //xmlhttp.open("POST", url);
-  //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  xmlhttp.open("POST", url);
+  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   console.log(data);
-  //xmlhttp.send(data);
+  xmlhttp.send(data);
 
   xmlhttp.onreadystatechange = function(){
     if(this.readyState === XMLHttpRequest.DONE && this.status === 200)
