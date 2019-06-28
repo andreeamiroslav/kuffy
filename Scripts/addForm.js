@@ -16,7 +16,7 @@ function add(strutturaid){
 function addForm(){
   var temp = document.getElementById('forms');
   var p = document.createElement('P');
-  p.innerHTML =  '<form id="addF'+j+'" method="post" action="/Queries/addGuests.php?num='+j+'"><div class="row" id="name-surname"><div class="input-field col offset-s1 s4">  <input id="name'+j+'" type="text" class="validate"><label for="name'+j+'">Nome</label>  </div>  <div class="input-field col s4"><input id="surname'+j+'" type="text" class="validate">  <label for="surname'+j+'">Cognome</label></div><div class="input-field col s3"><select id="selectGender'+j+'"><option value="m">M</option><option value="f">F</option></select></div></div><div class="row" id="name-surname"><div class="input-field col offset-s1 s4"><input id="provenienza'+j+'" type="text" class="validate">  <label for="provenienza'+j+'">Provenienza</label></div><div class="input-field col s4"><input id="nascita'+j+'" type="text" class="validate"><label for="nascita'+j+'">Data di nascita</label>  </div><div class="input-field col s3"><input id="professione'+j+'" type="text" class="validate"><label for="professione'+j+'">Professione</label>  </div></div> </form>';
+  p.innerHTML =  '<form id="addF'+j+'" method="post" action="/Queries/addGuests.php?num='+j+'"><div class="row" id="name-surname"><div class="input-field col offset-s1 s4">  <input id="name'+j+'" type="text" class="validate"><label for="name'+j+'">Nome <p style="display: inline; color: red;">(*)</p></label>  </div>  <div class="input-field col s4"><input id="surname'+j+'" type="text" class="validate">  <label for="surname'+j+'">Cognome <p style="display: inline; color: red;">(*)</p></label></div><div class="input-field col s3"><select id="selectGender'+j+'"><option value="m">M</option><option value="f">F</option></select></div></div><div class="row" id="name-surname"><div class="input-field col offset-s1 s4"><input id="provenienza'+j+'" type="text" class="validate">  <label for="provenienza'+j+'">Provenienza <p style="display: inline; color: red;">(*)</p></label></div><div class="input-field col s4"><input id="nascita'+j+'" type="text" class="validate"><label for="nascita'+j+'">Data di nascita <p style="display: inline; color: red;">(*)</p></label>  </div><div class="input-field col s3"><input id="professione'+j+'" type="text" class="validate"><label for="professione'+j+'">Professione</label>  </div></div> </form>';
   temp.appendChild(p);
   j++;
 }
@@ -39,7 +39,7 @@ function destroySelect(){
   <div class="row" id="name-surname">
     <div class="input-field col offset-s1 s4">
       <input id="name" type="text" class="validate">
-      <label for="name">Nome</label>
+      <label for="name">Nome <p style="display: inline; color: red;">(*)</p></label>
     </div>
     <div class="input-field col s4">
       <input id="surname" type="text" class="validate">

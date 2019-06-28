@@ -15,6 +15,9 @@ function submitGuestsValues(){
       var nascita = document.getElementById('nascita'+i).value;
       var professione = document.getElementById('professione'+i).value;
 
+      if(professione == "")
+        professione = "ND";
+
       data += 'name'+i+'='+nome+'&surname'+i+'='+cognome+'&gender'+i+'='+sesso+'&provenienza'+i+'='+provenienza+'&nascita'+i+'='+nascita+'&professione'+i+'='+professione;
 
       if(i+1!=formsNumber){
@@ -36,6 +39,8 @@ function submitGuestsValues(){
 }
 
 function submitResValues(id){
+
+    console.log("ciao");
   var data = "";
   var xmlhttp = new XMLHttpRequest();
 
@@ -53,13 +58,18 @@ function submitResValues(id){
   var nascita = document.getElementById('nascita').value;
   var professione = document.getElementById('professione').value;
 
+    console.log("ciao");
 
-  if(from == "" || to == "" || days == "" || pax == "" || name == "" || surname == "" || gender == "" || idstanza == ""   || checkin == "" || checkout == "" || provenienza == "" || nascita == "" || professione == ""){
+  if(from == "" || to == "" || days == "" || pax == "" || name == "" || surname == "" || gender == "" || idstanza == ""   || checkin == "" || checkout == "" || provenienza == "" || nascita == ""){
+    console.log("ciao");
     data = "/stanza.php?stanzaid=" + idstanza + "&msg=mancanti";
     if(id != null)
       data += '&resID=res'+id;
     window.location.href = data;
   }else{
+    console.log("ciao");
+    if(professione == "")
+      professione = "ND";
     var fdate = new Date(from);
     var tdate = new Date(to);
     if(fdate >= tdate)

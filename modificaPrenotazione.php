@@ -93,7 +93,7 @@
               </div>
               <div class="input-field col s3">
                 <input placeholder="Professione" id="professione" type="text" class="validate">
-                <label for="professione">Professione <p style="display: inline; color: red;">(*)</p></label>
+                <label for="professione">Professione</label>
               </div>
             </div>
           </div>

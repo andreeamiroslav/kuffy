@@ -36,32 +36,32 @@
                 }
                 ?>
               </select>
-              <label>Strutture</label>
+              <label>Strutture <p style="display: inline; color: red;">(*)</p></label>
             </div>
             <div class="input-field col s3">
               <input placeholder="aaaa-mm-gg" name="from" id="from" type="text" class="validate">
-              <label for="name">Dal</label>
+              <label for="name">Dal <p style="display: inline; color: red;">(*)</p></label>
             </div>
           </div>
           <div class="row" id="room-to">
             <div class="input-field col offset-s1 s5" id="room">
               <select id="selectRoom" onchange="fillColor();">
               </select>
-              <label>Stanze</label>
+              <label>Stanze <p style="display: inline; color: red;">(*)</p></label>
             </div>
             <div class="input-field col s3">
               <input placeholder="aaaa-mm-gg" name="to" id="to" type="text" class="validate">
-              <label for="name">Al</label>
+              <label for="name">Al <p style="display: inline; color: red;">(*)</p></label>
             </div>
           </div>
           <div class="row" id="checks">
             <div class="input-field col offset-s1 s4">
               <input placeholder="HH:MM" id="checkin" type="text" class="validate">
-              <label for="checkin">Orario check-in</label>
+              <label for="checkin">Orario check-in <p style="display: inline; color: red;">(*)</p></label>
             </div>
             <div class="input-field col s4">
               <input placeholder="HH:MM" id="checkout" type="text" class="validate">
-              <label for="checkout">Orario check-out</label>
+              <label for="checkout">Orario check-out <p style="display: inline; color: red;">(*)</p></label>
             </div>
           </div>
           <div id="client">
@@ -69,11 +69,11 @@
             <div class="row" id="name-surname">
               <div class="input-field col offset-s1 s4">
                 <input id="name" type="text" class="validate">
-                <label for="name">Nome</label>
+                <label for="name">Nome <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s4">
                 <input id="surname" type="text" class="validate">
-                <label for="surname">Cognome</label>
+                <label for="surname">Cognome <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s3">
                 <select id="selectGender">
@@ -85,11 +85,11 @@
             <div class="row" id="name-surname">
               <div class="input-field col offset-s1 s4">
                 <input id="provenienza" type="text" class="validate">
-                <label for="provenienza">Provenienza</label>
+                <label for="provenienza">Provenienza <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s4">
                 <input placeholder="aaaa-mm-gg" id="nascita" type="text" class="validate">
-                <label for="nascita">Data di nascita</label>
+                <label for="nascita">Data di nascita <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s3">
                 <input id="professione" type="text" class="validate">
