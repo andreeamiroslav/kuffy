@@ -28,7 +28,7 @@ function submitGuestsValues(){
       if(errors == 0)
         xmlhttp.send(data);
   }
-  window.location.href = 'home.php';
+  //window.location.href = 'home.php';
 
   xmlhttp.onreadystatechange = function(){
     if(this.readyState === XMLHttpRequest.DONE && this.status === 200)
