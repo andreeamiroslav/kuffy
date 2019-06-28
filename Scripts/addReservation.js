@@ -67,8 +67,8 @@ function submitResValues(id){
   if(id != null)
     data += '&resID='+id
   var url = document.getElementById('firstForm').action;
-  xmlhttp.open("POST", url);
-  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+  //xmlhttp.open("POST", url);
+  //xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
   console.log(data);
   //xmlhttp.send(data);
 
