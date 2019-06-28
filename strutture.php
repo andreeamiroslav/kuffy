@@ -63,6 +63,15 @@
         </div>
       </div>
     </div>
+      
+      <div id="modal3" class="modal">
+    <div class="modal-content">
+      <h4>Eliminare la struttura?</h4>
+    </div>
+    <div class="modal-footer" id = "foot">
+      <a href="" id="delete" class="modal-close waves-effect waves-green btn-flat">Elimina</a>
+    </div>
+  </div>
 
     <table>
       <thead>
