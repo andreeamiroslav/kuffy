@@ -14,8 +14,6 @@ function submitGuestsValues(){
       var provenienza = document.getElementById('provenienza'+i).value;
       var nascita = document.getElementById('nascita'+i).value;
       var professione = document.getElementById('professione'+i).value;
-      if(nome == "" || cognome == "" || sesso == "" || provenienza == "" || nascita == "0000-00-00" || nascita == "" || professione == "")
-        errors ++;
 
       data += 'name'+i+'='+nome+'&surname'+i+'='+cognome+'&gender'+i+'='+sesso+'&provenienza'+i+'='+provenienza+'&nascita'+i+'='+nascita+'&professione'+i+'='+professione;
 
@@ -28,7 +26,8 @@ function submitGuestsValues(){
       if(errors == 0)
         xmlhttp.send(data);
   }
-  //window.location.href = 'home.php';
+  if(errors != 0)
+    window.location.href = 'home.php';
 
   xmlhttp.onreadystatechange = function(){
     if(this.readyState === XMLHttpRequest.DONE && this.status === 200)
@@ -55,27 +54,28 @@ function submitResValues(id){
   var professione = document.getElementById('professione').value;
 
 
-  if(from == "" || to == "" || days == "" || pax == "" || name == "" || surname == "" || gender == "" || idstanza == ""   || checkin == "" || checkout == "" || provenienza == "" || nascita == "" || professione == "")
-    window.location.href = 'aggiungiPrenotazione.php?msg=mancanti';
+  if(from == "" || to == "" || days == "" || pax == "" || name == "" || surname == "" || gender == "" || idstanza == ""   || checkin == "" || checkout == "" || provenienza == "" || nascita == "" || professione == ""){
+    data = 'from='+from+'&to='+to+'&days='+days+'&pax='+pax+'&name='+name+'&surname='+surname+'&gender='+gender+'&idstanza='+idstanza+'&checkin='+checkin+'&checkout='+checkout+'&provenienza='+provenienza+'&nascita='+nascita+'&professione='+professione+'&stanzaidd='+idstanza;
+  }else{
+    var fdate = new Date(from);
+    var tdate = new Date(to);
+    if(fdate >= tdate)
+      window.location.href = 'aggiungiPrenotazione.php?msg=data';
+    else{
+      data = 'from='+from+'&to='+to+'&days='+days+'&pax='+pax+'&name='+name+'&surname='+surname+'&gender='+gender+'&idstanza='+idstanza+'&checkin='+checkin+'&checkout='+checkout+'&provenienza='+provenienza+'&nascita='+nascita+'&professione='+professione+'&stanzaidd='+idstanza;
+      if(id != null)
+        data += '&resID='+id;
+      var url = document.getElementById('firstForm').action;
+      xmlhttp.open("POST", url);
+      xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+      xmlhttp.send(data);
 
-
-  var fdate = new Date(from);
-  var tdate = new Date(to);
-  if(fdate >= tdate)
-    window.location.href = 'aggiungiPrenotazione.php?msg=data';
-  data = 'from='+from+'&to='+to+'&days='+days+'&pax='+pax+'&name='+name+'&surname='+surname+'&gender='+gender+'&idstanza='+idstanza+'&checkin='+checkin+'&checkout='+checkout+'&provenienza='+provenienza+'&nascita='+nascita+'&professione='+professione+'&stanzaidd='+idstanza;
-  if(id != null)
-    data += '&resID='+id;
-  var url = document.getElementById('firstForm').action;
-  xmlhttp.open("POST", url);
-  xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-  console.log(data);
-  xmlhttp.send(data);
-
-  xmlhttp.onreadystatechange = function(){
-    if(this.readyState === XMLHttpRequest.DONE && this.status === 200)
-      if(document.forms.length==1){
-        window.location.href = 'home.php';
+      xmlhttp.onreadystatechange = function(){
+        if(this.readyState === XMLHttpRequest.DONE && this.status === 200)
+          if(document.forms.length==1){
+            window.location.href = 'home.php';
+          }
+        }
       }
   }
 }
