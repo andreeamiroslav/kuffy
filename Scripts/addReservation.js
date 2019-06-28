@@ -69,7 +69,8 @@ function submitResValues(id){
   var url = document.getElementById('firstForm').action;
   xmlhttp.open("POST", url);
   xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-  xmlhttp.send(data);
+  console.log(data);
+  //xmlhttp.send(data);
 
   xmlhttp.onreadystatechange = function(){
     if(this.readyState === XMLHttpRequest.DONE && this.status === 200)
