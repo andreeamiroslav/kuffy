@@ -27,16 +27,18 @@ function getCheckList(){
         if(v[i]['struttura_id'] == e.options[e.selectedIndex].value){
           if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 1){
             doc.innerHTML += '<p id="inelement' + i + '"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + ' ' + v[i]['p_cognome'] + '"</p>';
-            trashDoc.innerHTML += '<p><a href="deleteCheck.php?type=in&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a></p>';
+            trashDoc.innerHTML += '<p><a href="/Queries/deleteCheck.php?type=in&reservationid='+v[i]['id']+'&value=0"><img src="Icone/check.png" id="deleteCheck" ></a></p>';
           }else if(v[i]['from_day'] == tempDate && v[i]['en_check_in'] == 0){
             doc.innerHTML += '<p id="inelement' + i + '" class="lined"><b><i>' + v[i]['check_in'] + '</b></i> <b>Check-in stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + ' ' + v[i]['p_cognome'] + '"</p>';
+            trashDoc.innerHTML += '<p><a href="/Queries/deleteCheck.php?type=in&reservationid='+v[i]['id']+'&value=1"><img src="Icone/check.png" id="deleteCheck" ></a></p>';
           }
 
           if(v[i]['to_day'] == tempDate && v[i]['en_check_out'] == 1){
             doc.innerHTML += '<p id="inelement' + i + '"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + ' ' + v[i]['p_cognome'] + '"</p>';
-            trashDoc.innerHTML += '<p><a href="deleteCheck.php?type=out&reservationid='+v[i]['id']+'"><img src="Icone/1214428.png" id="deleteCheck" ></a></p>';
+            trashDoc.innerHTML += '<p><a href="/Queries/deleteCheck.php?type=out&reservationid='+v[i]['id']+'&value=0"><img src="Icone/check.png" id="deleteCheck" ></a></p>';
           }else if(v[i]['to_day'] == tempDate && v[i]['en_check_out'] == 0){
             doc.innerHTML += '<p id="inelement' + i + '" class="lined"><b><i>' + v[i]['check_out'] + '</b></i> <b>Check-out stanza:</b> "' + v[i]['stanza_nome'] + '" <b>Cliente:</b> "' + v[i]['nome'] + ' ' + v[i]['p_cognome'] + '"</p>';
+            trashDoc.innerHTML += '<p><a href="/Queries/deleteCheck.php?type=out&reservationid='+v[i]['id']+'&value=1"><img src="Icone/check.png" id="deleteCheck" ></a></p>';
           }
         }
       }while(i != Object.keys(v).length);

@@ -375,8 +375,7 @@ function getRooms(id){
        }while(i != Object.keys(v).length); //Returns the length of an associative array
        if(window.location.pathname.match(/modificaPrenotazione.php.*/))
         initReservation(id);
-       console.log(document.getElementById('selectRoom').value);
-       fillColor(document.getElementById('selectRoom').value);
+        fillColor(document.getElementById('selectRoom').value);
      }
 
    };
