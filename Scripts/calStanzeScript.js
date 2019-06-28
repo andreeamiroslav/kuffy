@@ -469,7 +469,7 @@ function showReservationFromList(resID){
             document.getElementById('ospiti').innerHTML = ospitiHTML;
             document.getElementById('prezzo').innerHTML = "€" + parseInt(v[i]['stanza_prezzonotte'], 10) * parseInt(v[i]['days'], 10) ;
             document.getElementById('editLink').href = "modificaPrenotazione.php?id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
-            document.getElementById('deleteLink').href = "Queries/updateReservation.php?action=del&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
+            document.getElementById('delete').href = "Queries/updateReservation.php?action=del&id=" + v[i]['id'] + "&stanzaid=" + v[i]['stanza_id'];
           }
         }while(i != Object.keys(v).length);
       }
