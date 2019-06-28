@@ -24,6 +24,10 @@ function initReservation(id){
           var j = -1;
             do{
               j++;
+              var number = j+1;
+              document.getElementById("formNumber").classList = "";
+              document.getElementById("formNumber").classList.add(number.toString());
+              setJ();
               var temp = document.getElementById('forms');
               temp.innerHTML += '<form id="addF'+j+'" method="post" action="/Queries/addGuests.php?num='+j+'"><div class="row" id="name-surname"><div class="input-field col offset-s1 s4">  <input placeholder="Nome" id="name'+j+'" type="text" class="validate"> </div>  <div class="input-field col s4"><input placeholder="Cognome" id="surname'+j+'" type="text" class="validate"> </div><div class="input-field col s3"><select id="selectGender'+j+'"><option value="m">M</option><option value="f">F</option></select></div></div><div class="row" id="name-surname"><div class="input-field col offset-s1 s4"><input placeholder="Provenienza" id="provenienza'+j+'" type="text" class="validate"></div><div class="input-field col s4"><input placeholder="Data di nascita" id="nascita'+j+'" type="text" class="validate"></div><div class="input-field col s3"><input placeholder="Professione" id="professione'+j+'" type="text" class="validate"></div></div> </form>';
               document.getElementById('name'+j).value = v[i][j]['o_nome'];

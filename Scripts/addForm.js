@@ -1,6 +1,10 @@
 var i=0;
 var j=0;
 
+function setJ(){
+  j = document.getElementById("formNumber").classList.item(0);
+}
+
 function add(strutturaid){
   i++;
   var temp = document.getElementById('forms');
