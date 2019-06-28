@@ -3,6 +3,10 @@ function setidstruttura(temp){
   idstruttura = temp;
 }
 
+function editDel(){
+  document.getElementById('delete').href = "Queries/upDelStructures.php?cmd=del&strutturaid="+idstruttura;
+}
+
 function submitValues(utente_id, a){
   if(a==1){
     var nome = document.getElementById('nome_struttura').value;
