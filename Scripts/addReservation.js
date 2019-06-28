@@ -7,6 +7,7 @@ function submitGuestsValues(){
   formsNumber -= 1;
 
   for(i; i<formsNumber; i++){
+      errors = 0;
       var nome = document.getElementById('name'+i).value;
       var cognome = document.getElementById('surname'+i).value;
       var sesso = document.getElementById('selectGender'+i).value;
@@ -24,9 +25,8 @@ function submitGuestsValues(){
       var url = document.getElementById('addF'+i).action;
       xmlhttp.open("POST", url);
       xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-      if(errors > 0)
-        data = "";
-      xmlhttp.send(data);
+      if(errors == 0)
+        xmlhttp.send(data);
   }
   xmlhttp.onreadystatechange = function(){
     if(this.readyState === XMLHttpRequest.DONE && this.status === 200)
