@@ -52,7 +52,7 @@
       <h4>Eliminare la stanza?</h4>
     </div>
     <div class="modal-footer" id = "foot">
-      <a href="" id="delete" class="modal-close waves-effect waves-green btn-flat">Elimina</a>
+      <a href="" id="delete" class="modal-close waves-effect waves-green btn">Elimina</a>
     </div>
   </div>
 
