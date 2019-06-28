@@ -29,7 +29,7 @@
             <div class="row">
               <div class="input-field col s6">
                 <input id="nome-stanza" type="text" class="validate">
-                <label for="nome_struttura">Nome stanza <p style="display: inline; color: red;">(*)</p></label>
+                <label for="nome-stanza">Nome stanza <p style="display: inline; color: red;">(*)</p></label>
               </div>
               <div class="input-field col s6">
                 <input id="posti-letto" type="text" class="validate">
