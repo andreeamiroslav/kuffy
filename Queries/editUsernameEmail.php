@@ -26,9 +26,7 @@
       }else{
         $query = "UPDATE utenti SET utente_email='".$_POST['email-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
         $rs = mysqli_query($link, $query);
-        mysqli_close($link);
         $_SESSION['utente_email'] = $_POST['email-new'];
-        header('Location: /home.php');
       }
     }else{
       $rs = mysqli_query($link, $query);
@@ -65,7 +63,6 @@
       }else{
       $query = "UPDATE utenti SET utente_username='".$_POST['user-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
       $rs = mysqli_query($link, $query);
-      mysqli_close($link);
       $_SESSION['utente_username'] = $_POST['user-new'];
       header('Location: /home.php');
     }
@@ -76,7 +73,7 @@
   }
 }
 
-
+mysqli_close($link);
 header('Location: /home.php');
 
 
