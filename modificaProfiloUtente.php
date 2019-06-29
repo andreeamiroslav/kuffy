@@ -21,19 +21,22 @@
     <script language="javascript" type="text/javascript" src="Scripts/header.js"></script>
     <script language="javascript" type="text/javascript" src="Scripts/menu.js"></script>
     <script>getStructures();</script>
+    <div id="change-credentials" align="center">
+      <h4>Modifica le tue credenziali</h4>
+    </div>
     <div class="row centered">
       <div class="col s12">
         <?php
-          if(isset($_GET['msg'])){
-            if($_GET['msg'] == "mail")
+
+            if(isset($_GET['mail']))
                 echo '<p style="color: red;" align="center">Indirizzo email errato</p>';
-            if($_GET['msg'] == "username")
+            if(isset($_GET['username']))
                 echo '<p style="color: red;" align="center">Nome utente errato</p>';
-            if($_GET['msg'] == "mailesistente")
+            if(isset($_GET['mailesistente']))
                 echo '<p style="color: red;" align="center">Indirizzo email già utilizzato</p>';
-            if($_GET['msg'] == "usernameesistente")
+            if(isset($_GET['usernamesistente']))
                 echo '<p style="color: red;" align="center">Nome utente già utilizzato</p>';
-           }
+
       ?>
         <form action="Queries/editUsernameEmail.php" method="post">
           <div class="row" id="email-user-now">

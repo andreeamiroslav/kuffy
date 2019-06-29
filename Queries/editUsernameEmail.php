@@ -1,5 +1,6 @@
 <?php
   require_once('init.php');
+  $redirectLink = "Location: /modificaProfiloUtente.php?";
   if($_POST['email-old'] != "" && $_POST['email-new'] != ""){
     $query = "SELECT * FROM utenti WHERE utente_email='".$_POST['email-old']."';";
     $rs = mysqli_query($link, $query);
@@ -21,8 +22,7 @@
       $num_row = mysqli_num_rows($rs);
       $row = mysqli_fetch_array($rs);
       if($num_row>0){
-        mysqli_close($link);
-        header('Location: /modificaProfiloUtente.php?msg=mailesistente');
+        $redirectLink .= "&mailesistente=1";
       }else{
         $query = "UPDATE utenti SET utente_email='".$_POST['email-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
         $rs = mysqli_query($link, $query);
@@ -30,8 +30,7 @@
       }
     }else{
       $rs = mysqli_query($link, $query);
-      mysqli_close($link);
-      header('Location: /modificaProfiloUtente.php?msg=mail');
+      $redirectLink .= "&mail=1";
   }
 }
 
@@ -58,23 +57,25 @@
       $num_row = mysqli_num_rows($rs);
       $row = mysqli_fetch_array($rs);
       if($num_row>0){
-        mysqli_close($link);
-        header('Location: /modificaProfiloUtente.php?msg=usernameesistente');
+        $redirectLink .= "&usernamesistente=1";
       }else{
       $query = "UPDATE utenti SET utente_username='".$_POST['user-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
       $rs = mysqli_query($link, $query);
       $_SESSION['utente_username'] = $_POST['user-new'];
-      header('Location: /home.php');
+      //header('Location: /home.php');
     }
     }else{
       $rs = mysqli_query($link, $query);
-      mysqli_close($link);
-      header('Location: /modificaProfiloUtente.php?msg=username');
+      $redirectLink .= "&username=1";
   }
 }
 
 mysqli_close($link);
-header('Location: /home.php');
+if($redirectLink == "Location: /modificaProfiloUtente.php?")
+  header('Location: /home.php');
+else
+  header($redirectLink);
+
 
 
 
@@ -97,7 +98,7 @@ header('Location: /home.php');
 
     if($num_row==1){
       $query = "UPDATE utenti SET utente_password='".$_POST['password-new']."' WHERE utente_id='".$_SESSION['utente_id']."'";
-      $rs = mysqli_query($link, $query);
+      $rs = mysqli_query($redirectLink, $query);
       header('Location: /home.php');
     }
   }*/
