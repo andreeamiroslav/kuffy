@@ -1,15 +1,15 @@
 @media (max-height: 800px) {
   nav{
-    max-height: 95px;
-    height: 95px;
+    max-height: 80px;
+    height: 80px;
   }
 
   #logo {
     position: relative;
     margin-top: 0.2%;
-    margin-top: 3px;
+    margin-top: 2px;
     margin-left: 2%;
-    height: 90px;
+    height: 75px;
   }
 }
   @media(min-height: 800px){
