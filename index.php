@@ -21,29 +21,36 @@
           ?>
       </div>
       <div id="login-fields">
-        <div class="row">
-          <div class="col offset-s2 s1">
+      <div>
+        <div class="row valign-wrapper">
+          <div class="col s1">
             <a href="#!" onclick="loginOff();"><img src="Icone/av8a49a4f81c3318dc69d.png" id="login-back-icon"></a>
           </div>
+          <div class="col s11">
+          <h3 >Effettua il log-in</h3>
         </div>
-        <h3>Effettua il log-in</h3>
-        <div class="input-field col offset-s3 s6">
-              <form action="checkLogin.php" method="post" id="login">
-                <div class="input-field">
-                  <input type="email" name="email" id="email">
-                  <label for="email">Email</label>
-                </div>
-                <div class="input-field">
-                  <input type="password" name="password" id="pass">
-                  <label for="pass">Password</label>
-                </div>
-                <?php
-                  if(isset($_GET['msg'])){
-                    echo '<p style="color: red">Credenziali errate</p>';
-                    }
-             ?>
-                <button type="submit" class="btn waves-effect waves-light">Login</button>
-              </form>
+        </div>
+      </div>
+
+        <div class="valign-wrapper">
+          <div class="input-field col offset-s3 s6">
+                <form action="checkLogin.php" method="post" id="login">
+                  <div class="input-field">
+                    <input type="email" name="email" id="email">
+                    <label for="email">Email</label>
+                  </div>
+                  <div class="input-field">
+                    <input type="password" name="password" id="pass">
+                    <label for="pass">Password</label>
+                  </div>
+                  <?php
+                    if(isset($_GET['msg'])){
+                      echo '<p style="color: red">Credenziali errate</p>';
+                      }
+               ?>
+                  <button type="submit" class="btn waves-effect waves-light">Login</button>
+                </form>
+          </div>
         </div>
       </div>
 
