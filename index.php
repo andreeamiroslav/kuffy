@@ -16,8 +16,10 @@
         <h3>Benvenuto nel tuo gestore di Bed&Breakfast</h3>
         <br /><button class="waves-effect waves-light btn-large" onclick="loginOn();" style="width: 20%">LOGIN</button>
         <br /><br /><button class="waves-effect waves-light btn-large" onclick="location.href = 'registrazione.php'"style="width: 20%">REGISTRATI</button>
+        <?php if(isset($_GET['registrazione']))
+          echo '<p style="color: green; font-size: 16px;">Registrazione effettuata con successo! Effettua il login per accedere alla tua dashboard</p>';
+          ?>
       </div>
-      <br />
       <div id="login-fields">
         <div class="row">
           <div class="col offset-s2 s1">
@@ -47,10 +49,12 @@
 
     </div>
     <?php
-      if(isset($_GET['msg'])){
+      if(isset($_GET['msg']) && $_GET['msg'] == "wrong"){
     ?>
     <script>loginOn();</script>
-  <?php } ?>
+  <?php }
+    ?>
+
     <div class="col s5,5">
       <div id="right-text">
         <div id="login-text" align="center">

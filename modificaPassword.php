@@ -32,15 +32,15 @@
           <div class="row" id="email-user-now">
             <div class="input-field col offset-s4 s4">
               <input name="password-now" id="password-now" type="password" class="validate">
-              <label for="password-now">Password corrente</label>
+              <label for="password-now">Password corrente <p style="display: inline; color: red;">(*)</p></label>
             </div>
             <br /><div class="input-field col offset-s4 s4">
               <input name="password-new" id="password-new" type="password" class="validate">
-              <label for="password-new">Nuova password</label>
+              <label for="password-new">Nuova password <p style="display: inline; color: red;">(*)</p></label>
             </div>
             <br /><div class="input-field col offset-s4 s4">
               <input name="password-confirm" id="password-confirm" type="password" class="validate">
-              <label for="password-confirm">Conferma nuova password</label>
+              <label for="password-confirm">Conferma nuova password <p style="display: inline; color: red;">(*)</p></label>
             </div>
             <br /><div class="row col" id="modify-cancel-password">
               <button class="waves-effect waves-light btn-large" type="button" id="cancel-button" onclick="location.href='/home.php';">ANNULLA</button>
