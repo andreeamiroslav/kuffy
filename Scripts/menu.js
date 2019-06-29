@@ -9,8 +9,10 @@ function getStructures(){
       var i = 0;
       var temp = document.getElementById('dropdown2');
       while(i != Object.keys(v).length){
-        i++;
-        html += '<li><a href="stanze.php?strutturaid=' + v[i]['struttura_id'] +'">' + v[i]['struttura_nome'] +'</a></li>';
+        if(v[i]['struttura_id'] != null){
+          i++;
+          html += '<li><a href="stanze.php?strutturaid=' + v[i]['struttura_id'] +'">' + v[i]['struttura_nome'] +'</a></li>';
+      }
       }
       document.getElementById('utente').innerHTML = v[1]['nome_utente'] + '     <img src="/Icone/user.png" id="user-icon"/></a></li>';
       temp.innerHTML = html;

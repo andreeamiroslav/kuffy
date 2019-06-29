@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-      
+
       <div id="modal3" class="modal">
     <div class="modal-content">
       <h4>Eliminare la struttura?</h4>
@@ -77,7 +77,7 @@
       <thead>
        <?php
           if(isset($_GET['msg'])){
-            echo '<p style="color: red;" align="center">La struttura non è stata aggiunta, si prega di compilare i campi segnati</p>';
+            echo '<p style="color: red;" align="center">La struttura non è stata aggiunta, si prega di compilare tutti i campi segnati</p>';
             }
      ?>
       </thead>
