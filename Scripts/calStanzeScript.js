@@ -14,13 +14,12 @@ function getReservations(){
         i++;
         var html ="<tr>\n";
         var temp = document.getElementById('bodyTable');
-        if(i == 1)
+        if(i == 1 && temp != null)
           temp.innerHTML = "";
 
         var doc = document.getElementById('struttura' + i);
         html += '<td id="struttura' + i + '">'+ v[i]['struttura_nome']
         + '\n</td>\n';
-        w[i]['struttura_nome'] = v[i][struttura_nome];
 
         var doc = document.getElementById('stanza' + i);
         html += '<td id="stanza' + i + '">'+ v[i]['stanza_nome']
@@ -37,10 +36,8 @@ function getReservations(){
         var doc = document.getElementById('al' + i);
         html += '<td id="al' + i + '">'+ v[i]['to_day']
         + '\n</td>\n';
-
-        temp.innerHTML += html;
-
-
+        if(temp != null)
+          temp.innerHTML += html;
       }while(i != Object.keys(v).length); //Returns the length of an associative array
     }
 
@@ -184,7 +181,7 @@ function fillColor(passedID){
                     document.getElementById(t).title="Clicca per visualizzare le informazioni sulla prenotazione";
                   else
                     document.getElementById(t).title= "Giorno occupato";
-                  document.getElementById(t).classList.add(idInRow);
+                  document.getElementById(t).classList.add(v[j]['id']);
                 }while(t != first);
               }
               inRow = 0;

@@ -46,8 +46,10 @@
     $p[$i]['nOspiti'] = $j+1;
   }
 
-  $out = json_encode($p);
+  if(isset($p))
+    $out = json_encode($p);
   mysqli_close($link);
-  echo($out);
+  if(isset($p))
+    echo($out);
 
 ?>
